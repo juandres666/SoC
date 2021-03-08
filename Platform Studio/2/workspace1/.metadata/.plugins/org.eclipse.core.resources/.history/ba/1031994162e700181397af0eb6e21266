@@ -1,0 +1,53 @@
+/*
+ * led_dir.c
+ *
+ *  Created on: 13 nov. 2018
+ *      Author: jvalverd
+ */
+
+#include "xparameters.h"
+#include "xgpio.h"
+
+int main(void)
+{
+	int flag=0;
+	int count=0;
+	int leds=0;
+
+
+	XGpio led, sw;  // defined gpio variables
+
+	XGpio_Initialize (&led, XPAR_GPIO_0_DEVICE_ID);
+	XGpio_SetDataDirection (&led,1,0); // set display as output ports
+
+	XGpio_Initialize (&sw,XPAR_GPIO_1_DEVICE_ID);
+	XGpio_SetDataDirection (&sw,1,1); // set digit as input ports
+
+	while (1)
+	{
+		//flag= ;
+
+		if(XGpio_DiscreteRead(&sw, 0)=='0')
+		{
+
+			//for (count = 0 ; count < 100000 ; count++)
+			{
+				XGpio_DiscreteWrite(&led, 1, 0);
+			}
+
+		}
+		else
+		{
+
+			//for (count = 0 ; count < 100000 ; count++)
+			{
+				XGpio_DiscreteWrite(&led, 1, 1);
+
+			}
+
+		}
+
+	}
+
+  return 0;
+}

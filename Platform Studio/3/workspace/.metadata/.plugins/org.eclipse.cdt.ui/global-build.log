@@ -1,0 +1,259 @@
+10:13:22 **** Build of project interr_in_bsp ****
+make -k all 
+libgen -hw ../tp_SOC_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../tp_SOC_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-pattern-compare -mcpu=v8.50.c  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-pattern-compare -mcpu=v8.50.c  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling bram"
+"Compiling gpio"
+"Compiling intc"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+
+**** Build of configuration Debug for project interr_in ****
+
+Nothing to build for project interr_in
+
+**** Build of configuration Debug for project interr_in ****
+
+Nothing to build for project interr_in
+
+****  of configuration Debug for project interr_in ****
+
+Nothing to build for project interr_in
+10:16:17 **** Auto Build of configuration Debug for project interr_in ****
+make all 
+'Building file: ../main_int.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../interr_in_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main_int.d" -MT"main_int.d" -o "main_int.o" "../main_int.c"
+../main_int.c: In function 'main':
+../main_int.c:29:9: warning: variable 'data0' set but not used [-Wunused-but-set-variable]
+../main_int.c:16:6: warning: unused variable 'leds' [-Wunused-variable]
+../main_int.c:15:6: warning: unused variable 'count1' [-Wunused-variable]
+../main_int.c:14:6: warning: unused variable 'count' [-Wunused-variable]
+../main_int.c:13:6: warning: unused variable 'flag' [-Wunused-variable]
+'Finished building: ../main_int.c'
+' '
+'Building target: interr_in.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../interr_in_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "interr_in.elf"  ./main_int.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: interr_in.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size interr_in.elf  |tee "interr_in.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3322	    344	   2094	   5760	   1680	interr_in.elf
+'Finished building: interr_in.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck interr_in.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "interr_in.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+interr_in.elf 
+
+ELF file	: interr_in.elf
+elfcheck passed.
+'Finished building: interr_in.elf.elfcheck'
+' '
+10:50:02 **** Auto Build of configuration Debug for project interr_in ****
+make all 
+'Building file: ../main_int.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../interr_in_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main_int.d" -MT"main_int.d" -o "main_int.o" "../main_int.c"
+../main_int.c: In function 'main':
+../main_int.c:16:31: error: 'XInterruptHqndler' undeclared (first use in this function)
+../main_int.c:16:31: note: each undeclared identifier is reported only once for each function it appears in
+../main_int.c:16:49: error: expected ')' before 'myIntHandler'
+../main_int.c:16:49: error: too few arguments to function 'microblaze_register_handler'
+../../interr_in_bsp/microblaze_0/include/mb_interface.h:40:13: note: declared here
+../main_int.c:19:3: error: 'ier' undeclared (first use in this function)
+../main_int.c:19:9: error: 'ierEnqble' undeclared (first use in this function)
+../main_int.c:20:3: error: 'mer' undeclared (first use in this function)
+../main_int.c:20:9: error: 'merInitMask' undeclared (first use in this function)
+../main_int.c:22:2: warning: implicit declaration of function 'microblaze_enable_interrups' [-Wimplicit-function-declaration]
+../main_int.c:35:9: warning: variable 'data0' set but not used [-Wunused-but-set-variable]
+make: *** [main_int.o] Erreur 1
+12:29:21 **** Auto Build of configuration Debug for project interr_in ****
+make all 
+'Building file: ../main_int.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../interr_in_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main_int.d" -MT"main_int.d" -o "main_int.o" "../main_int.c"
+../main_int.c: In function 'myISR':
+../main_int.c:15:3: warning: implicit declaration of function 'button_ISR' [-Wimplicit-function-declaration]
+../main_int.c: In function 'main':
+../main_int.c:23:31: error: 'XInterruptHqndler' undeclared (first use in this function)
+../main_int.c:23:31: note: each undeclared identifier is reported only once for each function it appears in
+../main_int.c:23:49: error: expected ')' before 'myIntHandler'
+../main_int.c:23:49: error: too few arguments to function 'microblaze_register_handler'
+../../interr_in_bsp/microblaze_0/include/mb_interface.h:40:13: note: declared here
+../main_int.c:26:3: error: 'ier' undeclared (first use in this function)
+../main_int.c:26:9: error: 'ierEnqble' undeclared (first use in this function)
+../main_int.c:27:3: error: 'mer' undeclared (first use in this function)
+../main_int.c:27:9: error: 'merInitMask' undeclared (first use in this function)
+../main_int.c:29:2: warning: implicit declaration of function 'microblaze_enable_interrups' [-Wimplicit-function-declaration]
+../main_int.c:42:9: warning: variable 'data0' set but not used [-Wunused-but-set-variable]
+make: *** [main_int.o] Erreur 1
+08:17:00 **** Clean-only build of configuration Debug for project interr_in ****
+make clean 
+rm -rf  ./main_int.o  ./main_int.d  interr_in.elf.size  interr_in.elf.elfcheck  interr_in.elf
+' '
+08:17:04 **** Incremental Build of configuration Debug for project interr_in ****
+make all 
+'Building file: ../main_int.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../interr_in_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main_int.d" -MT"main_int.d" -o "main_int.o" "../main_int.c"
+../main_int.c: In function 'myISR':
+../main_int.c:15:3: warning: implicit declaration of function 'button_ISR' [-Wimplicit-function-declaration]
+../main_int.c: In function 'main':
+../main_int.c:23:31: error: 'XInterruptHqndler' undeclared (first use in this function)
+../main_int.c:23:31: note: each undeclared identifier is reported only once for each function it appears in
+../main_int.c:23:49: error: expected ')' before 'myIntHandler'
+../main_int.c:23:49: error: too few arguments to function 'microblaze_register_handler'
+../../interr_in_bsp/microblaze_0/include/mb_interface.h:40:13: note: declared here
+../main_int.c:26:3: error: 'ier' undeclared (first use in this function)
+../main_int.c:26:9: error: 'ierEnqble' undeclared (first use in this function)
+../main_int.c:27:3: error: 'mer' undeclared (first use in this function)
+../main_int.c:27:9: error: 'merInitMask' undeclared (first use in this function)
+../main_int.c:29:2: warning: implicit declaration of function 'microblaze_enable_interrups' [-Wimplicit-function-declaration]
+../main_int.c:42:9: warning: variable 'data0' set but not used [-Wunused-but-set-variable]
+make: *** [main_int.o] Erreur 1
+08:19:53 **** Auto Build of configuration Debug for project interr_in ****
+make all 
+'Building file: ../main_int.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../interr_in_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main_int.d" -MT"main_int.d" -o "main_int.o" "../main_int.c"
+../main_int.c: In function 'SoC_Configuration':
+../main_int.c:24:31: error: 'XPAR_GPIO_SWITCHES_DEVICE_ID' undeclared (first use in this function)
+../main_int.c:24:31: note: each undeclared identifier is reported only once for each function it appears in
+../main_int.c:25:27: error: 'XPAR_GPIO_LEDS_DEVICE_ID' undeclared (first use in this function)
+../main_int.c:30:32: error: 'XPAR_INTC_CONTROLLER_DEVICE_ID' undeclared (first use in this function)
+../main_int.c:33:29: error: 'XPAR_INTC_CONTROLLER_GPIO_SWITCHES_IP2INTC_IRPT_INTR' undeclared (first use in this function)
+make: *** [main_int.o] Erreur 1
+08:22:59 **** Auto Build of configuration Debug for project interr_in ****
+make all 
+'Building file: ../main_int.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../interr_in_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main_int.d" -MT"main_int.d" -o "main_int.o" "../main_int.c"
+../main_int.c: In function 'SoC_Configuration':
+../main_int.c:30:32: error: 'XPAR_INTC_CONTROLLER_DEVICE_ID' undeclared (first use in this function)
+../main_int.c:30:32: note: each undeclared identifier is reported only once for each function it appears in
+../main_int.c:33:29: error: 'XPAR_INTC_CONTROLLER_GPIO_SWITCHES_IP2INTC_IRPT_INTR' undeclared (first use in this function)
+make: *** [main_int.o] Erreur 1
+08:25:30 **** Auto Build of configuration Debug for project interr_in ****
+make all 
+'Building file: ../main_int.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../interr_in_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main_int.d" -MT"main_int.d" -o "main_int.o" "../main_int.c"
+../main_int.c: In function 'SoC_Configuration':
+../main_int.c:33:29: error: 'XPAR_INTC_CONTROLLER_GPIO_SWITCHES_IP2INTC_IRPT_INTR' undeclared (first use in this function)
+../main_int.c:33:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [main_int.o] Erreur 1
+08:27:28 **** Auto Build of configuration Debug for project interr_in ****
+make all 
+'Building file: ../main_int.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../interr_in_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main_int.d" -MT"main_int.d" -o "main_int.o" "../main_int.c"
+../main_int.c: In function 'SoC_Configuration':
+../main_int.c:35:28: error: 'XPAR_INTC_CONTROLLER_GPIO_SWITCHES_IP2INTC_IRPT_INTR' undeclared (first use in this function)
+../main_int.c:35:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [main_int.o] Erreur 1
+08:28:04 **** Auto Build of configuration Debug for project interr_in ****
+make all 
+'Building file: ../main_int.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../interr_in_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main_int.d" -MT"main_int.d" -o "main_int.o" "../main_int.c"
+../main_int.c: In function 'SoC_Configuration':
+../main_int.c:35:28: error: 'XPAR_INTC_CONTROLLER_GPIO_SWITCHES_IP2INTC_IRPT_INTR' undeclared (first use in this function)
+../main_int.c:35:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [main_int.o] Erreur 1
+08:28:51 **** Auto Build of configuration Debug for project interr_in ****
+make all 
+'Building file: ../main_int.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../interr_in_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main_int.d" -MT"main_int.d" -o "main_int.o" "../main_int.c"
+'Finished building: ../main_int.c'
+' '
+'Building target: interr_in.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../interr_in_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "interr_in.elf"  ./main_int.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: interr_in.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size interr_in.elf  |tee "interr_in.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5752	    344	   2272	   8368	   20b0	interr_in.elf
+'Finished building: interr_in.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck interr_in.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "interr_in.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+interr_in.elf 
+
+ELF file	: interr_in.elf
+elfcheck passed.
+'Finished building: interr_in.elf.elfcheck'
+' '
+08:31:46 **** Auto Build of configuration Debug for project interr_in ****
+make all 
+'Building file: ../main_int.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../interr_in_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main_int.d" -MT"main_int.d" -o "main_int.o" "../main_int.c"
+'Finished building: ../main_int.c'
+' '
+'Building target: interr_in.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../interr_in_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "interr_in.elf"  ./main_int.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: interr_in.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size interr_in.elf  |tee "interr_in.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5752	    344	   2272	   8368	   20b0	interr_in.elf
+'Finished building: interr_in.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck interr_in.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "interr_in.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+interr_in.elf 
+
+ELF file	: interr_in.elf
+elfcheck passed.
+'Finished building: interr_in.elf.elfcheck'
+' '
+08:33:18 **** Auto Build of project interr_in_bsp ****
+make -k all 
+'Finished building libraries'

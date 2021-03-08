@@ -1,0 +1,21 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Nov 13 16:42:22 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clock_generator_0_RST_pin" LOCATE = SITE "K17" LEVEL 1;
+COMP "xps_gpio_0_GPIO_IO_O_pin<0>" LOCATE = SITE "F9" LEVEL 1;
+COMP "xps_gpio_0_GPIO_IO_O_pin<1>" LOCATE = SITE "E9" LEVEL 1;
+COMP "xps_gpio_0_GPIO_IO_O_pin<2>" LOCATE = SITE "D11" LEVEL 1;
+COMP "xps_gpio_0_GPIO_IO_O_pin<3>" LOCATE = SITE "C11" LEVEL 1;
+COMP "xps_gpio_0_GPIO_IO_O_pin<4>" LOCATE = SITE "F11" LEVEL 1;
+COMP "xps_gpio_0_GPIO_IO_O_pin<5>" LOCATE = SITE "E11" LEVEL 1;
+COMP "xps_gpio_0_GPIO_IO_O_pin<6>" LOCATE = SITE "E12" LEVEL 1;
+COMP "xps_gpio_0_GPIO_IO_O_pin<7>" LOCATE = SITE "F12" LEVEL 1;
+COMP "xps_gpio_1_GPIO_IO_I_pin<0>" LOCATE = SITE "L13" LEVEL 1;
+COMP "xps_gpio_1_GPIO_IO_I_pin<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "xps_gpio_1_GPIO_IO_I_pin<2>" LOCATE = SITE "H18" LEVEL 1;
+COMP "xps_gpio_1_GPIO_IO_I_pin<3>" LOCATE = SITE "N17" LEVEL 1;
+COMP "clock_generator_0_CLKIN_pin" LOCATE = SITE "C9" LEVEL 1;
+SCHEMATIC END;
+

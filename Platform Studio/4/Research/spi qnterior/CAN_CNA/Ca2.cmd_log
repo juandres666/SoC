@@ -1,0 +1,4 @@
+vhdtdtfi -lib work Ca2.vhd -prj test_ADC -o Ca2.spl -module Ca2 -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Ca2.spl D:/stage/test_ADC/Ca2.sym 
+vhdtdtfi -lib work Ca2.vhd -prj test_ADC -o Ca2.spl -module Ca2 -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Ca2.spl D:/stage/test_ADC/Ca2.sym 

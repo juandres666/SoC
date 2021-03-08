@@ -1,0 +1,6 @@
+08:33:18 **** Auto Build of project interr_in_bsp ****
+make -k all 
+'Finished building libraries'
+
+08:33:20 Build Finished (took 1s.584ms)
+

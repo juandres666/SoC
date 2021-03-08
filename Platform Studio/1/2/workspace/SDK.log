@@ -1,0 +1,13 @@
+15:06:49.742 INFO  - Processing command line option -hwspec D:\tp_SOC\SDK\SDK_Export\hw\system.xml. 
+15:08:17.918 INFO  - FPGA configured successfully with bitstream "D:/workspace/tp_SOC_hw_platform/download.bit" 
+15:11:57.468 INFO  - FPGA configured successfully with bitstream "D:/workspace/tp_SOC_hw_platform/download.bit" 
+15:12:42.642 INFO  - FPGA configured successfully with bitstream "D:/workspace/tp_SOC_hw_platform/download.bit" 
+15:15:38.664 INFO  - FPGA configured successfully with bitstream "D:/workspace/tp_SOC_hw_platform/download.bit" 
+15:23:19.022 INFO  - FPGA configured successfully with bitstream "D:/workspace/tp_SOC_hw_platform/download.bit" 
+15:24:04.051 INFO  - FPGA configured successfully with bitstream "D:/workspace/tp_SOC_hw_platform/download.bit" 
+15:30:39.569 INFO  - FPGA configured successfully with bitstream "D:/workspace/tp_SOC_hw_platform/download.bit" 
+15:32:05.817 INFO  - FPGA configured successfully with bitstream "D:/workspace/tp_SOC_hw_platform/download.bit" 
+15:52:19.824 INFO  - Project tp_SOC_hw_platform's source hardware specification located at D:\tp_SOC\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+15:52:30.670 INFO  - Project tp_SOC_hw_platform's source hardware specification location will not be monitored anymore. 
+15:52:37.066 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

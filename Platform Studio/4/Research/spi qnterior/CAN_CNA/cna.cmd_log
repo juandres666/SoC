@@ -1,0 +1,10 @@
+vhdtdtfi -lib work cna.vhd -prj test_ADC -o cna.spl -module cna -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e cna.spl D:/stage/test_ADC/cna.sym 
+vhdtdtfi -lib work cna.vhd -prj test_ADC -o cna.spl -module cna -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e cna.spl D:/stage/test_ADC/cna.sym 
+vhdtdtfi -lib work cna.vhd -prj test_ADC -o cna.spl -module cna -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e cna.spl D:/stage/test_ADC/cna.sym 
+vhdtdtfi -lib work cna.vhd -prj test_ADC -o cna.spl -module cna -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e cna.spl D:/stage/test_ADC/cna.sym 
+vhdtdtfi -lib work cna.vhd -prj test_ADC -o cna.spl -module cna -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e cna.spl D:/stage/test_ADC/cna.sym 

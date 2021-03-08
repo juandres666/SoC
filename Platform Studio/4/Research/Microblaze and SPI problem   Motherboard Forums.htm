@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html id="XenForo" dir="LTR" class="Public LoggedOut Sidebar RunDeferred Responsive hasJs NoTouch HasDragDrop" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+		<!-- base href="https://www.motherboardpoint.com/" -->
+	
+
+	
+<title>Microblaze and SPI problem | Motherboard Forums</title>
+
+	
+	
+	<link rel="stylesheet" href="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/css_003.css">
+	
+
+
+
+<link rel="stylesheet" href="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/css_002.css">
+
+	
+	
+<link rel="apple-touch-icon" href="https://www.motherboardpoint.com/styles/default/xenforo/logo.og.png">
+
+	<link rel="alternate" type="application/rss+xml" title="RSS feed for Motherboard Forums" href="https://www.motherboardpoint.com/forums/-/index.rss">
+	
+	
+	<link rel="canonical" href="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/a.htm">
+	<meta name="description" content="I got a strange problem with microblaze and SPI.
+I have based my program upon xspi_low_level_example.c
+
+What happens is that when I run it with...">	<meta property="og:site_name" content="Motherboard Forums">
+	<meta property="og:image" content="https://www.motherboardpoint.com/styles/default/custom/avatars/avatar_m.png">
+	<meta property="og:image" content="https://www.motherboardpoint.com/styles/default/custom/mobile_icon.png">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://www.motherboardpoint.com/threads/microblaze-and-spi-problem.96920/">
+	<meta property="og:title" content="Microblaze and SPI problem">
+	<meta property="og:description" content="I got a strange problem with microblaze and SPI.
+I have based my program upon xspi_low_level_example.c
+
+What happens is that when I run it with...">
+	
+	
+	
+
+<link href="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/css.css" rel="stylesheet" type="text/css">
+
+
+<script src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/osd.js"></script><script src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/ca-pub-9482258749662266.js"></script><script src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/show_ads_impl.js" id="google_shimpl"></script><script async="" src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/analytics.js"></script><script src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/a" type="text/javascript" async=""></script><link rel="preload" href="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/integrator_002.js" as="script"><script type="text/javascript" src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/integrator_002.js"></script><link rel="preload" href="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/integrator.js" as="script"><script type="text/javascript" src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/integrator.js"></script><link rel="preload" href="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/show_ads_impl.js" as="script"><script src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/Consent_A_fr.js" type="text/javascript" async=""></script></head>
+
+<body class="node30 node49 node55 SelectQuotable">
+
+
+
+
+<div id="headerMover">
+	<div id="headerProxy"></div>
+
+<div id="content" class="thread_view">
+	<div class="pageWidth">
+		<div class="pageContent">
+			<!-- main content area -->
+			
+			
+			
+			
+				<div class="mainContainer">
+					<div class="mainContent">
+						
+						
+						
+						
+
+						<div class="breadBoxTop ">
+							
+							
+
+<nav>
+	
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+
+	<fieldset class="breadcrumb" style="">
+		
+			
+		<div class="boardTitle"><strong>Motherboard Forums</strong></div>
+		
+		<span class="crumbs">
+			
+			
+			
+				<span class="crust selectedTabCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+					<a href="https://www.motherboardpoint.com/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Forums</span></a>
+					<span class="arrow"><span>&gt;</span></span>
+				</span>
+			
+			
+			
+				
+					<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="https://www.motherboardpoint.com/#archives.49" class="crumb" rel="up" itemprop="url"><span itemprop="title">Archives</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+					<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="https://www.motherboardpoint.com/categories/archives.55/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Archives</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+					<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="https://www.motherboardpoint.com/forums/embedded.30/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Embedded</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+			
+		</span>
+	</fieldset>
+</nav>
+						</div>
+						
+
+						
+						
+					
+						<!--[if lt IE 8]>
+							<p class="importantMessage">You are using an out of date browser. It  may not display this or other websites correctly.<br />You should upgrade or use an <a href="https://www.google.com/chrome/browser/" target="_blank">alternative browser</a>.</p>
+						<![endif]-->
+
+						
+
+						
+	
+
+		
+		
+		
+
+		<div class="PanelScroller Notices" data-vertical="0" data-speed="400" data-interval="4000" style="display: block;">
+			<div class="scrollContainer">
+				<div class="PanelContainer">
+					<ol class="Panels" style="position: static;">
+						
+							<li class="panel Notice DismissParent notice_1 " data-notice="1">
+	
+	<div class="baseHtml noticeContent"><p>This forum section is a <strong>read-only archive</strong> which contains old newsgroup posts. If you wish to post a query, please do so in one of our main forum sections (<a href="http://www.motherboardpoint.com/">here</a>). This way you will get a faster, better response from the members on Motherboard Point.</p></div>
+	
+	
+</li>
+						
+					</ol>
+				</div>
+			</div>
+
+			
+		</div>
+
+	
+
+	
+						
+						
+
+						
+						
+												
+							<!-- h1 title, description -->
+							<div class="titleBar">
+								
+								<h1>Microblaze and SPI problem</h1>
+								
+								<p id="pageDescription" class="muted ">
+
+	Discussion in 'Embedded' started by Grata, <span class="DateTime" title="Jul 11, 2006 at 5:19 AM">Jul 11, 2006</span>.
+</p>
+							</div>
+						
+						
+						
+						
+						
+						<!-- main template -->
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+<div class="pageNavLinkGroup">
+	<div class="linkGroup SelectionCountContainer">
+		
+		
+	</div>
+
+	
+</div>
+
+
+
+
+
+<form action="inline-mod/post/switch" method="post" class="InlineModForm section" data-cookiename="posts" data-controls="#InlineModControls" data-imodoptions="#ModerationSelect option">
+
+	<ol class="messageList" id="messageList">
+		
+			
+				
+
+
+<li id="post-495357" class="message   " data-author="Grata">
+
+	
+
+
+<div class="messageUserInfo">
+	
+<div class="messageUserBlock ">
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			
+<span class="avatar"><img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/avatar_m.png" alt="Grata" width="96" height="96"></span>
+
+			
+
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+			
+<a rel="nofollow" class="username" itemprop="name">Grata</a>
+
+			<em class="userTitle">Guest</em>
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					I got a strange problem with microblaze and SPI.<br>
+I have based my program upon xspi_low_level_example.c<br>
+<br>
+What happens is that when I run it with XSP_LOOPBACK_OPTION, then the data  <br>
+that are being sent are read back. But when I remove the loopback, it only  <br>
+reads 0xFF. The input pin (MISO) is floating (measures 0 when I look at <br>
+the pin with a oscilloscope). The same also happens when I select another  <br>
+pin for MISO. Basically it should have read 0x00 when the pin is low all<br>
+the time.<br>
+<br>
+I'm using EDK 8.1 and the Spartan 3E starter kit<br>
+Does anyone have a suggestion of how I can get it to read data properly?<br>
+<br>
+<br>
+The important part of the code:<br>
+-----------------------------------------------------------<br>
+//Initialize SPI<br>
+status = XSpi_Initialize(&amp;Spi, XPAR_SPI_ADCBOARD_DEVICE_ID);<br>
+if (status == XST_SUCCESS) {xil_printf("SPI Initialize successful\r\n");}<br>
+if (status == XST_DEVICE_NOT_FOUND) {xil_printf("SPI device was not  <br>
+found in the configuration\r\n");}<br>
+<br>
+status = XSpi_SelfTest(&amp;Spi);<br>
+if (status == XST_SUCCESS) {xil_printf("SPI selftest successful\r\n");}<br>
+if (status == XST_REGISTER_ERROR) {xil_printf("SPI register did not read  <br>
+or write correctly\r\n");}<br>
+if (status == XST_LOOPBACK_ERROR) {xil_printf("SPI loopback error <br>
+occurred\r\n");}<br>
+<br>
+<br>
+//Configure the SPI interface against the ADC.<br>
+status = XSpi_SetOptions(&amp;Spi, XSP_MASTER_OPTION |  <br>
+XSP_MANUAL_SSELECT_OPTION);<br>
+if (status != XST_SUCCESS) {xil_printf("ERROR: Failed to set SPI  <br>
+Options");}<br>
+<br>
+status = XSpi_Start(&amp;Spi);<br>
+if (status != XST_SUCCESS) {xil_printf("ERROR: Failed to start SPI");}<br>
+<br>
+<br>
+while(1) {<br>
+k=XGpio_DiscreteRead(&amp;gp_dip_in,CHANNEL);<br>
+XGpio_DiscreteWrite(&amp;gp_led_out,CHANNEL,k);<br>
+<br>
+<br>
+//CONFIG DATA<br>
+Xuint8 adc_config[2], bogus_data[2];<br>
+bogus_data[0]=1;<br>
+bogus_data[1]=2;<br>
+adc_config[0]=k;<br>
+adc_config[1]=k+1;<br>
+<br>
+spi_transfer(adc_config,bogus_data,2);<br>
+xil_printf("ADC write byte %d (0x%X)\r\n",adc_config[0],adc_config[0]);<br>
+xil_printf("ADC read byte %d (0x%X)\r\n",bogus_data[0],bogus_data[0]);<br>
+xil_printf("ADC write byte %d (0x%X)\r\n",adc_config[1],adc_config[1]);<br>
+xil_printf("ADC read byte %d (0x%X)\r\n",bogus_data[1],bogus_data[1]);<br>
+}	<br>
+}<br>
+<br>
+<br>
+void spi_transfer(Xuint8 *send, Xuint8 *recv, Xuint8 num_bytes)<br>
+{<br>
+int NumBytesRcvd = 0;<br>
+int NumBytesSent = 0;<br>
+<br>
+while(num_bytes--)<br>
+{<br>
+XSpi_mSendByte(XPAR_SPI_ADCBOARD_BASEADDR, *send++);<br>
+NumBytesSent++;<br>
+}<br>
+<br>
+XSpi_mEnable(XPAR_SPI_ADCBOARD_BASEADDR);<br>
+<br>
+while (!(XSpi_mGetStatusReg(XPAR_SPI_ADCBOARD_BASEADDR) &amp;  <br>
+XSP_SR_TX_EMPTY_MASK));<br>
+<br>
+<br>
+while ((XSpi_mGetStatusReg(XPAR_SPI_ADCBOARD_BASEADDR) &amp;  <br>
+XSP_SR_RX_EMPTY_MASK) == 0)<br>
+{<br>
+*recv++ = XSpi_mRecvByte(XPAR_SPI_ADCBOARD_BASEADDR);<br>
+NumBytesRcvd++;<br>
+}<br>
+<br>
+if ((NumBytesSent != NumBytesRcvd) || (NumBytesSent == 0))<br>
+{<br>
+print("SPI XFER ERROR");<br>
+}<br>
+}
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd">Grata,</span>
+					<span class="DateTime" title="Jul 11, 2006 at 5:19 AM">Jul 11, 2006</span>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+                                
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://www.motherboardpoint.com/threads/microblaze-and-spi-problem.96920/" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/495357/permalink">#1</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-495357"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+
+
+
+
+
+
+
+
+
+<ol id="messageList" class="messageList">
+
+	
+	<li class="message" style="padding-bottom:10px; border-bottom: #d7edfc 1px solid;">
+		
+
+<div class="messageAdvertising">
+<div class="messageUserInfo">
+	<div class="messageUserBlock">
+		<div class="avatarHolder" style="height:60px">
+			<span class="helper"></span>
+		</div>
+		<h3 class="userText">
+			<em class="userBanner advertising_ribbon wrapped" itemprop="title"><span class="before"></span><strong>Advertisements</strong><span class="after"></span></em>
+		</h3>
+
+	</div>
+</div>
+</div>
+
+
+<div class="messageInfo primaryContent"><div class="messageContent"><article><blockquote class="messageText ugc baseHtml">
+
+<div id="google-ads-div"></div>
+
+
+
+	<script type="text/javascript"> 
+	 
+	    /* Calculate the width of available ad space */
+	    ad = document.getElementById('google-ads-div');
+	 
+	    if (ad.getBoundingClientRect().width) {
+	        adWidth = ad.getBoundingClientRect().width; // for modern browsers 
+	    } else {
+	        adWidth = ad.offsetWidth; // for old IE 
+	    }
+	 
+	    /* Replace ca-pub-XXX with your AdSense Publisher ID */ 
+	    google_ad_client = "ca-pub-9482258749662266";
+	 
+	    /* Replace 1234567890 with the AdSense Ad Slot ID */ 
+	    google_ad_slot = "2954762699";
+	  
+	    /* Do not change anything after this line */
+	    if ( adWidth >= 728 )
+	      google_ad_size = ["728", "100"];
+	    else if ( adWidth >= 468 )
+	      google_ad_size = ["468", "100"];
+	    else
+	      google_ad_size = ["320", "100"];
+	 
+	    document.write (
+	     '<ins class="adsbygoogle" style="display:inline-block;width:' 
+	      + google_ad_size[0] + 'px;height:' 
+	      + google_ad_size[1] + 'px" data-ad-client="' 
+	      + google_ad_client + '" data-ad-slot="' 
+	      + google_ad_slot + '"></ins>'
+	    );
+	  
+	    (adsbygoogle = window.adsbygoogle || []).push({});
+	 
+	</script><ins class="adsbygoogle" style="display:inline-block;width:468px;height:100px" data-ad-client="ca-pub-9482258749662266" data-ad-slot="2954762699" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:100px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:100px;margin:0;padding:0;position:relative;visibility:visible;width:468px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:468px;height:100px;" width="468" height="100" frameborder="0"></iframe></ins></ins></ins>
+	 
+	<script async="" src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/adsbygoogle.js">
+	</script>
+
+
+
+
+</blockquote></article></div></div></li></ol>
+
+
+
+			
+		
+		
+	</ol>
+
+	
+
+	<input name="_xfToken" value="" type="hidden">
+
+</form>
+
+	<div class="pageNavLinkGroup">
+			
+				
+					<div class="linkGroup">
+						
+							
+						
+					</div>
+				
+			
+			<div class="linkGroup" style="display: none"><a href="javascript:" class="muted JsOnly DisplayIgnoredContent Tooltip">Show Ignored Content</a></div>
+
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+<div class="discussionList section sectionMain registerPrompt">
+	
+
+	<dl class="sectionHeaders">
+		<dd class="main">
+			<span style="text-transform:uppercase">Ask a Question</span>
+		</dd>
+	</dl>
+	
+	<div class="baseHtml" style="margin:0 auto;">
+	<div style="padding:0px 0px 20px 10px; ">
+	<h2 style="color:#176093">Want to reply to this thread or ask your own question?</h2>
+	<span class="messagetext">You'll need to choose a username for the site, which only take a couple of moments (<a href="https://www.motherboardpoint.com/register/">here</a>). After that, you can post your question and our members will help you out.</span>
+	</div>
+	<div style="padding:0px 0px 20px 10px; ">
+	<label id="SignupButton"><a href="https://www.motherboardpoint.com/register/" class="inner" style="padding:0px 10px">Ask a Question</a></label>
+	</div>
+	</div>
+
+</div>
+
+
+
+<div class="discussionList section sectionMain similarThreads">
+	
+
+	<dl class="sectionHeaders">
+		<dd class="main">
+			<span style="text-transform:uppercase">Similar Threads</span>
+		</dd>
+		
+		
+		
+	</dl>
+
+	
+		<ol class="discussionListItems">
+			
+				
+	
+				<li id="thread-92917" class="discussionListItem visible  " data-author="jiri_gaisler">
+					
+					<div class="listBlock main">
+						<div class="titleText">
+							<h3 class="title" style="font-weight:bold">
+								
+								<a href="https://www.motherboardpoint.com/threads/comparison-of-leon2-microblaze-and-openrisc-processors.92917/" class="PreviewTooltip" data-previewurl="threads/comparison-of-leon2-microblaze-and-openrisc-processors.92917/preview" title="">Comparison of LEON2, Microblaze and Openrisc processors</a>
+							</h3>
+						</div>
+					</div>
+
+						
+	
+				</li>
+			
+				
+	
+				<li id="thread-93784" class="discussionListItem visible  " data-author="3.14">
+					
+					<div class="listBlock main">
+						<div class="titleText">
+							<h3 class="title" style="font-weight:bold">
+								
+								<a href="https://www.motherboardpoint.com/threads/memory-map-and-acces-in-microblaze.93784/" class="PreviewTooltip" data-previewurl="threads/memory-map-and-acces-in-microblaze.93784/preview" title="">Memory map and acces in Microblaze</a>
+							</h3>
+						</div>
+					</div>
+
+						
+	
+				</li>
+			
+				
+	
+				<li id="thread-96358" class="discussionListItem visible  " data-author="AnnonymousFC4">
+					
+					<div class="listBlock main">
+						<div class="titleText">
+							<h3 class="title" style="font-weight:bold">
+								
+								<a href="https://www.motherboardpoint.com/threads/asking-feedback-on-microblaze-and-xilinx-tools-on-linux.96358/" class="PreviewTooltip" data-previewurl="threads/asking-feedback-on-microblaze-and-xilinx-tools-on-linux.96358/preview" title="">Asking feedback on Microblaze and Xilinx Tools on Linux.</a>
+							</h3>
+						</div>
+					</div>
+
+						
+	
+				</li>
+			
+				
+	
+				<li id="thread-97102" class="discussionListItem visible  " data-author="larwe">
+					
+					<div class="listBlock main">
+						<div class="titleText">
+							<h3 class="title" style="font-weight:bold">
+								
+								<a href="https://www.motherboardpoint.com/threads/microblaze-edk-spartan-3-and-webpack.97102/" class="PreviewTooltip" data-previewurl="threads/microblaze-edk-spartan-3-and-webpack.97102/preview" title="">Microblaze, EDK, Spartan 3 and Webpack</a>
+							</h3>
+						</div>
+					</div>
+
+						
+	
+				</li>
+			
+				
+	
+				<li id="thread-159989" class="discussionListItem visible  " data-author="Wisnia">
+					
+					<div class="listBlock main">
+						<div class="titleText">
+							<h3 class="title" style="font-weight:bold">
+								
+								<a href="https://www.motherboardpoint.com/threads/microblaze-opb-sdram-controller-and-uclinux.159989/" class="PreviewTooltip" data-previewurl="threads/microblaze-opb-sdram-controller-and-uclinux.159989/preview" title="">Microblaze OPB SDRAM controller and uClinux</a>
+							</h3>
+						</div>
+					</div>
+
+						
+	
+				</li>
+			
+				
+	
+				<li id="thread-165772" class="discussionListItem visible  " data-author="mfgunes">
+					
+					<div class="listBlock main">
+						<div class="titleText">
+							<h3 class="title" style="font-weight:bold">
+								
+								<a href="https://www.motherboardpoint.com/threads/writing-to-bram-and-reading-from-bram-with-microblaze.165772/" class="PreviewTooltip" data-previewurl="threads/writing-to-bram-and-reading-from-bram-with-microblaze.165772/preview" title="">Writing to bram and reading from bram with microblaze</a>
+							</h3>
+						</div>
+					</div>
+
+						
+	
+				</li>
+			
+				
+	
+				<li id="thread-179670" class="discussionListItem visible  " data-author="">
+					
+					<div class="listBlock main">
+						<div class="titleText">
+							<h3 class="title" style="font-weight:bold">
+								
+								<a href="https://www.motherboardpoint.com/threads/more-microblaze-firmware-blues-tool-chain-version-problem.179670/" class="PreviewTooltip" data-previewurl="threads/more-microblaze-firmware-blues-tool-chain-version-problem.179670/preview" title="">more microblaze firmware blues. tool chain version problem?</a>
+							</h3>
+						</div>
+					</div>
+
+						
+	
+				</li>
+			
+		</ol>
+	
+
+
+	<div id="PreviewTooltip">
+	<span class="arrow"><span></span></span>
+	
+	<div class="section">
+		<div class="primaryContent previewContent">
+			<span class="PreviewContents">Loading...</span>
+		</div>
+	</div>
+</div>
+</div>
+						
+						
+						
+						
+						
+					</div>
+				</div>
+				
+				<!-- sidebar -->
+				<aside>
+					
+<div class="sidebar">
+
+						
+						
+						
+
+<div class="section loginButton">		
+	<div class="secondaryContent">
+<h3>Welcome to Motherboard Point</h3>
+Welcome to <strong>Motherboard Point</strong> a friendly motherboard forum full of tech experts..
+<br><br>Please join our friendly community by clicking the button below -
+ it only takes a few seconds and is totally free. You'll be able to ask 
+questions about your motherboard or chat with the community and help 
+others.
+		<label id="SignupButton"><a href="https://www.motherboardpoint.com/register/" class="inner">Ask a Question</a></label>
+	</div>
+</div>
+
+
+<div class="section loginMember">		
+	<div class="secondaryContent">
+<form action="login/login" method="post" id="login">
+<h3>Member Login</h3>
+<div style="text-align:center">
+<input name="login" id="LoginControl" tabindex="201" style="width:150px; height:15px; margin-bottom:5px;" value="User Name" onfocus="if (this.value == 'User Name') this.value = '';" class="textCtrl" type="text"><br>
+<input name="password" id="ctrl_password" tabindex="203" style="width:150px; height:15px;" class="textCtrl" type="password"><br><br>
+<input value="Log in" tabindex="205" class="button primary" type="submit">
+<input name="remember" value="1" id="ctrl_remember" tabindex="204" type="checkbox"> Remember Me
+<input name="cookie_check" value="1" type="hidden">
+<input name="redirect" value="/threads/microblaze-and-spi-problem.96920/" type="hidden">
+<input name="_xfToken" value="" type="hidden">
+<div class="lostPassword" style="padding-top:10px"><a href="https://www.motherboardpoint.com/lost-password/" class="OverlayTrigger OverlayCloser" tabindex="106" rel="nofollow">Forgot your password?</a></div>
+</div>
+</form>
+
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="section ">
+		<div class="secondaryContent">
+			<h3>Advertisements</h3>
+<div style="text-align:center">
+<script async="" src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/adsbygoogle.js"></script>
+<ins class="adsbygoogle sidebar_adx" data-ad-client="ca-pub-3832671689629497" data-ad-slot="0117693739" data-adsbygoogle-status="done" style="width: auto; height: auto;">
+<!--No ad requested because of display:none on the adsbygoogle tag--></ins>
+<script>
+(adsbygoogle=window.adsbygoogle || []).push({});
+</script>
+</div>
+		</div>
+	</div>
+
+
+
+						
+
+<div class="section widget-single">
+	<div class="secondaryContent widget sidebar-widget WidgetFramework_WidgetRenderer_Threads" id="widget-11">
+		<h3>
+			
+				Latest Threads
+			
+		</h3>
+		<div class="avatarList">
+	<ul>
+		
+		
+
+		
+		
+		<li class="thread-259019 thread-node-54">
+	
+<span class="avatar"><img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/avatar_m.png" alt="wkevils" width="48" height="48"></span>
+
+
+	
+
+	<a href="https://www.motherboardpoint.com/threads/detecting-pci-devices-on-x11dai-n.259019/">
+		detecting PCI devices on X11DAi-N
+	</a>
+
+	<div class="userTitle">
+				
+wkevils posted <span class="DateTime" title="Nov 17, 2018 at 9:07 AM">Nov 17, 2018</span>
+
+			</div>
+	
+	
+</li>
+
+		
+		
+		<li class="thread-259018 thread-node-52">
+	
+<span class="avatar"><img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/avatar_m.png" alt="vdaniel12" width="48" height="48"></span>
+
+
+	
+
+	<a href="https://www.motherboardpoint.com/threads/error-powergear-cpp-line-420.259018/">
+		ERROR - PowerGear.cpp line 420
+	</a>
+
+	<div class="userTitle">
+				
+vdaniel12 posted <span class="DateTime" title="Nov 16, 2018 at 7:31 PM">Nov 16, 2018</span>
+
+			</div>
+	
+	
+</li>
+
+		
+		
+		<li class="thread-259017 thread-node-54">
+	
+<span class="avatar"><img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/avatar_m.png" alt="jnyreb" width="48" height="48"></span>
+
+
+	
+
+	<a href="https://www.motherboardpoint.com/threads/change-power-supply.259017/">
+		Change power supply?
+	</a>
+
+	<div class="userTitle">
+				
+jnyreb posted <span class="DateTime" title="Nov 13, 2018 at 3:01 PM">Nov 13, 2018</span>
+
+			</div>
+	
+	
+</li>
+
+		
+		
+		<li class="thread-259016 thread-node-13">
+	
+<span class="avatar"><img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/avatar_m.png" alt="bradbobak" width="48" height="48"></span>
+
+
+	
+
+	<a href="https://www.motherboardpoint.com/threads/x8dtl-if-mobo-about-nvme-drives.259016/">
+		x8dtl-if mobo about nvme drives
+	</a>
+
+	<div class="userTitle">
+				
+bradbobak posted <span class="DateTime" title="Oct 30, 2018 at 5:36 PM">Oct 30, 2018</span>
+
+			</div>
+	
+	
+</li>
+
+		
+		
+		<li class="thread-259015 thread-node-52">
+	
+<span class="avatar"><img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/avatar_m.png" alt="Reza_liaghat" width="48" height="48"></span>
+
+
+	
+
+	<a href="https://www.motherboardpoint.com/threads/nec-powermate-286-plus.259015/">
+		NEC Powermate 286 plus
+	</a>
+
+	<div class="userTitle">
+				
+Reza_liaghat posted <span class="DateTime" title="Oct 22, 2018 at 11:35 PM">Oct 22, 2018</span>
+
+			</div>
+	
+	
+</li>
+
+		
+		
+		<li class="thread-259014 thread-node-4">
+	
+<span class="avatar"><img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/avatar_m.png" alt="talksalot73" width="48" height="48"></span>
+
+
+	
+
+	<a href="https://www.motherboardpoint.com/threads/asus-prime-b450m-a-csm-am4-amd-b450-sata-6gb-s-usb-3-1-hdmi-micro-atx-amd-motherboard-question.259014/">
+		ASUS PRIME B450M-A/CSM AM4 AMD B450 SATA 6Gb/s USB 3.1 HDMI Micro ATX AMD Motherboard | Question
+	</a>
+
+	<div class="userTitle">
+				
+talksalot73 posted <span class="DateTime" title="Oct 13, 2018 at 12:43 AM">Oct 13, 2018</span>
+
+			</div>
+	
+	
+</li>
+
+		
+		
+		<li class="thread-259013 thread-node-52">
+	
+<span class="avatar"><img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/avatar_m.png" alt="Ze Baarda" width="48" height="48"></span>
+
+
+	
+
+	<a href="https://www.motherboardpoint.com/threads/asus-p5q-deluxe-s775-pci-question.259013/">
+		ASUS P5Q Deluxe s775 PCI question
+	</a>
+
+	<div class="userTitle">
+				
+Ze Baarda posted <span class="DateTime" title="Oct 11, 2018 at 7:45 AM">Oct 11, 2018</span>
+
+			</div>
+	
+	
+</li>
+
+		
+		
+		<li class="thread-259012 thread-node-19">
+	
+<span class="avatar"><img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/avatar_m.png" alt="Osmak70" width="48" height="48"></span>
+
+
+	
+
+	<a href="https://www.motherboardpoint.com/threads/boot-from-xp.259012/">
+		Boot from xp
+	</a>
+
+	<div class="userTitle">
+				
+Osmak70 posted <span class="DateTime" title="Oct 8, 2018 at 3:57 PM">Oct 8, 2018</span>
+
+			</div>
+	
+	
+</li>
+
+		
+		
+		<li class="thread-259011 thread-node-17">
+	
+<span class="avatar"><img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/avatar_m.png" alt="KarlOppenheimer" width="48" height="48"></span>
+
+
+	
+
+	<a href="https://www.motherboardpoint.com/threads/compaq-prosignia-200-doesnt-detect-ide-hard-drives-and-dvd-drives.259011/">
+		Compaq Prosignia 200 doesn't detect IDE Hard Drives and DVD Drives
+	</a>
+
+	<div class="userTitle">
+				
+KarlOppenheimer posted <span class="DateTime" title="Oct 3, 2018 at 11:31 AM">Oct 3, 2018</span>
+
+			</div>
+	
+	
+</li>
+
+		
+		
+		<li class="thread-259010 thread-node-13">
+	
+<span class="avatar"><img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/avatar_m.png" alt="Pavel" width="48" height="48"></span>
+
+
+	
+
+	<a href="https://www.motherboardpoint.com/threads/hdd-status-unspecified.259010/">
+		HDD Status  unspecified
+	</a>
+
+	<div class="userTitle">
+				
+Pavel posted <span class="DateTime" title="Oct 2, 2018 at 7:11 AM">Oct 2, 2018</span>
+
+			</div>
+	
+	
+</li>
+
+		
+
+		
+		
+	</ul>
+</div>
+
+<div id="PreviewTooltip">
+	<span class="arrow"><span></span></span>
+	
+	<div class="section">
+		<div class="primaryContent previewContent">
+			<span class="PreviewContents">Loading...</span>
+		</div>
+	</div>
+</div>
+	</div>
+</div>
+						
+						
+					</div>
+				</aside>
+			
+			
+						
+			<div class="breadBoxBottom">
+
+<nav>
+	
+
+	<fieldset class="breadcrumb" style="">
+		
+			
+		<div class="boardTitle"><strong>Motherboard Forums</strong></div>
+		
+		<span class="crumbs">
+			
+			
+			
+				<span class="crust selectedTabCrumb">
+					<a href="https://www.motherboardpoint.com/" class="crumb"><span>Forums</span></a>
+					<span class="arrow"><span>&gt;</span></span>
+				</span>
+			
+			
+			
+				
+					<span class="crust">
+						<a href="https://www.motherboardpoint.com/#archives.49" class="crumb"><span>Archives</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+					<span class="crust">
+						<a href="https://www.motherboardpoint.com/categories/archives.55/" class="crumb"><span>Archives</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+					<span class="crust">
+						<a href="https://www.motherboardpoint.com/forums/embedded.30/" class="crumb"><span>Embedded</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+			
+		</span>
+	</fieldset>
+</nav></div>
+			
+						
+			
+						
+		</div>
+	</div>
+</div>
+
+<header>
+	
+
+
+<div id="header">
+	<div id="logoBlock">
+	<div class="pageWidth">
+		<div class="pageContent">
+			
+			
+			<div id="logo"><a href="https://www.motherboardpoint.com/">
+				<span></span>
+				<img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/logo.png" alt="Motherboard Forums">
+			</a></div>
+			
+			<span class="helper"></span>
+		</div>
+	</div>
+</div>
+	
+
+<div id="navigation" class="pageWidth withSearch">
+	<div class="pageContent">
+		<nav>
+
+<div class="navTabs">
+	<ul class="publicTabs">
+	
+		<!-- home -->
+		
+		
+		
+		<!-- extra tabs: home -->
+		
+		
+		
+		<!-- forums -->
+		
+			<li class="navTab forums selected">
+			
+				<a href="https://www.motherboardpoint.com/" class="navLink">Forums</a>
+				<a href="https://www.motherboardpoint.com/" class="SplitCtrl" rel="Menu"></a>
+				
+				<div class="tabLinks forumsTabLinks">
+					<div class="primaryContent menuHeader">
+						<h3>Forums</h3>
+						<div class="muted">Quick Links</div>
+					</div>
+					<ul class="secondaryContent blockLinksList">
+					
+						
+						<li><a href="https://www.motherboardpoint.com/search/?type=post">Search Forums</a></li>
+						
+						<li><a href="https://www.motherboardpoint.com/find-new/posts" rel="nofollow">Recent Posts</a></li>
+					
+					</ul>
+				</div>
+			</li>
+		
+		
+		
+		<!-- extra tabs: middle -->
+		
+		
+		
+		<!-- members -->
+		
+			<li class="navTab members Popup PopupControl PopupClosed PopupContainerControl">
+			
+				<a href="https://www.motherboardpoint.com/members/" class="navLink">Members</a>
+				<a href="https://www.motherboardpoint.com/members/" class="SplitCtrl" rel="Menu"></a>
+				
+				
+			</li>
+						
+		
+		<!-- extra tabs: end -->
+		
+
+		<!-- responsive popup -->
+		<li class="navTab navigationHiddenTabs Popup PopupControl PopupClosed PopupContainerControl" style="display: none;">	
+						
+			<a rel="Menu" class="navLink NoPopupGadget"><span class="menuIcon">Menu</span></a>
+			
+			
+		</li>
+			
+		
+		<!-- no selection -->
+		
+		
+	</ul>
+	
+	
+
+
+<ul class="visitorTabs">
+<li class="navTab PopupClosed">
+<a href="https://www.motherboardpoint.com/register/" rel="nofollow" class="navLink" style="font-weight: bold; color: #d7edfc">Register</a>
+<a href="https://www.motherboardpoint.com/login/" rel="nofollow" class="navLink" style="font-weight: bold; color: #d7edfc">Log In</a>
+</li>
+</ul>
+
+
+
+</div>
+
+<span class="helper"></span>
+			
+		</nav>	
+	</div>
+</div>
+	
+
+<div id="searchBar" class="pageWidth">
+	
+	<span id="QuickSearchPlaceholder" title="Search">Search</span>
+	<fieldset id="QuickSearch">
+		<form action="search/search" method="post" class="formPopup">
+			
+			<div class="primaryControls">
+				<!-- block: primaryControls -->
+				<input name="keywords" class="textCtrl" placeholder="Search..." title="Enter your search and hit enter" id="QuickSearchQuery" type="search">				
+				<!-- end block: primaryControls -->
+			</div>
+			
+			<div class="secondaryControls">
+				<div class="controlsWrapper">
+				
+					<!-- block: secondaryControls -->
+					<dl class="ctrlUnit">
+						<dt></dt>
+						<dd><ul>
+							<li><label><input name="title_only" value="1" id="search_bar_title_only" class="AutoChecker" data-uncheck="#search_bar_thread" type="checkbox"> Search titles only</label></li>
+						</ul></dd>
+					</dl>
+				
+					<dl class="ctrlUnit">
+						<dt><label for="searchBar_users">Posted by Member:</label></dt>
+						<dd>
+							<input name="users" class="textCtrl AutoComplete" id="searchBar_users" autocomplete="off" type="text">
+							<p class="explain">Separate names with a comma.</p>
+						</dd>
+					</dl>
+				
+					<dl class="ctrlUnit">
+						<dt><label for="searchBar_date">Newer Than:</label></dt>
+						<dd><input name="date" class="textCtrl date" id="searchBar_date" data-orig-type="date" type="text"></dd>
+					</dl>
+					
+					
+					<dl class="ctrlUnit">
+						<dt></dt>
+						<dd><ul>
+								
+									<li><label title="Search only Microblaze and SPI problem"><input name="type[post][thread_id]" value="96920" id="search_bar_thread" class="AutoChecker" data-uncheck="#search_bar_title_only, #search_bar_nodes" type="checkbox"> Search this thread only</label></li>
+								
+									<li><label title="Search only Embedded"><input name="nodes[]" value="30" id="search_bar_nodes" class="Disabler AutoChecker" checked="checked" data-uncheck="#search_bar_thread" type="checkbox"> Search this forum only</label>
+	<ul id="search_bar_nodes_Disabler">
+		<li><label><input name="type[post][group_discussion]" value="1" id="search_bar_group_discussion" class="AutoChecker" data-uncheck="#search_bar_thread" type="checkbox"> Display results as threads</label></li>
+	</ul></li>
+								
+						</ul></dd>
+					</dl>
+					
+				</div>
+				<!-- end block: secondaryControls -->
+				
+				<dl class="ctrlUnit submitUnit">
+					<dt></dt>
+					<dd>
+						<input value="Search" class="button primary Tooltip" type="submit">
+						<div class="Popup" id="commonSearches">
+							<a rel="Menu" class="button NoPopupGadget Tooltip PopupControl" data-tipclass="flipped"><span class="arrowWidget"></span></a>
+							
+						</div>
+						<a href="https://www.motherboardpoint.com/search/" class="button moreOptions Tooltip">More...</a>
+					</dd>
+				</dl>
+				
+			</div>
+			
+			<input name="_xfToken" value="" type="hidden">
+		</form>		
+	</fieldset>
+	
+</div>
+</div>
+
+	
+	
+</header>
+
+</div>
+
+<footer>
+	
+
+
+<div class="footer">
+	<div class="pageWidth">
+		<div class="pageContent">
+			<div class="nrep_footer_block" style="max-width: 400px;">
+			<span class="nrep_footer_title">About Us</span>
+
+			<p class="nrep_footer_about_text">We're a forum dedicated to providing support and advice for motherboards, chipsets and drivers from all manufacturers. </p>
+			<p>
+			
+			<a href="https://www.motherboardpoint.com/help/privacy-policy" class="nrep_footer_horizontal_links">Privacy Policy</a>
+			<a href="https://www.motherboardpoint.com/help/terms" class="nrep_footer_horizontal_links">Terms and Rules</a>
+			<a href="https://www.motherboardpoint.com/help/" class="nrep_footer_horizontal_links" rel="help">Help</a></p>			
+			</div>		
+			
+			
+
+			<div class="nrep_footer_block" style="max-width: 200px; float:right">
+			<span class="nrep_footer_title">Connect With Us</span>
+	
+			<p>
+			
+			
+			
+			<a href="https://www.motherboardpoint.com/login/" class="nrep_footer_connect_links">Log-in <img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/register.png" style="vertical-align:middle" alt="Log in"></a>
+			<a href="https://www.motherboardpoint.com/register/" class="nrep_footer_connect_links">Register <img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/register.png" style="vertical-align:middle" alt="Register"></a>			
+			<a href="https://www.motherboardpoint.com/misc/contact" class="nrep_footer_connect_links">Contact Us <img src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/contact.png" style="vertical-align:middle" alt="Contact Us"></a>
+			</p>
+			</div>
+			
+
+				
+		</div>
+	</div>
+</div>
+
+<div class="footerLegal">
+	<div class="pageWidth">
+		<div class="pageContent">		
+			<div id="copyright"><a href="https://xenforo.com/" class="concealed">Forum software by XenForo™ <span>© 2010-2018 XenForo Ltd.</span></a> </div>
+			
+		
+			
+			
+			<span class="helper"></span>
+		</div>
+	</div>	
+</div>
+
+
+</footer>
+
+<div class="bottomFixer">
+	
+	
+
+</div>
+
+
+
+
+
+<script>
+			var _b = document.getElementsByTagName('base')[0], _bH = "https://www.motherboardpoint.com/";
+			if (_b && _b.href != _bH) _b.href = _bH;
+		</script><script src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/jquery.js"></script><script>if (!window.jQuery) { document.write('<scr'+'ipt type="text/javascript" src="js/jquery/jquery-1.11.0.min.js"><\/scr'+'ipt>'); }</script><script src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/xenforo.js"></script><script type="text/javascript" src="Microblaze%20and%20SPI%20problem%20%20%20Motherboard%20Forums_fichiers/23176X829335.js"></script><script>
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	ga('create', 'UA-2598339-37', 'auto');
+
+
+ga('set', 'dimension1', 'Guest');
+
+
+ga('set', 'dimension2', '0');
+
+
+ga('set', 'dimension3', 'Archive Thread');
+
+
+ga('set', 'dimension4', 'Embedded');
+
+ga('set', 'dimension5', '55');
+
+ga('send', 'pageview');
+
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "DiscussionForumPosting",
+  "@id": "https://www.motherboardpoint.com/threads/microblaze-and-spi-problem.96920/",
+  "headline": "Microblaze and SPI problem",
+  "articleSection": "Embedded",
+  "articleBody": "I got a strange problem with microblaze and SPI.\nI have based my program upon xspi_low_level_example.c\n\nWhat happens is that when I run it with XSP_LOOPBACK_OPTION, then the data  \nthat are being sent are read back. But when I remove the loopback, it only  \nreads 0xFF. The input pin (MISO) is floating (measures 0 when I look at \nthe pin with a oscilloscope). The same also happens when I select another  \npin for MISO. Basically it should have read 0x00 when the pin is low all\nthe time.\n\nI&#039;m using EDK 8.1 and the Spartan 3E starter kit\nDoes anyone have a suggestion of how I can get it to read data properly?\n\n\nThe important part of the code:\n-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n//Initialize SPI\nstatus = XSpi_Initialize(&amp;Spi, XPAR_SPI_ADCBOARD_DEVICE_ID);\nif (status == XST_SUCCESS) {xil_printf(&quot;SPI Initialize successful\r\n&quot;);}\nif (status == XST_DEVICE_NOT_FOUND) {xil_printf(&quot;SPI device was not  \nfound in the configuration\r\n&quot;);}\n\nstatus = XSpi_SelfTest(&amp;Spi);\nif (status == XST_SUCCESS) {xil_printf(&quot;SPI selftest successful\r\n&quot;);}\nif (status == XST_REGISTER_ERROR) {xil_printf(&quot;SPI register did not read  \nor write correctly\r\n&quot;);}\nif (status == XST_LOOPBACK_ERROR) {xil_printf(&quot;SPI loopback error \noccurred\r\n&quot;);}\n\n\n//Configure the SPI interface against the ADC.\nstatus = XSpi_SetOptions(&amp;Spi, XSP_MASTER_OPTION |  \nXSP_MANUAL_SSELECT_OPTION);\nif (status != XST_SUCCESS) {xil_printf(&quot;ERROR: Failed to set SPI  \nOptions&quot;);}\n\nstatus = XSpi_Start(&amp;Spi);\nif (status != XST_SUCCESS) {xil_printf(&quot;ERROR: Failed to start SPI&quot;);}\n\n\nwhile(1) {\nk=XGpio_DiscreteRead(&amp;gp_dip_in,CHANNEL);\nXGpio_DiscreteWrite(&amp;gp_led_out,CHANNEL,k);\n\n\n//CONFIG DATA\nXuint8 adc_config[2], bogus_data[2];\nbogus_data[0]=1;\nbogus_data[1]=2;\nadc_config[0]=k;\nadc_config[1]=k+1;\n\nspi_transfer(adc_config,bogus_data,2);\nxil_printf(&quot;ADC write byte %d (0x%X)\r\n&quot;,adc_config[0],adc_config[0]);\nxil_printf(&quot;ADC read byte %d (0x%X)\r\n&quot;,bogus_data[0],bogus_data[0]);\nxil_printf(&quot;ADC write byte %d (0x%X)\r\n&quot;,adc_config[1],adc_config[1]);\nxil_printf(&quot;ADC read byte %d (0x%X)\r\n&quot;,bogus_data[1],bogus_data[1]);\n}	\n}\n\n\nvoid spi_transfer(Xuint8 *send, Xuint8 *recv, Xuint8 num_bytes)\n{\nint NumBytesRcvd = 0;\nint NumBytesSent = 0;\n\nwhile(num_bytes-\-)\n{\nXSpi_mSendByte(XPAR_SPI_ADCBOARD_BASEADDR, *send++);\nNumBytesSent++;\n}\n\nXSpi_mEnable(XPAR_SPI_ADCBOARD_BASEADDR);\n\nwhile (!(XSpi_mGetStatusReg(XPAR_SPI_ADCBOARD_BASEADDR) &amp;  \nXSP_SR_TX_EMPTY_MASK));\n\n\nwhile ((XSpi_mGetStatusReg(XPAR_SPI_ADCBOARD_BASEADDR) &amp;  \nXSP_SR_RX_EMPTY_MASK) == 0)\n{\n*recv++ = XSpi_mRecvByte(XPAR_SPI_ADCBOARD_BASEADDR);\nNumBytesRcvd++;\n}\n\nif ((NumBytesSent != NumBytesRcvd) || (NumBytesSent == 0))\n{\nprint(&quot;SPI XFER ERROR&quot;);\n}\n}",
+  "datePublished": "2006-07-11",
+  "dateModified": "2006-07-11",
+  "image": "https://www.motherboardpoint.com/styles/default/custom/mobile_icon.png",
+  "author": {
+    "@type": "Person",
+    "name": "Grata"
+  },
+  "url": "https://www.motherboardpoint.com/threads/microblaze-and-spi-problem.96920/",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": "https://schema.org/ReplyAction",
+    "userInteractionCount": "0"
+  }
+}
+</script><script>
+
+
+jQuery.extend(true, XenForo,
+{
+	visitor: { user_id: 0 },
+	serverTimeInfo:
+	{
+		now: 1543402854,
+		today: 1543363200,
+		todayDow: 3
+	},
+	_lightBoxUniversal: "0",
+	_enableOverlays: "1",
+	_animationSpeedMultiplier: "1",
+	_overlayConfig:
+	{
+		top: "10%",
+		speed: 200,
+		closeSpeed: 100,
+		mask:
+		{
+			color: "rgb(255, 255, 255)",
+			opacity: "0.6",
+			loadSpeed: 200,
+			closeSpeed: 100
+		}
+	},
+	_ignoredUsers: [],
+	_loadedScripts: {"thread_view":true,"message":true,"bb_code":true,"message_user_info":true,"similar_threads":true,"discussion_list":true,"wf_default":true,"notices":true,"panel_scroller":true},
+	_cookieConfig: { path: "/", domain: "", prefix: "xf_"},
+	_csrfToken: "",
+	_csrfRefreshUrl: "login/csrf-token-refresh",
+	_jsVersion: "454f7760",
+	_noRtnProtect: false,
+	_noSocialLogin: false
+});
+jQuery.extend(XenForo.phrases,
+{
+	cancel: "Cancel",
+
+	a_moment_ago:    "A moment ago",
+	one_minute_ago:  "1 minute ago",
+	x_minutes_ago:   "%minutes% minutes ago",
+	today_at_x:      "Today at %time%",
+	yesterday_at_x:  "Yesterday at %time%",
+	day_x_at_time_y: "%day% at %time%",
+
+	day0: "Sunday",
+	day1: "Monday",
+	day2: "Tuesday",
+	day3: "Wednesday",
+	day4: "Thursday",
+	day5: "Friday",
+	day6: "Saturday",
+
+	_months: "January,February,March,April,May,June,July,August,September,October,November,December",
+	_daysShort: "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+
+	following_error_occurred: "The following error occurred",
+	server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+	logging_in: "Logging in",
+	click_image_show_full_size_version: "Click this image to show the full-size version.",
+	show_hidden_content_by_x: "Show hidden content by {names}"
+});
+
+// Facebook Javascript SDK
+XenForo.Facebook.appId = "";
+XenForo.Facebook.forceInit = false;
+
+
+</script>
+<div style="display: none; position: absolute;" id="calroot"><div id="calhead"><a id="calprev">←</a><div id="caltitle"></div><a id="calnext">→</a></div><div id="calbody"><div id="caldays"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div><div id="calweeks"></div></div></div><div class="Menu JsOnly tabMenu membersTabLinks" id="XenForoUniq0">
+					<div class="primaryContent menuHeader">
+						<h3>Members</h3>
+						<div class="muted">Quick Links</div>
+					</div>
+					<ul class="secondaryContent blockLinksList">
+					
+						<li><a href="https://www.motherboardpoint.com/members/">Notable Members</a></li>
+						
+						<li><a href="https://www.motherboardpoint.com/online/" rel="nofollow">Current Visitors</a></li>
+						<li><a href="https://www.motherboardpoint.com/recent-activity/">Recent Activity</a></li>
+						
+					
+					</ul>
+				</div><div class="Menu JsOnly blockLinksList primaryContent" id="NavigationHiddenMenu"></div><div class="Menu" id="XenForoUniq1">
+								<div class="primaryContent menuHeader">
+									<h3>Useful Searches</h3>
+								</div>
+								<ul class="secondaryContent blockLinksList">
+									<!-- block: useful_searches -->
+									<li><a href="https://www.motherboardpoint.com/find-new/posts?recent=1" rel="nofollow">Recent Posts</a></li>
+									
+									<!-- end block: useful_searches -->
+								</ul>
+							</div><iframe style="display: none;" width="0" height="0"></iframe><iframe id="google_osd_static_frame_979261169029" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body></html>

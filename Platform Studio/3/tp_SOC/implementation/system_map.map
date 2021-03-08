@@ -1,0 +1,180 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Map Application Log File for Design 'system'
+
+Design Information
+------------------
+Command Line   : map -o system_map.ncd -pr b -ol high -timing -detail system.ngd
+system.pcf 
+Target Device  : xc3s500e
+Target Package : fg320
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Thu Nov 22 10:03:49 2018
+
+Mapping design into LUTs...
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<0> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<0> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<1> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<1> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<2> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<2> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<3> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<3> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<4> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<4> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<5> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<5> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<6> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<6> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<7> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<7> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<8> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<8> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<9> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<9> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<10> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<10> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<11> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<11> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<12> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<12> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<13> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<13> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<14> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<14> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<15> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<15> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<16> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<16> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<17> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<17> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<18> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<18> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<19> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<19> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<20> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<20> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<21> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<21> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<22> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<22> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<23> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<23> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<24> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<24> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<25> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<25> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<26> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<26> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<27> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<27> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<28> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<28> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<29> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<29> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<30> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<30> has been removed.
+WARNING:MapLib:701 - Signal microblaze_0_INTERRUPT_ADDRESS_pin<31> connected to
+   top level port microblaze_0_INTERRUPT_ADDRESS_pin<31> has been removed.
+Writing file system_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 26 secs 
+Total CPU  time at the beginning of Placer: 6 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:58bce110) REAL time: 28 secs 
+
+Phase 2.7  Design Feasibility Check
+INFO:Place:834 - Only a subset of IOs are locked. Out of 10 IOs, 8 are locked
+   and 2 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+Phase 2.7  Design Feasibility Check (Checksum:58bce110) REAL time: 28 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:58bce110) REAL time: 28 secs 
+
+Phase 4.2  Initial Clock and IO Placement
+......
+Phase 4.2  Initial Clock and IO Placement (Checksum:4ddd6600) REAL time: 30 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:4ddd6600) REAL time: 30 secs 
+
+Phase 6.36  Local Placement Optimization
+Phase 6.36  Local Placement Optimization (Checksum:4ddd6600) REAL time: 30 secs 
+
+Phase 7.3  Local Placement Optimization
+......
+Phase 7.3  Local Placement Optimization (Checksum:16a7ed0e) REAL time: 30 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:16a7ed0e) REAL time: 30 secs 
+
+Phase 9.8  Global Placement
+........................
+...........................................
+....
+...................................................................
+................
+................
+Phase 9.8  Global Placement (Checksum:e04eae04) REAL time: 41 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:e04eae04) REAL time: 41 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:fdcacc50) REAL time: 56 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:fdcacc50) REAL time: 57 secs 
+
+Total REAL time to Placer completion: 57 secs 
+Total CPU  time to Placer completion: 35 secs 
+Running post-placement packing...
+WARNING:PhysDesignRules:367 - The signal <data_ctrl_BRAM_PORT_BRAM_Addr<31>> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <data_ctrl_BRAM_PORT_BRAM_Addr<30>> is
+   incomplete. The signal does not drive any load pins in the design.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   34
+Logic Utilization:
+  Number of Slice Flip Flops:         1,133 out of   9,312   12%
+  Number of 4 input LUTs:             2,130 out of   9,312   22%
+Logic Distribution:
+  Number of occupied Slices:          1,550 out of   4,656   33%
+    Number of Slices containing only related logic:   1,550 out of   1,550 100%
+    Number of Slices containing unrelated logic:          0 out of   1,550   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       2,200 out of   9,312   23%
+    Number used as logic:             1,663
+    Number used as a route-thru:         70
+    Number used for Dual Port RAMs:     384
+      (Two LUTs used per Dual Port RAM)
+    Number used as Shift registers:      83
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 20 out of     232    8%
+    IOB Flip Flops:                       8
+  Number of RAMB16s:                      8 out of      20   40%
+  Number of BUFGMUXs:                     1 out of      24    4%
+  Number of DCMs:                         1 out of       4   25%
+  Number of MULT18X18SIOs:                3 out of      20   15%
+
+Average Fanout of Non-Clock Nets:                4.03
+
+Peak Memory Usage:  428 MB
+Total REAL time to MAP completion:  1 mins 1 secs 
+Total CPU time to MAP completion:   36 secs 
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.

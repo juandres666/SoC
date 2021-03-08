@@ -1,0 +1,12 @@
+D:\tp_SOC\implementation\system.ngc 1541584773
+D:/tp_SOC/implementation/system_microblaze_0_wrapper.ngc 1541584641
+D:/tp_SOC/implementation/system_data_lmb_wrapper.ngc 1541584646
+D:/tp_SOC/implementation/system_inst_lmb_wrapper.ngc 1541584650
+D:/tp_SOC/implementation/system_plb_v46_0_wrapper.ngc 1541584590
+D:/tp_SOC/implementation/system_bram_block_0_wrapper.ngc 1541584596
+D:/tp_SOC/implementation/system_data_ctrl_wrapper.ngc 1541584603
+D:/tp_SOC/implementation/system_inst_ctrl_wrapper.ngc 1541584609
+D:/tp_SOC/implementation/system_xps_gpio_0_wrapper.ngc 1541584623
+D:/tp_SOC/implementation/system_clock_generator_0_wrapper.ngc 1541584654
+D:/tp_SOC/implementation/system_reset_0_wrapper.ngc 1541584635
+OK

@@ -1,0 +1,6 @@
+vhdtdtfi -lib work signed_unsigned_converter.vhd -prj test_ADC -o signed_unsigned_converter.spl -module signed_unsigned_converter -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e signed_unsigned_converter.spl D:/stage/test_ADC/signed_unsigned_converter.sym 
+vhdtdtfi -lib work signed_unsigned_converter.vhd -prj test_ADC -o signed_unsigned_converter.spl -module signed_unsigned_converter -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e signed_unsigned_converter.spl D:/stage/test_ADC/signed_unsigned_converter.sym 
+vhdtdtfi -lib work signed_unsigned_converter.vhd -prj test_ADC -o signed_unsigned_converter.spl -module signed_unsigned_converter -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e signed_unsigned_converter.spl D:/stage/test_ADC/signed_unsigned_converter.sym 

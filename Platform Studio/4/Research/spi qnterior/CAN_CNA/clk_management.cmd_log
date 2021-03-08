@@ -1,0 +1,8 @@
+vhdtdtfi -lib work clk_management.vhd -prj test_ADC -o clk_management.spl -module clk_management -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e clk_management.spl D:/stage/test_ADC/clk_management.sym 
+xaw2spl {-intstyle ise} D:/stage/test_ADC/ipcore_dir/clk_management.xaw 
+spl2sym -intstyle ise -family spartan3e clk_management.spl D:/stage/test_ADC/clk_management.sym 
+xaw2spl {-intstyle ise} D:/stage/test_ADC/ipcore_dir/clk_management.xaw 
+spl2sym -intstyle ise -family spartan3e clk_management.spl D:/stage/test_ADC/clk_management.sym 
+xaw2spl {-intstyle ise} D:/stage/test_ADC/ipcore_dir/clk_management.xaw 
+spl2sym -intstyle ise -family spartan3e clk_management.spl D:/stage/test_ADC/clk_management.sym 

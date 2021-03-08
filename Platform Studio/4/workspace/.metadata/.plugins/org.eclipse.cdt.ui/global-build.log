@@ -1,0 +1,376 @@
+16:59:45 **** Build of project mtr_bsp ****
+make -k all 
+libgen -hw ../tp_SOC_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../tp_SOC_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-pattern-compare -mcpu=v8.50.c  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-pattern-compare -mcpu=v8.50.c  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling bram"
+"Compiling gpio"
+"Compiling spi"
+"Compiling tmrctr"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+17:01:04 **** Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+'Finished building: ../mtr_code.c'
+' '
+'Building target: mtr.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mtr_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mtr.elf"  ./mtr_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [mtr.elf] Erreur 1
+17:01:29 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:30:2: warning: implicit declaration of function 'Xspi_mIntrGlobalDisable' [-Wimplicit-function-declaration]
+../mtr_code.c:36:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:36:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:35:15: warning: unused variable 'adc' [-Wunused-variable]
+'Finished building: ../mtr_code.c'
+' '
+'Building target: mtr.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mtr_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mtr.elf"  ./mtr_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./mtr_code.o: In function `main':
+F:\4\workspace\mtr\Debug/../mtr_code.c:30: undefined reference to `Xspi_mIntrGlobalDisable'
+collect2: ld returned 1 exit status
+make: *** [mtr.elf] Erreur 1
+17:01:52 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c:19:19: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [mtr_code.o] Erreur 1
+17:04:04 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:29:2: warning: implicit declaration of function 'Xspi_mIntrGlobalDisable' [-Wimplicit-function-declaration]
+../mtr_code.c:35:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:35:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:34:15: warning: unused variable 'adc' [-Wunused-variable]
+'Finished building: ../mtr_code.c'
+' '
+'Building target: mtr.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mtr_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mtr.elf"  ./mtr_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./mtr_code.o: In function `main':
+F:\4\workspace\mtr\Debug/../mtr_code.c:29: undefined reference to `Xspi_mIntrGlobalDisable'
+collect2: ld returned 1 exit status
+make: *** [mtr.elf] Erreur 1
+17:04:36 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c:19:19: fatal error: xintc.h: No such file or directory
+compilation terminated.
+make: *** [mtr_code.o] Erreur 1
+17:05:22 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:35:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:35:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:34:15: warning: unused variable 'adc' [-Wunused-variable]
+'Finished building: ../mtr_code.c'
+' '
+'Building target: mtr.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mtr_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mtr.elf"  ./mtr_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mtr.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtr.elf  |tee "mtr.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2770	    300	   2098	   5168	   1430	mtr.elf
+'Finished building: mtr.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck mtr.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "mtr.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+mtr.elf 
+
+ELF file	: mtr.elf
+elfcheck passed.
+'Finished building: mtr.elf.elfcheck'
+' '
+17:20:53 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:29:2: warning: implicit declaration of function 'Xspi_mIntrGlobalDisable' [-Wimplicit-function-declaration]
+../mtr_code.c:31:2: error: expected ';' before 'XSpi_Initialize'
+../mtr_code.c:33:19: error: 'mySPI' undeclared (first use in this function)
+../mtr_code.c:33:19: note: each undeclared identifier is reported only once for each function it appears in
+../mtr_code.c:41:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:41:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:40:15: warning: unused variable 'adc' [-Wunused-variable]
+make: *** [mtr_code.o] Erreur 1
+17:21:47 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:29:2: warning: implicit declaration of function 'Xspi_mIntrGlobalDisable' [-Wimplicit-function-declaration]
+../mtr_code.c:41:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:41:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:40:15: warning: unused variable 'adc' [-Wunused-variable]
+'Finished building: ../mtr_code.c'
+' '
+'Building target: mtr.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mtr_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mtr.elf"  ./mtr_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./mtr_code.o: In function `main':
+F:\4\workspace\mtr\Debug/../mtr_code.c:29: undefined reference to `Xspi_mIntrGlobalDisable'
+collect2: ld returned 1 exit status
+make: *** [mtr.elf] Erreur 1
+17:26:17 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:29:2: warning: implicit declaration of function 'Xspi_mIntrGlobalDisable' [-Wimplicit-function-declaration]
+../mtr_code.c:36:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:36:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:35:15: warning: unused variable 'adc' [-Wunused-variable]
+'Finished building: ../mtr_code.c'
+' '
+'Building target: mtr.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mtr_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mtr.elf"  ./mtr_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./mtr_code.o: In function `main':
+F:\4\workspace\mtr\Debug/../mtr_code.c:29: undefined reference to `Xspi_mIntrGlobalDisable'
+collect2: ld returned 1 exit status
+make: *** [mtr.elf] Erreur 1
+17:26:35 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:36:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:36:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:35:15: warning: unused variable 'adc' [-Wunused-variable]
+'Finished building: ../mtr_code.c'
+' '
+'Building target: mtr.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mtr_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mtr.elf"  ./mtr_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mtr.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mtr.elf  |tee "mtr.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3664	    300	   2092	   6056	   17a8	mtr.elf
+'Finished building: mtr.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck mtr.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "mtr.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+mtr.elf 
+
+ELF file	: mtr.elf
+elfcheck passed.
+'Finished building: mtr.elf.elfcheck'
+' '
+18:02:48 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:44:21: error: 'InstanciaTimer' undeclared (first use in this function)
+../mtr_code.c:44:21: note: each undeclared identifier is reported only once for each function it appears in
+../mtr_code.c:44:36: error: 'XPAR_XPS_TIMER_0' undeclared (first use in this function)
+../mtr_code.c:44:53: error: expected ')' before '_DEVICE_ID'
+../mtr_code.c:47:2: warning: implicit declaration of function 'XTmrCtr_mSetLoadReg' [-Wimplicit-function-declaration]
+../mtr_code.c:51:2: warning: implicit declaration of function 'XTmrCtr_mWriteReg' [-Wimplicit-function-declaration]
+../mtr_code.c:51:53: error: expected ')' before numeric constant
+../mtr_code.c:53:53: error: expected ')' before numeric constant
+../mtr_code.c:57:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:57:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:56:15: warning: unused variable 'adc' [-Wunused-variable]
+make: *** [mtr_code.o] Erreur 1
+18:03:26 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:44:21: error: 'InstanciaTimer' undeclared (first use in this function)
+../mtr_code.c:44:21: note: each undeclared identifier is reported only once for each function it appears in
+../mtr_code.c:44:36: error: 'XPAR_XPS_TIMER_0' undeclared (first use in this function)
+../mtr_code.c:44:53: error: expected ')' before '_DEVICE_ID'
+../mtr_code.c:47:2: warning: implicit declaration of function 'XTmrCtr_mSetLoadReg' [-Wimplicit-function-declaration]
+../mtr_code.c:51:2: warning: implicit declaration of function 'XTmrCtr_mWriteReg' [-Wimplicit-function-declaration]
+../mtr_code.c:57:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:57:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:56:15: warning: unused variable 'adc' [-Wunused-variable]
+make: *** [mtr_code.o] Erreur 1
+18:05:08 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:51:35: error: 'XPAR_XPS_TIMER_0' undeclared (first use in this function)
+../mtr_code.c:51:35: note: each undeclared identifier is reported only once for each function it appears in
+../mtr_code.c:51:52: error: expected ')' before '_DEVICE_ID'
+../mtr_code.c:54:2: warning: implicit declaration of function 'XTmrCtr_mSetLoadReg' [-Wimplicit-function-declaration]
+../mtr_code.c:58:2: warning: implicit declaration of function 'XTmrCtr_mWriteReg' [-Wimplicit-function-declaration]
+../mtr_code.c:64:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:64:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:63:15: warning: unused variable 'adc' [-Wunused-variable]
+make: *** [mtr_code.o] Erreur 1
+18:07:32 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:52:2: warning: implicit declaration of function 'XTmrCtr_mSetLoadReg' [-Wimplicit-function-declaration]
+../mtr_code.c:56:2: warning: implicit declaration of function 'XTmrCtr_mWriteReg' [-Wimplicit-function-declaration]
+../mtr_code.c:62:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:62:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:61:15: warning: unused variable 'adc' [-Wunused-variable]
+'Finished building: ../mtr_code.c'
+' '
+'Building target: mtr.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mtr_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mtr.elf"  ./mtr_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./mtr_code.o: In function `main':
+F:\4\workspace\mtr\Debug/../mtr_code.c:52: undefined reference to `XTmrCtr_mSetLoadReg'
+F:\4\workspace\mtr\Debug/../mtr_code.c:54: undefined reference to `XTmrCtr_mSetLoadReg'
+F:\4\workspace\mtr\Debug/../mtr_code.c:56: undefined reference to `XTmrCtr_mWriteReg'
+F:\4\workspace\mtr\Debug/../mtr_code.c:58: undefined reference to `XTmrCtr_mWriteReg'
+collect2: ld returned 1 exit status
+make: *** [mtr.elf] Erreur 1
+18:09:53 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:51:2: warning: implicit declaration of function 'XTmrCtr_mSetLoadReg' [-Wimplicit-function-declaration]
+../mtr_code.c:55:2: warning: implicit declaration of function 'XTmrCtr_mWriteReg' [-Wimplicit-function-declaration]
+../mtr_code.c:80:3: error: 'data' undeclared (first use in this function)
+../mtr_code.c:80:3: note: each undeclared identifier is reported only once for each function it appears in
+../mtr_code.c:70:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:70:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:69:15: warning: unused variable 'adc' [-Wunused-variable]
+make: *** [mtr_code.o] Erreur 1
+18:10:42 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:51:2: warning: implicit declaration of function 'XTmrCtr_mSetLoadReg' [-Wimplicit-function-declaration]
+../mtr_code.c:55:2: warning: implicit declaration of function 'XTmrCtr_mWriteReg' [-Wimplicit-function-declaration]
+../mtr_code.c:70:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:70:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:69:15: warning: unused variable 'adc' [-Wunused-variable]
+'Finished building: ../mtr_code.c'
+' '
+'Building target: mtr.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mtr_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mtr.elf"  ./mtr_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./mtr_code.o: In function `main':
+F:\4\workspace\mtr\Debug/../mtr_code.c:51: undefined reference to `XTmrCtr_mSetLoadReg'
+F:\4\workspace\mtr\Debug/../mtr_code.c:53: undefined reference to `XTmrCtr_mSetLoadReg'
+F:\4\workspace\mtr\Debug/../mtr_code.c:55: undefined reference to `XTmrCtr_mWriteReg'
+F:\4\workspace\mtr\Debug/../mtr_code.c:57: undefined reference to `XTmrCtr_mWriteReg'
+collect2: ld returned 1 exit status
+make: *** [mtr.elf] Erreur 1
+18:12:18 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:50:2: warning: implicit declaration of function 'XTmrCtr_mSetLoadReg' [-Wimplicit-function-declaration]
+../mtr_code.c:51:2: warning: implicit declaration of function 'XTmrCtr_mWriteReg' [-Wimplicit-function-declaration]
+../mtr_code.c:65:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:65:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:64:15: warning: unused variable 'adc' [-Wunused-variable]
+'Finished building: ../mtr_code.c'
+' '
+'Building target: mtr.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mtr_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mtr.elf"  ./mtr_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./mtr_code.o: In function `main':
+F:\4\workspace\mtr\Debug/../mtr_code.c:50: undefined reference to `XTmrCtr_mSetLoadReg'
+F:\4\workspace\mtr\Debug/../mtr_code.c:51: undefined reference to `XTmrCtr_mWriteReg'
+collect2: ld returned 1 exit status
+make: *** [mtr.elf] Erreur 1
+18:12:56 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:50:2: warning: implicit declaration of function 'XTmrCtr_mSetLoadReg' [-Wimplicit-function-declaration]
+../mtr_code.c:51:2: warning: implicit declaration of function 'XTmrCtr_mWriteReg' [-Wimplicit-function-declaration]
+../mtr_code.c:62:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:62:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:61:15: warning: unused variable 'adc' [-Wunused-variable]
+'Finished building: ../mtr_code.c'
+' '
+'Building target: mtr.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mtr_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mtr.elf"  ./mtr_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./mtr_code.o: In function `main':
+F:\4\workspace\mtr\Debug/../mtr_code.c:50: undefined reference to `XTmrCtr_mSetLoadReg'
+F:\4\workspace\mtr\Debug/../mtr_code.c:51: undefined reference to `XTmrCtr_mWriteReg'
+collect2: ld returned 1 exit status
+make: *** [mtr.elf] Erreur 1

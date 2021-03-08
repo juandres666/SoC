@@ -1,0 +1,36 @@
+12:40:03 **** Auto Build of configuration Debug for project LED_Shift ****
+make all 
+'Building file: ../main_program.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../LED_Shift_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main_program.d" -MT"main_program.d" -o "main_program.o" "../main_program.c"
+../main_program.c:7:25: warning: extra tokens at end of #include directive [enabled by default]
+../main_program.c:8:19: warning: extra tokens at end of #include directive [enabled by default]
+'Finished building: ../main_program.c'
+' '
+'Building target: LED_Shift.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../LED_Shift_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "LED_Shift.elf"  ./main_program.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: LED_Shift.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size LED_Shift.elf  |tee "LED_Shift.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1826	    268	   2090	   4184	   1058	LED_Shift.elf
+'Finished building: LED_Shift.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck LED_Shift.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "LED_Shift.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+LED_Shift.elf 
+
+ELF file	: LED_Shift.elf
+elfcheck passed.
+'Finished building: LED_Shift.elf.elfcheck'
+' '
+
+12:40:17 Build Finished (took 13s.506ms)
+

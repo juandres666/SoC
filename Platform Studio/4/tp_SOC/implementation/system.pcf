@@ -1,0 +1,18 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Dec 03 16:48:58 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clock_generator_0_RST_pin" LOCATE = SITE "K17" LEVEL 1;
+COMP "xps_gpio_0_GPIO_IO_O_pin<0>" LOCATE = SITE "P7" LEVEL 1;
+COMP "xps_gpio_0_GPIO_IO_O_pin<1>" LOCATE = SITE "P11" LEVEL 1;
+COMP "xps_spi_0_MISO_pin" LOCATE = SITE "N10" LEVEL 1;
+COMP "xps_spi_0_MOSI_pin" LOCATE = SITE "T4" LEVEL 1;
+COMP "clock_generator_0_CLKIN_pin" LOCATE = SITE "C9" LEVEL 1;
+COMP "xps_timer_0_GenerateOut0_pin" LOCATE = SITE "C7" LEVEL 1;
+COMP "xps_timer_0_GenerateOut1_pin" LOCATE = SITE "F8" LEVEL 1;
+COMP "xps_spi_0_SCK_pin" LOCATE = SITE "U16" LEVEL 1;
+COMP "xps_timer_0_PWM0_pin" LOCATE = SITE "D7" LEVEL 1;
+COMP "xps_spi_0_SS_pin" LOCATE = SITE "N7" LEVEL 1;
+SCHEMATIC END;
+

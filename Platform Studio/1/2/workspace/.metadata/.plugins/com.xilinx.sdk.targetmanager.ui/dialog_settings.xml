@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="system_bd.bmm" key="tp_SOC_hw_platform-bmmFile"/>
+	<item value="D:\workspace\led_bliking\Debug\led_bliking.elf" key="tp_SOC_hw_platform-microblaze_0-initElf"/>
+	<item value="system.bit" key="tp_SOC_hw_platform-bitFile"/>
+</section>

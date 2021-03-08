@@ -1,0 +1,16 @@
+14:20:34 **** Incremental Build of configuration Debug for project LED_Shift ****
+make all 
+'Building file: ../main_program.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main_program.o" -I../../LED_Shift_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main_program.d" -MT"main_program.o" -o "main_program.o" "../main_program.c"
+../main_program.c:7:25: warning: extra tokens at end of #include directive
+ #include "xparameters.h";
+                         ^
+../main_program.c:7:10: fatal error: xparameters.h: No such file or directory
+ #include "xparameters.h";
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [main_program.o] Erreur 1
+
+14:20:37 Build Finished (took 3s.30ms)
+

@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=D:\stage\test_ADC\impact.xsl
+OUTFILE=D:\stage\test_ADC\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=D:\stage\test_ADC
+LICENSE=iMPACT
+USER_INFO=iMPACT

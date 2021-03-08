@@ -1,0 +1,15 @@
+F:\4\tp_SOC\implementation\system.ngc 1543851812
+F:/4/tp_SOC/implementation/system_microblaze_0_wrapper.ngc 1543851638
+F:/4/tp_SOC/implementation/system_data_lmb_wrapper.ngc 1543851640
+F:/4/tp_SOC/implementation/system_inst_lmb_wrapper.ngc 1543851642
+F:/4/tp_SOC/implementation/system_plb_v46_0_wrapper.ngc 1543851644
+F:/4/tp_SOC/implementation/system_bram_block_0_wrapper.ngc 1543851646
+F:/4/tp_SOC/implementation/system_data_ctrl_wrapper.ngc 1543851648
+F:/4/tp_SOC/implementation/system_inst_ctrl_wrapper.ngc 1543851652
+F:/4/tp_SOC/implementation/system_clock_generator_0_wrapper.ngc 1543851718
+F:/4/tp_SOC/implementation/system_reset_0_wrapper.ngc 1543851654
+F:/4/tp_SOC/implementation/system_xps_gpio_0_wrapper.ngc 1543851658
+F:/4/tp_SOC/implementation/system_xps_gpio_1_wrapper.ngc 1543851658
+F:/4/tp_SOC/implementation/system_xps_spi_0_wrapper.ngc 1543851662
+F:/4/tp_SOC/implementation/system_xps_timer_0_wrapper.ngc 1543851664
+OK

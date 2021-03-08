@@ -1,0 +1,115 @@
+
+ PARAMETER VERSION = 2.1.0
+
+
+ PORT clock_generator_0_CLKIN_pin = net_clock_generator_0_CLKIN_pin, DIR = I, SIGIS = CLK
+ PORT clock_generator_0_RST_pin = net_clock_generator_0_RST_pin, DIR = I, SIGIS = RST
+ PORT xps_gpio_0_GPIO_IO_O_pin = xps_gpio_0_GPIO_IO_O, DIR = O, VEC = [0:7]
+ PORT xps_gpio_1_GPIO_IO_I_pin = net_xps_gpio_1_GPIO_IO_I_pin, DIR = I, VEC = [0:7]
+
+
+BEGIN microblaze
+ PARAMETER INSTANCE = microblaze_0
+ PARAMETER HW_VER = 8.50.c
+ BUS_INTERFACE DLMB = inst_lmb
+ BUS_INTERFACE ILMB = data_lmb
+ BUS_INTERFACE DPLB = plb_v46_0
+ PORT MB_RESET = reset_0_MB_Reset
+END
+
+BEGIN lmb_v10
+ PARAMETER INSTANCE = data_lmb
+ PARAMETER HW_VER = 2.00.b
+ PORT SYS_Rst = reset_0_Bus_Struct_Reset
+ PORT LMB_Clk = clock_generator_0_CLKOUT0
+END
+
+BEGIN lmb_v10
+ PARAMETER INSTANCE = inst_lmb
+ PARAMETER HW_VER = 2.00.b
+ PORT SYS_Rst = reset_0_Bus_Struct_Reset
+ PORT LMB_Clk = clock_generator_0_CLKOUT0
+END
+
+BEGIN plb_v46
+ PARAMETER INSTANCE = plb_v46_0
+ PARAMETER HW_VER = 1.05.a
+ PORT SYS_Rst = reset_0_Bus_Struct_Reset
+ PORT PLB_Clk = clock_generator_0_CLKOUT0
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = bram_block_0
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE PORTB = data_ctrl_BRAM_PORT
+ BUS_INTERFACE PORTA = inst_ctrl_BRAM_PORT
+END
+
+BEGIN lmb_bram_if_cntlr
+ PARAMETER INSTANCE = data_ctrl
+ PARAMETER HW_VER = 3.10.c
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x00003fff
+ BUS_INTERFACE SLMB = inst_lmb
+ BUS_INTERFACE BRAM_PORT = data_ctrl_BRAM_PORT
+END
+
+BEGIN lmb_bram_if_cntlr
+ PARAMETER INSTANCE = inst_ctrl
+ PARAMETER HW_VER = 3.10.c
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x00003fff
+ BUS_INTERFACE SLMB = data_lmb
+ BUS_INTERFACE BRAM_PORT = inst_ctrl_BRAM_PORT
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = xps_gpio_0
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_GPIO_WIDTH = 8
+ PARAMETER C_BASEADDR = 0x81420000
+ PARAMETER C_HIGHADDR = 0x8142ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT GPIO_IO_O = xps_gpio_0_GPIO_IO_O
+END
+
+BEGIN clock_generator
+ PARAMETER INSTANCE = clock_generator_0
+ PARAMETER HW_VER = 4.03.a
+ PARAMETER C_CLKIN_FREQ = 50000000
+ PARAMETER C_CLKOUT0_FREQ = 50000000
+ PORT CLKIN = net_clock_generator_0_CLKIN_pin
+ PORT RST = net_clock_generator_0_RST_pin
+ PORT LOCKED = clock_generator_0_LOCKED
+ PORT CLKOUT0 = clock_generator_0_CLKOUT0
+END
+
+BEGIN proc_sys_reset
+ PARAMETER INSTANCE = reset_0
+ PARAMETER HW_VER = 3.00.a
+ PORT Dcm_locked = clock_generator_0_LOCKED
+ PORT Slowest_sync_clk = clock_generator_0_CLKOUT0
+ PORT MB_Reset = reset_0_MB_Reset
+ PORT Bus_Struct_Reset = reset_0_Bus_Struct_Reset
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = xps_gpio_1
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_GPIO_WIDTH = 8
+ PARAMETER C_BASEADDR = 0x81400000
+ PARAMETER C_HIGHADDR = 0x8140ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT GPIO_IO_I = net_xps_gpio_1_GPIO_IO_I_pin
+END
+
+BEGIN xps_deltasigma_adc
+ PARAMETER INSTANCE = xps_deltasigma_adc_0
+ PARAMETER HW_VER = 1.01.a
+END
+
+BEGIN xps_deltasigma_adc
+ PARAMETER INSTANCE = xps_deltasigma_adc_1
+ PARAMETER HW_VER = 1.01.a
+END
+

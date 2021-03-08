@@ -1,0 +1,40 @@
+18:12:52 **** Auto Build of configuration Debug for project led_dir ****
+make all 
+'Building file: ../led_dir.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../led_dir_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_dir.d" -MT"led_dir.d" -o "led_dir.o" "../led_dir.c"
+../led_dir.c: In function 'main':
+../led_dir.c:29:9: warning: variable 'data0' set but not used [-Wunused-but-set-variable]
+../led_dir.c:16:6: warning: unused variable 'leds' [-Wunused-variable]
+../led_dir.c:15:6: warning: unused variable 'count1' [-Wunused-variable]
+../led_dir.c:14:6: warning: unused variable 'count' [-Wunused-variable]
+../led_dir.c:13:6: warning: unused variable 'flag' [-Wunused-variable]
+'Finished building: ../led_dir.c'
+' '
+'Building target: led_dir.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_dir_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_dir.elf"  ./led_dir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_dir.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_dir.elf  |tee "led_dir.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3066	    304	   2094	   5464	   1558	led_dir.elf
+'Finished building: led_dir.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck led_dir.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "led_dir.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+led_dir.elf 
+
+ELF file	: led_dir.elf
+elfcheck passed.
+'Finished building: led_dir.elf.elfcheck'
+' '
+
+18:12:54 Build Finished (took 2s.491ms)
+

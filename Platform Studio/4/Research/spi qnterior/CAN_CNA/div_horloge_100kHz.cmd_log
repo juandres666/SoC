@@ -1,0 +1,4 @@
+vhdtdtfi -lib work div_100kHz.vhd -prj test_ADC -o div_horloge_100kHz.spl -module div_horloge_100kHz -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e div_horloge_100kHz.spl D:/stage/test_ADC/div_horloge_100kHz.sym 
+vhdtdtfi -lib work div_100kHz.vhd -prj test_ADC -o div_horloge_100kHz.spl -module div_horloge_100kHz -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e div_horloge_100kHz.spl D:/stage/test_ADC/div_horloge_100kHz.sym 

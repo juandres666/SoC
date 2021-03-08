@@ -1,0 +1,140 @@
+
+ PARAMETER VERSION = 2.1.0
+
+
+ PORT clock_generator_0_CLKIN_pin = net_clock_generator_0_CLKIN_pin, DIR = I, SIGIS = CLK
+ PORT clock_generator_0_RST_pin = net_clock_generator_0_RST_pin, DIR = I, SIGIS = RST
+ PORT xps_gpio_0_GPIO_IO_O_pin = xps_gpio_0_GPIO_IO_O, DIR = O, VEC = [0:7]
+ PORT xps_gpio_1_GPIO_IO_I_pin = xps_gpio_1_GPIO_IO_I, DIR = I, VEC = [0:7]
+ PORT xps_spi_0_SPISEL_pin = xps_spi_0_SPISEL, DIR = I
+ PORT xps_spi_0_SCK_pin = xps_spi_0_SCK, DIR = IO
+ PORT xps_spi_0_MISO_pin = xps_spi_0_MISO, DIR = IO
+ PORT xps_spi_0_MOSI_pin = xps_spi_0_MOSI, DIR = IO
+ PORT xps_spi_0_SS_pin = xps_spi_0_SS, DIR = IO
+ PORT xps_timer_0_PWM0_pin = xps_timer_0_PWM0, DIR = O
+ PORT xps_timer_0_GenerateOut0_pin = xps_timer_0_GenerateOut0, DIR = O
+ PORT xps_timer_0_GenerateOut1_pin = xps_timer_0_GenerateOut1, DIR = O
+
+
+BEGIN microblaze
+ PARAMETER INSTANCE = microblaze_0
+ PARAMETER HW_VER = 8.50.c
+ BUS_INTERFACE DLMB = inst_lmb
+ BUS_INTERFACE ILMB = data_lmb
+ BUS_INTERFACE DPLB = plb_v46_0
+ PORT MB_RESET = reset_0_MB_Reset
+ PORT DBG_WAKEUP = microblaze_0_DBG_WAKEUP
+END
+
+BEGIN lmb_v10
+ PARAMETER INSTANCE = data_lmb
+ PARAMETER HW_VER = 2.00.b
+ PORT SYS_Rst = reset_0_Bus_Struct_Reset
+ PORT LMB_Clk = clock_generator_0_CLKOUT0
+END
+
+BEGIN lmb_v10
+ PARAMETER INSTANCE = inst_lmb
+ PARAMETER HW_VER = 2.00.b
+ PORT SYS_Rst = reset_0_Bus_Struct_Reset
+ PORT LMB_Clk = clock_generator_0_CLKOUT0
+END
+
+BEGIN plb_v46
+ PARAMETER INSTANCE = plb_v46_0
+ PARAMETER HW_VER = 1.05.a
+ PORT SYS_Rst = reset_0_Bus_Struct_Reset
+ PORT PLB_Clk = clock_generator_0_CLKOUT0
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = bram_block_0
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE PORTB = data_ctrl_BRAM_PORT
+ BUS_INTERFACE PORTA = inst_ctrl_BRAM_PORT
+END
+
+BEGIN lmb_bram_if_cntlr
+ PARAMETER INSTANCE = data_ctrl
+ PARAMETER HW_VER = 3.10.c
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x00003fff
+ BUS_INTERFACE SLMB = inst_lmb
+ BUS_INTERFACE BRAM_PORT = data_ctrl_BRAM_PORT
+END
+
+BEGIN lmb_bram_if_cntlr
+ PARAMETER INSTANCE = inst_ctrl
+ PARAMETER HW_VER = 3.10.c
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x00003fff
+ BUS_INTERFACE SLMB = data_lmb
+ BUS_INTERFACE BRAM_PORT = inst_ctrl_BRAM_PORT
+END
+
+BEGIN clock_generator
+ PARAMETER INSTANCE = clock_generator_0
+ PARAMETER HW_VER = 4.03.a
+ PARAMETER C_CLKIN_FREQ = 50000000
+ PARAMETER C_CLKOUT0_FREQ = 50000000
+ PORT CLKIN = net_clock_generator_0_CLKIN_pin
+ PORT RST = net_clock_generator_0_RST_pin
+ PORT LOCKED = clock_generator_0_LOCKED
+ PORT CLKOUT0 = clock_generator_0_CLKOUT0
+END
+
+BEGIN proc_sys_reset
+ PARAMETER INSTANCE = reset_0
+ PARAMETER HW_VER = 3.00.a
+ PORT Dcm_locked = clock_generator_0_LOCKED
+ PORT Slowest_sync_clk = clock_generator_0_CLKOUT0
+ PORT MB_Reset = reset_0_MB_Reset
+ PORT Bus_Struct_Reset = reset_0_Bus_Struct_Reset
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = xps_gpio_0
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_GPIO_WIDTH = 8
+ PARAMETER C_BASEADDR = 0x81420000
+ PARAMETER C_HIGHADDR = 0x8142ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT GPIO_IO_O = xps_gpio_0_GPIO_IO_O
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = xps_gpio_1
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_GPIO_WIDTH = 8
+ PARAMETER C_BASEADDR = 0x81400000
+ PARAMETER C_HIGHADDR = 0x8140ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT GPIO_IO_I = xps_gpio_1_GPIO_IO_I
+END
+
+BEGIN xps_spi
+ PARAMETER INSTANCE = xps_spi_0
+ PARAMETER HW_VER = 2.02.a
+ PARAMETER C_SCK_RATIO = 48
+ PARAMETER C_NUM_TRANSFER_BITS = 32
+ PARAMETER C_BASEADDR = 0x83400000
+ PARAMETER C_HIGHADDR = 0x8340ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT SPISEL = xps_spi_0_SPISEL
+ PORT SCK = xps_spi_0_SCK
+ PORT MISO = xps_spi_0_MISO
+ PORT MOSI = xps_spi_0_MOSI
+ PORT SS = xps_spi_0_SS
+END
+
+BEGIN xps_timer
+ PARAMETER INSTANCE = xps_timer_0
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_BASEADDR = 0x83c00000
+ PARAMETER C_HIGHADDR = 0x83c0ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT PWM0 = xps_timer_0_PWM0
+ PORT GenerateOut0 = xps_timer_0_GenerateOut0
+ PORT GenerateOut1 = xps_timer_0_GenerateOut1
+END
+

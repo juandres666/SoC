@@ -1,0 +1,58 @@
+NET "clock_generator_0_CLKIN_pin" LOC = "C9";
+NET "clock_generator_0_RST_pin" LOC = "K17";
+
+#GPIO Output
+#NET "xps_gpio_0_GPIO_IO_O_pin<0>" LOC = "F9";
+#NET "xps_gpio_0_GPIO_IO_O_pin<1>" LOC = "E9";
+#NET "xps_gpio_0_GPIO_IO_O_pin<2>" LOC = "D11";
+#NET "xps_gpio_0_GPIO_IO_O_pin<3>" LOC = "C11";
+#NET "xps_gpio_0_GPIO_IO_O_pin<4>" LOC = "F11";
+#NET "xps_gpio_0_GPIO_IO_O_pin<5>" LOC = "E11";
+#NET "xps_gpio_0_GPIO_IO_O_pin<6>" LOC = "E12";
+#NET "xps_gpio_0_GPIO_IO_O_pin<7>" LOC = "F12";
+
+#GPIO Input
+#NET "xps_gpio_1_GPIO_IO_I_pin<0>" LOC = "P7";
+#NET "xps_gpio_1_GPIO_IO_I_pin<1>" LOC = "L14";
+#NET "xps_gpio_1_GPIO_IO_I_pin<2>" LOC = "H18";
+#NET "xps_gpio_1_GPIO_IO_I_pin<3>" LOC = "N17";
+
+#SPI
+# PORT xps_spi_0_SPISEL_pin = xps_spi_0_SPISEL, DIR = I
+# PORT xps_spi_0_SCK_pin = xps_spi_0_SCK, DIR = IO
+# PORT xps_spi_0_MISO_pin = xps_spi_0_MISO, DIR = IO
+# PORT xps_spi_0_MOSI_pin = xps_spi_0_MOSI, DIR = IO
+# PORT xps_spi_0_SS_pin = xps_spi_0_SS, DIR = IO
+
+#SPI PRE-AMPLIFIER
+NET "xps_spi_0_MOSI_pin" LOC = "T4"; #SPI_MOSI  | IOSTANDARD = LVCMOS33| SLEW = SLOW | DRIVE = 6 
+NET "xps_spi_0_SS_pin" LOC = "N7"; #AMP_CS   | IOSTANDARD = LVCMOS33| SLEW = SLOW | DRIVE = 6 
+NET "xps_spi_0_SCK_pin" LOC = "U16"; #SPI_SCK   | IOSTANDARD = LVCMOS33| SLEW = SLOW | DRIVE = 8 
+NET "xps_gpio_0_GPIO_IO_O_pin<0>" LOC = "P7" ;#AMP_SHDN  | IOSTANDARD = LVCMOS33| SLEW = SLOW | DRIVE = 6 
+#NET "xps_spi_0_MISO_pin" LOC = "E18" | IOSTANDARD = LVCMOS33 ;#AMP_DOUT #IGNORED
+
+#SPI ADC
+NET "xps_gpio_0_GPIO_IO_O_pin<1>" LOC = "P11";#AD_CONV | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 6 
+#NET "xps_spi_0_SCK_pin" LOC = "U16";#SPI_SCK | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 
+NET "xps_spi_0_MISO_pin" LOC = "N10";#SPI_MISO | IOSTANDARD = LVCMOS33 
+
+
+
+# ==== 6-pin header J1 ====
+# These four connections are shared with the FX2 connector
+NET "xps_timer_0_PWM0_pin" LOC = "B4" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 6 ;
+NET "xps_timer_0_GenerateOut0_pin" LOC = "A4" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 6 ;
+NET "xps_timer_0_GenerateOut1_pin" LOC = "D5" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 6 ;
+#NET "J1<3>" LOC = "C5" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 6 ;
+# ==== 6-pin header J2 ====
+# These four connections are shared with the FX2 connector
+NET "xps_timer_0_PWM0_pin" LOC = "A6" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 6 ;
+NET "xps_timer_0_GenerateOut0_pin" LOC = "B6" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 6 ;
+NET "xps_timer_0_GenerateOut1_pin" LOC = "E7" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 6 ;
+#NET "J2<3>" LOC = "F7" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 6 ;
+# ==== 6-pin header J4 ====
+# These four connections are shared with the FX2 connector
+NET "xps_timer_0_PWM0_pin" LOC = "D7" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 6 ;
+NET "xps_timer_0_GenerateOut0_pin" LOC = "C7" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 6 ;
+NET "xps_timer_0_GenerateOut1_pin" LOC = "F8" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 6 ;
+#NET "J4<3>" LOC = "E8" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 6 ;

@@ -1,0 +1,7 @@
+[Inputs]
+clk
+rst
+=entree[13:0]=
+[Outputs]
+=sortie[13:0]=
+[BiDir]

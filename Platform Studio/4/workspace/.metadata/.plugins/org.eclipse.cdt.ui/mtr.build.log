@@ -1,0 +1,24 @@
+18:12:56 **** Auto Build of configuration Debug for project mtr ****
+make all 
+'Building file: ../mtr_code.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../mtr_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"mtr_code.d" -MT"mtr_code.d" -o "mtr_code.o" "../mtr_code.c"
+../mtr_code.c: In function 'main':
+../mtr_code.c:50:2: warning: implicit declaration of function 'XTmrCtr_mSetLoadReg' [-Wimplicit-function-declaration]
+../mtr_code.c:51:2: warning: implicit declaration of function 'XTmrCtr_mWriteReg' [-Wimplicit-function-declaration]
+../mtr_code.c:62:23: warning: unused variable 'gain_b' [-Wunused-variable]
+../mtr_code.c:62:15: warning: unused variable 'gain_a' [-Wunused-variable]
+../mtr_code.c:61:15: warning: unused variable 'adc' [-Wunused-variable]
+'Finished building: ../mtr_code.c'
+' '
+'Building target: mtr.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../mtr_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mtr.elf"  ./mtr_code.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./mtr_code.o: In function `main':
+F:\4\workspace\mtr\Debug/../mtr_code.c:50: undefined reference to `XTmrCtr_mSetLoadReg'
+F:\4\workspace\mtr\Debug/../mtr_code.c:51: undefined reference to `XTmrCtr_mWriteReg'
+collect2: ld returned 1 exit status
+make: *** [mtr.elf] Erreur 1
+
+18:13:06 Build Finished (took 10s.633ms)
+

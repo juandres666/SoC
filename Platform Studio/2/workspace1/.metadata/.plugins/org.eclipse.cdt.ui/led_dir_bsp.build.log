@@ -1,0 +1,6 @@
+18:13:07 **** Auto Build of project led_dir_bsp ****
+make -k all 
+'Finished building libraries'
+
+18:13:07 Build Finished (took 208ms)
+

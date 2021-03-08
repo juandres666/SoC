@@ -1,0 +1,19 @@
+14:42:24 **** Auto Build of configuration Debug for project led ****
+make all 
+'Building file: ../led_blink.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"led_blink.o" -I../../led_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_blink.d" -MT"led_blink.o" -o "led_blink.o" "../led_blink.c"
+../led_blink.c:13:25: warning: extra tokens at end of #include directive
+ #include "xparameters.h";
+                         ^
+../led_blink.c:14:21: warning: extra tokens at end of #include directive
+ #include "xgpio_l.h";
+                     ^
+../led_blink.c:14:10: fatal error: xgpio_l.h: No such file or directory
+ #include "xgpio_l.h";
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [led_blink.o] Erreur 1
+
+14:42:29 Build Finished (took 5s.463ms)
+

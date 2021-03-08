@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.15xf
+# Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.15xf
+DATE            06/18/2014 - 10:32
+SOURCE          D:\stage\test_ADC\Untitled.mcs
+DEVICE          XC17V02
+DATA_WIDTH      8
+FILL_DATA       0xFF
+SIGNATURE       0x00D48C15
+START_ADDRESS   0x00000000 END_ADDRESS 0x0004547F DIRECTION_UP   "D:/stage/test_ADC/test.bit" 3s500efg320

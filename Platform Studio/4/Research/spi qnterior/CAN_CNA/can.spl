@@ -1,0 +1,13 @@
+[Inputs]
+clk
+rst
+spi_miso
+en_can
+[Outputs]
+spi_miso_signal
+spi_sck
+ad_conv
+fin_can
+=can0[13:0]=
+=can1[13:0]=
+[BiDir]

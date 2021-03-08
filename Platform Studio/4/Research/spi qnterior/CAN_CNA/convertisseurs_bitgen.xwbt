@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\stage\test_ADC\convertisseurs.ncd
+OUTFILE=D:\stage\test_ADC\convertisseurs.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=D:\stage\test_ADC
+LICENSE=ISE
+USER_INFO=174131902_174131903_210569939_462

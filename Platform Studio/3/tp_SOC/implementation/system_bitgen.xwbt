@@ -1,0 +1,7 @@
+INFILE=F:\3\tp_SOC\implementation\system.ncd
+OUTFILE=F:\3\tp_SOC\implementation\system.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5fg320
+WORKINGDIR=F:\3\tp_SOC\implementation
+LICENSE=ISE
+USER_INFO=174131902_174131903_210671458_965

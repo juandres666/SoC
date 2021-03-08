@@ -1,0 +1,11 @@
+MODULE Test
+	SUBMODULE convertisseurs
+		INSTANCE XLXI_1
+	SUBMODULE clk_management
+		INSTANCE XLXI_56
+	SUBMODULE bascule
+		INSTANCE XLXI_100
+	SUBMODULE bascule
+		INSTANCE XLXI_101
+	SUBMODULE signed_unsigned_converter
+		INSTANCE XLXI_102

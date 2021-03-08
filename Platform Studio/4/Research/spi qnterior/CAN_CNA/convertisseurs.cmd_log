@@ -1,0 +1,8 @@
+sch2sym -intstyle ise -family spartan3e -refsym convertisseurs D:/stage/test_ADC/convertisseurs.sch D:/stage/test_ADC/convertisseurs.sym 
+sch2sym -intstyle ise -family spartan3e -refsym convertisseurs D:/stage/test_ADC/convertisseurs.sch D:/stage/test_ADC/convertisseurs.sym 
+sch2sym -intstyle ise -family spartan3e -refsym convertisseurs D:/stage/test_ADC/convertisseurs.sch D:/stage/test_ADC/convertisseurs.sym 
+sch2sym -intstyle ise -family spartan3e -refsym convertisseurs D:/stage/test_ADC/convertisseurs.sch D:/stage/test_ADC/convertisseurs.sym 
+sch2sym -intstyle ise -family spartan3e -refsym convertisseurs D:/stage/test_ADC/convertisseurs.sch D:/stage/test_ADC/convertisseurs.sym 
+sch2sym -intstyle ise -family spartan3e -refsym convertisseurs D:/stage/test_ADC/convertisseurs.sch D:/stage/test_ADC/convertisseurs.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym convertisseurs D:/stage/test_ADC/convertisseurs.sch D:/stage/test_ADC/convertisseurs.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym convertisseurs D:/stage/test_ADC/convertisseurs.sch D:/stage/test_ADC/convertisseurs.sym 

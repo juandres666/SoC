@@ -1,0 +1,12 @@
+[Inputs]
+clk
+rst
+en_cna
+=data[11:0]=
+[Outputs]
+spi_mosi
+dac_cs
+spi_sck
+dac_clr
+fin_cna
+[BiDir]

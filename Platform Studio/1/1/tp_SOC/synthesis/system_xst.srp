@@ -1,0 +1,854 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to D:\tp_SOC\synthesis\xst_temp_dir\
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_xst.prj"
+Verilog Include Directory          : {"D:\tp_SOC\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc3s500efg320-5
+Output File Name                   : "../implementation/system.ngc"
+
+---- Source Options
+Top Module Name                    : system
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 10000
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/tp_SOC/hdl/system.vhd" in Library work.
+Entity <system> compiled.
+Entity <system> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <system> in library <work> (architecture <STRUCTURE>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <system> in library <work> (Architecture <STRUCTURE>).
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'INTERRUPT_ACK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'MB_Halted' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'MB_Error' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'SLEEP' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'DBG_WAKEUP' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'LOCKSTEP_MASTER_OUT' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'LOCKSTEP_OUT' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_ABort' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_ABus' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_UABus' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_BE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_busLock' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_lockErr' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_MSize' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_priority' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_rdBurst' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_request' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_RNW' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_size' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_TAttribute' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_type' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_wrBurst' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'IPLB_M_wrDBus' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_AWID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_AWADDR' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_AWLEN' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_AWSIZE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_AWBURST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_AWLOCK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_AWCACHE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_AWPROT' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_AWQOS' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_AWVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_WDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_WSTRB' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_WLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_WVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_BREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_ARID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_ARADDR' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_ARLEN' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_ARSIZE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_ARBURST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_ARLOCK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_ARCACHE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_ARPROT' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_ARQOS' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_ARVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IP_RREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_AWID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_AWADDR' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_AWLEN' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_AWSIZE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_AWBURST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_AWLOCK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_AWCACHE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_AWPROT' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_AWQOS' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_AWVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_WDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_WSTRB' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_WLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_WVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_BREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_ARID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_ARADDR' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_ARLEN' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_ARSIZE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_ARBURST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_ARLOCK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_ARCACHE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_ARPROT' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_ARQOS' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_ARVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DP_RREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWADDR' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWLEN' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWSIZE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWBURST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWLOCK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWCACHE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWPROT' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWQOS' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWUSER' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWDOMAIN' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWSNOOP' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_AWBAR' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_WDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_WSTRB' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_WLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_WVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_WUSER' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_BREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_WACK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARADDR' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARLEN' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARSIZE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARBURST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARLOCK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARCACHE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARPROT' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARQOS' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARUSER' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARDOMAIN' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARSNOOP' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ARBAR' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_RREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_RACK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_ACREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_CRVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_CRRESP' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_CDVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_CDDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_IC_CDLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWADDR' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWLEN' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWSIZE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWBURST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWLOCK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWCACHE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWPROT' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWQOS' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWUSER' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWDOMAIN' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWSNOOP' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_AWBAR' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_WDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_WSTRB' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_WLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_WVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_WUSER' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_BREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_WACK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARADDR' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARLEN' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARSIZE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARBURST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARLOCK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARCACHE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARPROT' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARQOS' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARUSER' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARDOMAIN' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARSNOOP' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ARBAR' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_RREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_RACK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_ACREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_CRVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_CRRESP' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_CDVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_CDDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M_AXI_DC_CDLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'DBG_TDO' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Instruction' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Valid_Instr' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_PC' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Reg_Write' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Reg_Addr' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_MSR_Reg' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_PID_Reg' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_New_Reg_Value' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Exception_Taken' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Exception_Kind' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Jump_Taken' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Delay_Slot' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Data_Address' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Data_Access' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Data_Read' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Data_Write' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Data_Write_Value' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Data_Byte_Enable' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_DCache_Req' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_DCache_Hit' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_DCache_Rdy' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_DCache_Read' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_ICache_Req' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_ICache_Hit' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_ICache_Rdy' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_OF_PipeRun' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_EX_PipeRun' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_MEM_PipeRun' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_MB_Halted' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'Trace_Jump_Hit' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL0_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL0_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL0_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL0_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL0_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL0_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL1_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL1_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL1_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL1_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL1_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL1_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL2_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL2_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL2_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL2_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL2_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL2_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL3_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL3_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL3_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL3_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL3_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL3_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL4_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL4_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL4_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL4_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL4_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL4_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL5_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL5_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL5_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL5_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL5_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL5_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL6_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL6_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL6_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL6_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL6_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL6_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL7_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL7_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL7_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL7_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL7_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL7_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL8_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL8_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL8_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL8_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL8_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL8_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL9_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL9_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL9_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL9_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL9_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL9_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL10_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL10_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL10_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL10_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL10_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL10_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL11_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL11_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL11_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL11_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL11_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL11_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL12_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL12_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL12_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL12_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL12_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL12_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL13_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL13_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL13_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL13_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL13_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL13_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL14_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL14_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL14_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL14_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL14_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL14_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL15_S_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL15_S_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL15_M_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL15_M_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL15_M_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'FSL15_M_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M0_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M0_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M0_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S0_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M1_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M1_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M1_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S1_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M2_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M2_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M2_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S2_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M3_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M3_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M3_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S3_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M4_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M4_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M4_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S4_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M5_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M5_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M5_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S5_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M6_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M6_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M6_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S6_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M7_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M7_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M7_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S7_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M8_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M8_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M8_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S8_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M9_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M9_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M9_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S9_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M10_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M10_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M10_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S10_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M11_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M11_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M11_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S11_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M12_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M12_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M12_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S12_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M13_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M13_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M13_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S13_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M14_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M14_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M14_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S14_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M15_AXIS_TLAST' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M15_AXIS_TDATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'M15_AXIS_TVALID' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'S15_AXIS_TREADY' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'ICACHE_FSL_IN_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'ICACHE_FSL_IN_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'ICACHE_FSL_OUT_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'ICACHE_FSL_OUT_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'ICACHE_FSL_OUT_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'ICACHE_FSL_OUT_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'DCACHE_FSL_IN_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'DCACHE_FSL_IN_READ' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'DCACHE_FSL_OUT_CLK' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'DCACHE_FSL_OUT_WRITE' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'DCACHE_FSL_OUT_DATA' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 1377: Unconnected output port 'DCACHE_FSL_OUT_CONTROL' of component 'system_microblaze_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_Rst' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'MPLB_Rst' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_dcrAck' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_dcrDBus' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_SaddrAck' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_SMRdErr' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_SMWrErr' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_SMBusy' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_SrdBTerm' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_SrdComp' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_SrdDAck' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_SrdDBus' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_SrdWdAddr' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_Srearbitrate' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_Sssize' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_Swait' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_SwrBTerm' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_SwrComp' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'PLB_SwrDAck' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2079: Unconnected output port 'Bus_Error_Det' of component 'system_plb_v46_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl1_DBus' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl1_Ready' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl1_Wait' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl1_UE' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl1_CE' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl2_DBus' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl2_Ready' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl2_Wait' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl2_UE' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl2_CE' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl3_DBus' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl3_Ready' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl3_Wait' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl3_UE' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Sl3_CE' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'Interrupt' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'UE' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'CE' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_addrAck' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_SSize' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_wait' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_rearbitrate' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_wrDAck' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_wrComp' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_rdDBus' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_rdDAck' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_rdComp' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_MBusy' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_MWrErr' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_MRdErr' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_wrBTerm' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_rdWdAddr' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_rdBTerm' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'SPLB_CTRL_Sl_MIRQ' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'S_AXI_CTRL_AWREADY' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'S_AXI_CTRL_WREADY' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'S_AXI_CTRL_BRESP' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'S_AXI_CTRL_BVALID' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'S_AXI_CTRL_ARREADY' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'S_AXI_CTRL_RDATA' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'S_AXI_CTRL_RRESP' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2198: Unconnected output port 'S_AXI_CTRL_RVALID' of component 'system_data_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl1_DBus' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl1_Ready' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl1_Wait' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl1_UE' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl1_CE' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl2_DBus' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl2_Ready' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl2_Wait' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl2_UE' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl2_CE' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl3_DBus' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl3_Ready' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl3_Wait' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl3_UE' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Sl3_CE' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'Interrupt' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'UE' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'CE' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_addrAck' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_SSize' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_wait' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_rearbitrate' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_wrDAck' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_wrComp' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_rdDBus' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_rdDAck' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_rdComp' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_MBusy' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_MWrErr' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_MRdErr' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_wrBTerm' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_rdWdAddr' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_rdBTerm' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'SPLB_CTRL_Sl_MIRQ' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'S_AXI_CTRL_AWREADY' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'S_AXI_CTRL_WREADY' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'S_AXI_CTRL_BRESP' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'S_AXI_CTRL_BVALID' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'S_AXI_CTRL_ARREADY' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'S_AXI_CTRL_RDATA' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'S_AXI_CTRL_RRESP' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2317: Unconnected output port 'S_AXI_CTRL_RVALID' of component 'system_inst_ctrl_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2436: Unconnected output port 'IP2INTC_Irpt' of component 'system_xps_gpio_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2436: Unconnected output port 'GPIO_IO_T' of component 'system_xps_gpio_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2436: Unconnected output port 'GPIO2_IO_O' of component 'system_xps_gpio_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2436: Unconnected output port 'GPIO2_IO_T' of component 'system_xps_gpio_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT1' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT2' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT3' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT4' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT5' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT6' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT7' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT8' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT9' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT10' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT11' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT12' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT13' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT14' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKOUT15' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'CLKFBOUT' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2489: Unconnected output port 'PSDONE' of component 'system_clock_generator_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2518: Unconnected output port 'RstcPPCresetcore_0' of component 'system_reset_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2518: Unconnected output port 'RstcPPCresetchip_0' of component 'system_reset_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2518: Unconnected output port 'RstcPPCresetsys_0' of component 'system_reset_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2518: Unconnected output port 'RstcPPCresetcore_1' of component 'system_reset_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2518: Unconnected output port 'RstcPPCresetchip_1' of component 'system_reset_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2518: Unconnected output port 'RstcPPCresetsys_1' of component 'system_reset_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2518: Unconnected output port 'Peripheral_Reset' of component 'system_reset_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2518: Unconnected output port 'Interconnect_aresetn' of component 'system_reset_0_wrapper'.
+WARNING:Xst:753 - "D:/tp_SOC/hdl/system.vhd" line 2518: Unconnected output port 'Peripheral_aresetn' of component 'system_reset_0_wrapper'.
+Entity <system> analyzed. Unit <system> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <system>.
+    Related source file is "D:/tp_SOC/hdl/system.vhd".
+Unit <system> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <../implementation/system_microblaze_0_wrapper.ngc>.
+Reading core <../implementation/system_data_lmb_wrapper.ngc>.
+Reading core <../implementation/system_inst_lmb_wrapper.ngc>.
+Reading core <../implementation/system_plb_v46_0_wrapper.ngc>.
+Reading core <../implementation/system_bram_block_0_wrapper.ngc>.
+Reading core <../implementation/system_data_ctrl_wrapper.ngc>.
+Reading core <../implementation/system_inst_ctrl_wrapper.ngc>.
+Reading core <../implementation/system_xps_gpio_0_wrapper.ngc>.
+Reading core <../implementation/system_clock_generator_0_wrapper.ngc>.
+Reading core <../implementation/system_reset_0_wrapper.ngc>.
+Loading core <system_microblaze_0_wrapper> for timing and area information for instance <microblaze_0>.
+Loading core <system_data_lmb_wrapper> for timing and area information for instance <data_lmb>.
+Loading core <system_inst_lmb_wrapper> for timing and area information for instance <inst_lmb>.
+Loading core <system_plb_v46_0_wrapper> for timing and area information for instance <plb_v46_0>.
+Loading core <system_bram_block_0_wrapper> for timing and area information for instance <bram_block_0>.
+Loading core <system_data_ctrl_wrapper> for timing and area information for instance <data_ctrl>.
+Loading core <system_inst_ctrl_wrapper> for timing and area information for instance <inst_ctrl>.
+Loading core <system_xps_gpio_0_wrapper> for timing and area information for instance <xps_gpio_0>.
+Loading core <system_clock_generator_0_wrapper> for timing and area information for instance <clock_generator_0>.
+Loading core <system_reset_0_wrapper> for timing and area information for instance <reset_0>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <system> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_2> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_2_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_ALU_Op_0> in Unit <microblaze_0> is equivalent to the following 2 FFs/Latches : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_ALU_Op_0_1> <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_ALU_Op_0_2> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/sync_reset> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/sync_reset_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_4> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_4_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_1> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_1_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_3> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_3_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_valid_0> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_valid_0_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_ALU_Op_1> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_ALU_Op_1_1> 
+INFO:Xst:2260 - The FF/Latch <plb_v46_0/GEN_MPLB_RST[0].I_MPLB_RST> in Unit <plb_v46_0> is equivalent to the following 2 FFs/Latches : <plb_v46_0/GEN_SPLB_RST[0].I_SPLB_RST> <plb_v46_0/I_PLB_RST> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_2> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_2_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_ALU_Op_0> in Unit <microblaze_0> is equivalent to the following 2 FFs/Latches : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_ALU_Op_0_1> <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_ALU_Op_0_2> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/sync_reset> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/sync_reset_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_4> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_4_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_1> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_1_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_3> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/wb_gpr_write_addr_3_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_valid_0> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_valid_0_1> 
+INFO:Xst:2260 - The FF/Latch <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_ALU_Op_1> in Unit <microblaze_0> is equivalent to the following FF/Latch : <microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/EX_ALU_Op_1_1> 
+INFO:Xst:2260 - The FF/Latch <plb_v46_0/GEN_MPLB_RST[0].I_MPLB_RST> in Unit <plb_v46_0> is equivalent to the following 2 FFs/Latches : <plb_v46_0/GEN_SPLB_RST[0].I_SPLB_RST> <plb_v46_0/I_PLB_RST> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/system.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 2280
+#      GND                         : 10
+#      INV                         : 21
+#      LUT1                        : 68
+#      LUT2                        : 119
+#      LUT2_D                      : 6
+#      LUT2_L                      : 3
+#      LUT3                        : 703
+#      LUT3_D                      : 42
+#      LUT3_L                      : 50
+#      LUT4                        : 577
+#      LUT4_D                      : 15
+#      LUT4_L                      : 26
+#      MULT_AND                    : 34
+#      MUXCY                       : 30
+#      MUXCY_L                     : 152
+#      MUXF5                       : 293
+#      VCC                         : 5
+#      XORCY                       : 126
+# FlipFlops/Latches                : 1451
+#      FD                          : 40
+#      FDE                         : 167
+#      FDP                         : 4
+#      FDR                         : 553
+#      FDRE                        : 602
+#      FDRS                        : 5
+#      FDRSE                       : 1
+#      FDS                         : 22
+#      FDSE                        : 57
+# RAMS                             : 200
+#      RAM16X1D                    : 192
+#      RAMB16_S4_S4                : 8
+# Shift Registers                  : 77
+#      SRL16                       : 12
+#      SRL16E                      : 65
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 10
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 8
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# MULTs                            : 3
+#      MULT18X18SIO                : 3
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                     1336  out of   4656    28%  
+ Number of Slice Flip Flops:           1451  out of   9312    15%  
+ Number of 4 input LUTs:               2091  out of   9312    22%  
+    Number used as logic:              1630
+    Number used as Shift registers:      77
+    Number used as RAMs:                384
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    232     4%  
+ Number of BRAMs:                         8  out of     20    40%  
+ Number of MULT18X18SIOs:                 3  out of     20    15%  
+ Number of GCLKs:                         3  out of     24    12%  
+ Number of DCMs:                          1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                 | Load  |
+-----------------------------------+-------------------------------------------------------+-------+
+clock_generator_0_CLKIN_pin        | clock_generator_0/DCM0_INST/Using_Virtex.DCM_INST:CLK0| 1731  |
+-----------------------------------+-------------------------------------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+clock_generator_0_RST_pin          | IBUF                   | 4     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 9.133ns (Maximum Frequency: 109.488MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.040ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_generator_0_CLKIN_pin'
+  Clock period: 9.133ns (frequency: 109.488MHz)
+  Total number of paths / destination ports: 193460 / 5993
+-------------------------------------------------------------------------
+Delay:               9.133ns (Levels of Logic = 7)
+  Source:            microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_mbar_stall_no_sleep_1_0 (FF)
+  Destination:       microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/ex_missed_fetch_on_branch_ended_hold_0 (FF)
+  Source Clock:      clock_generator_0_CLKIN_pin rising
+  Destination Clock: clock_generator_0_CLKIN_pin rising
+
+  Data Path: microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_mbar_stall_no_sleep_1_0 to microblaze_0/microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/ex_missed_fetch_on_branch_ended_hold_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.514   0.509  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_mbar_stall_no_sleep_1_0 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_mbar_stall_no_sleep_1<0>)
+     LUT4_D:I0->O          3   0.612   0.520  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_mbar_stall_jump_logic_0_or000011 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/N28)
+     LUT2:I1->O            1   0.612   0.000  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/force_jump61 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/force_jump6)
+     MUXCY_L:S->LO        53   0.641   1.082  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/FPGA_TARGET.MUXCY_JUMP_CARRY6 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/PreFetch_Buffer_I1/jump_or_flush)
+     LUT4:I3->O            1   0.612   0.360  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/if_fetch_i_0_and0000_SW1 (N315)
+     LUT4_D:I3->LO         1   0.612   0.130  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/if_fetch_i_0_and0000 (N489)
+     LUT3:I2->O           13   0.612   0.866  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ib_addr_strobe_i_0_and00011 (I_AS)
+     LUT3:I2->O            1   0.612   0.357  microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_missed_fetch_on_branch_ended_0_and00001 (microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/ex_missed_fetch_on_branch_ended)
+     FDRE:CE                   0.483          microblaze_0/MicroBlaze_Core_I/Performance.Decode_I/jump_logic_I1/ex_missed_fetch_on_branch_ended_hold_0
+    ----------------------------------------
+    Total                      9.133ns (5.310ns logic, 3.823ns route)
+                                       (58.1% logic, 41.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_generator_0_CLKIN_pin'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 2)
+  Source:            xps_gpio_0/xps_gpio_0/gpio_core_1/gpio_Data_Out_0 (FF)
+  Destination:       xps_gpio_0_GPIO_IO_O_pin<0> (PAD)
+  Source Clock:      clock_generator_0_CLKIN_pin rising
+
+  Data Path: xps_gpio_0/xps_gpio_0/gpio_core_1/gpio_Data_Out_0 to xps_gpio_0_GPIO_IO_O_pin<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.514   0.357  xps_gpio_0/gpio_core_1/gpio_Data_Out_0 (GPIO_IO_O<0>)
+     end scope: 'xps_gpio_0'
+     OBUF:I->O                 3.169          xps_gpio_0_GPIO_IO_O_pin_0_OBUF (xps_gpio_0_GPIO_IO_O_pin<0>)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 118.00 secs
+Total CPU time to Xst completion: 117.75 secs
+ 
+--> 
+
+Total memory usage is 329980 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  498 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+

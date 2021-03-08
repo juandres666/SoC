@@ -1,0 +1,14 @@
+set -tmpdir D:\tp_SOC\synthesis\xst_temp_dir\
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc3s500efg320-5
+-top system_xps_gpio_0_wrapper
+-ifmt MIXED
+-ifn system_xps_gpio_0_wrapper_xst.prj
+-ofn ../implementation/system_xps_gpio_0_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}
+-vlgincdir {"D:\tp_SOC\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }

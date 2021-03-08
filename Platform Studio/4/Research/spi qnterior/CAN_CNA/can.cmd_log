@@ -1,0 +1,9 @@
+vhdtdtfi -prj test_ADC -o D:/stage/test_ADC/can.vhi -module can -template C:/Xilinx/14.1/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work can.vhd 
+vhdtdtfi -lib work can.vhd -prj test_ADC -o can.spl -module can -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e can.spl D:/stage/test_ADC/can.sym 
+vhdtdtfi -lib work can.vhd -prj test_ADC -o can.spl -module can -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e can.spl D:/stage/test_ADC/can.sym 
+vhdtdtfi -lib work can.vhd -prj test_ADC -o can.spl -module can -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e can.spl D:/stage/test_ADC/can.sym 
+vhdtdtfi -lib work can.vhd -prj test_ADC -o can.spl -module can -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w can.spl D:/stage/test_ADC/can.sym 

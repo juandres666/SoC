@@ -1,0 +1,6 @@
+vhdtdtfi -lib work compteur.vhd -prj test_ADC -o compteur.spl -module compteur -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e compteur.spl D:/stage/test_ADC/compteur.sym 
+vhdtdtfi -lib work compteur.vhd -prj test_ADC -o compteur.spl -module compteur -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e compteur.spl D:/stage/test_ADC/compteur.sym 
+vhdtdtfi -lib work compteur.vhd -prj test_ADC -o compteur.spl -module compteur -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e compteur.spl D:/stage/test_ADC/compteur.sym 

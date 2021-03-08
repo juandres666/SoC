@@ -1,0 +1,10 @@
+NET "clock_generator_0_CLKIN_pin" LOC = "C9";
+NET "clock_generator_0_RST_pin" LOC = "K17";
+NET "xps_gpio_0_GPIO_IO_O_pin<0>" LOC = "F9";
+NET "xps_gpio_0_GPIO_IO_O_pin<1>" LOC = "E9";
+NET "xps_gpio_0_GPIO_IO_O_pin<2>" LOC = "D11";
+NET "xps_gpio_0_GPIO_IO_O_pin<3>" LOC = "C11";
+NET "xps_gpio_0_GPIO_IO_O_pin<4>" LOC = "F11";
+NET "xps_gpio_0_GPIO_IO_O_pin<5>" LOC = "E11";
+NET "xps_gpio_0_GPIO_IO_O_pin<6>" LOC = "E12";
+NET "xps_gpio_0_GPIO_IO_O_pin<7>" LOC = "F12";

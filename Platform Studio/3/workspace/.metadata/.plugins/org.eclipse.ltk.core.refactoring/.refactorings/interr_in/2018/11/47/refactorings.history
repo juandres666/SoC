@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;interr_in/main_int&apos; to &apos;main_int.c&apos;" description="Rename resource &apos;main_int&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="main_int" name="main_int.c" stamp="1542878176309" updateReferences="true"/>
+</session>

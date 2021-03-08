@@ -1,0 +1,99 @@
+/*
+ * main.c
+ *
+ *  Created on: Jan 4, 2019
+ *      Author: juandres666
+ */
+
+#include "xparameters.h" //information about AXI peripherals
+#include "xgpio.h" //AXI GPIO driver
+//#include "xil_printf.h" //send data over UART
+//#include "xadcps.h"
+#include "xsysmon.h"
+//#include "xstatus.h"
+//#include "stdio.h"
+
+#include "xil_io.h"
+
+//static XAdcPs XAdcInst;      /* XADC driver instance */
+static XSysMon SysMonInst; //a sysmon instance
+
+#include "xtmrctr.h"
+
+#include "xintc.h"
+
+XGpio gpio1;
+u32 btn1, led1;
+
+void SwitchInterruptHandler(void *pointer)
+{
+  //XGpio_InterruptDisable(&Switches, XGPIO_IR_CH1_MASK);
+  inputs = XGpio_DiscreteRead(&Switches, switchs_ch);
+  XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+  XGpio_InterruptClear(&Switches, XGPIO_IR_CH1_MASK);
+  //XGpio_InterruptEnable(&Switches, XGPIO_IR_CH1_MASK);
+}
+
+int main()
+{
+	u32 VccPdroRawData;
+
+	XSysMon_Config *SysMonConfigPtr;
+	XSysMon *SysMonInstPtr = &SysMonInst;
+	SysMonConfigPtr = XSysMon_LookupConfig(XPAR_SYSMON_0_DEVICE_ID);
+
+	XSysMon_CfgInitialize(SysMonInstPtr, SysMonConfigPtr,SysMonConfigPtr->BaseAddress);
+	XSysMon_GetStatus(SysMonInstPtr); // Clear the old status
+
+
+	XTmrCtr TimerInstancePtr;
+	XTmrCtr_Initialize(&TimerInstancePtr,XPAR_TMRCTR_0_DEVICE_ID);
+
+	XTmrCtr_SetOptions(&TimerInstancePtr, 0, XTC_ENABLE_ALL_OPTION|XTC_DOWN_COUNT_OPTION|XTC_AUTO_RELOAD_OPTION); //XTmrCtr_SetOptions(&TimerInstancePtr, 0, (XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION | XTC_DOWN_COUNT_OPTION));
+
+	u32 CounterControlReg = Xil_In32(TimerInstancePtr.BaseAddress + XTmrCtr_Offsets[0] + XTC_TCSR_OFFSET);
+	CounterControlReg = CounterControlReg | XTC_CSR_ENABLE_PWM_MASK | XTC_CSR_EXT_GENERATE_MASK;
+	Xil_Out32(TimerInstancePtr.BaseAddress + XTmrCtr_Offsets[0] + XTC_TCSR_OFFSET, CounterControlReg);
+
+	XTmrCtr_SetOptions(&TimerInstancePtr, 1, XTC_ENABLE_ALL_OPTION|XTC_DOWN_COUNT_OPTION|XTC_AUTO_RELOAD_OPTION); //XTmrCtr_SetOptions(&TimerInstancePtr, 1, (XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION | XTC_DOWN_COUNT_OPTION));
+
+	CounterControlReg = Xil_In32(TimerInstancePtr.BaseAddress + XTmrCtr_Offsets[1] + XTC_TCSR_OFFSET);
+	CounterControlReg = CounterControlReg | XTC_CSR_ENABLE_PWM_MASK | XTC_CSR_EXT_GENERATE_MASK;
+	Xil_Out32(TimerInstancePtr.BaseAddress + XTmrCtr_Offsets[1] + XTC_TCSR_OFFSET, CounterControlReg);
+
+	XTmrCtr_SetResetValue(&TimerInstancePtr, 0, 2000000); //XTmrCtr_SetResetValue(&TimerInstancePtr, 0, 0x5f5e100);
+	XTmrCtr_SetResetValue(&TimerInstancePtr, 1, 150000); //XTmrCtr_SetResetValue(&TimerInstancePtr,1, 0x1f78a40);
+
+	XTmrCtr_Start(&TimerInstancePtr,0);
+	XTmrCtr_Start(&TimerInstancePtr,1);
+
+
+	XGpio gpio0;
+	u32 btn, led;
+
+	XGpio_Initialize(&gpio0, XPAR_GPIO_0_DEVICE_ID);
+	XGpio_SetDataDirection(&gpio0, 2, 0x00000000); // set LED GPIO channel tristates to All Output
+	XGpio_SetDataDirection(&gpio0, 1, 0xFFFFFFFF); // set BTN GPIO channel tristates to All Input
+
+	XGpio_Initialize(&gpio1, XPAR_GPIO_1_DEVICE_ID);
+	XGpio_SetDataDirection(&gpio1, 2, 0x00000000); // set LED GPIO channel tristates to All Output
+	XGpio_SetDataDirection(&gpio1, 1, 0xFFFFFFFF); // set BTN GPIO channel tristates to All Input
+
+	XGpio_InterruptEnable(&gpio1, XGPIO_IR_CH1_MASK);
+	XGpio_InterruptGlobalEnable(&Switches);
+
+
+	while (1)
+	{
+		btn = XGpio_DiscreteRead(&gpio0, 1);
+		if (btn != 0) // turn all LEDs on when any button is pressed
+			led = 0xFFFFFFFF;
+		else
+			led = 0x00000000;
+		XGpio_DiscreteWrite(&gpio0, 2, led);
+
+		VccPdroRawData = XSysMon_GetAdcData(SysMonInstPtr,XSM_CH_AUX_MIN+2);//Read the external Vaux2 Data
+
+		XTmrCtr_SetResetValue(&TimerInstancePtr, 1, 90000+VccPdroRawData*27);
+	}
+}

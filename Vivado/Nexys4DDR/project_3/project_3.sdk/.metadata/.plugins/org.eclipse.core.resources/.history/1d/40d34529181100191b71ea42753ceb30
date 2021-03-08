@@ -1,0 +1,107 @@
+/*
+ * main.c
+ *
+ *  Created on: Jan 4, 2019
+ *      Author: juandres666
+ */
+
+#include "xparameters.h" //information about AXI peripherals
+#include "xgpio.h" //AXI GPIO driver
+//#include "xil_printf.h" //send data over UART
+//#include "xadcps.h"
+#include "xsysmon.h"
+//#include "xstatus.h"
+//#include "stdio.h"
+
+#include "xil_io.h"
+
+//static XAdcPs XAdcInst;      /* XADC driver instance */
+static XSysMon SysMonInst; //a sysmon instance
+
+#include "xtmrctr.h"
+
+int main()
+{
+	XGpio gpio
+	u32 btn, led;
+
+	//XGpio_Initialize(&gpio, 0);
+	XGpio_Initialize(&gpio, XPAR_GPIO_0_DEVICE_ID);
+	XGpio_SetDataDirection(&gpio, 2, 0x00000000); // set LED GPIO channel tristates to All Output
+	XGpio_SetDataDirection(&gpio, 1, 0xFFFFFFFF); // set BTN GPIO channel tristates to All Input
+
+	//int Status;
+	u32 VccPdroRawData;
+
+	/*XAdcPs_Config *ConfigPtr;
+	XAdcPs *XAdcInstPtr = &XAdcInst;
+	ConfigPtr = XAdcPs_LookupConfig(XPAR_XADC_WIZ_0_DEVICE_ID);
+	Status = XAdcPs_CfgInitialize(XAdcInstPtr, ConfigPtr, ConfigPtr->BaseAddress);
+	Status = XAdcPs_SelfTest(XAdcInstPtr);
+	*/
+
+//	XAdcPs XADC_Driver_Instance ;
+//	XAdcPs_Config * cfg = XAdcPs_LookupConfig(XPAR_XADC_WIZ_0_DEVICE_ID);
+//
+//	XAdcPs_CfgInitialize(&XADC_Driver_Instance, cfg, cfg->BaseAddress) ;
+//	XAdcPs_SetSequencerMode (&XADC_Driver_Instance, XADCPS_SEQ_MODE_SINGCHAN);
+//	XAdcPs_SetSingleChParams(&XADC_Driver_Instance, XADCPS_CH_AUX_MIN+2U,FALSE, FALSE, FALSE);
+
+	XSysMon_Config *SysMonConfigPtr;
+	XSysMon *SysMonInstPtr = &SysMonInst;
+	SysMonConfigPtr = XSysMon_LookupConfig(XPAR_SYSMON_0_DEVICE_ID);
+
+	XSysMon_CfgInitialize(SysMonInstPtr, SysMonConfigPtr,SysMonConfigPtr->BaseAddress);
+	XSysMon_GetStatus(SysMonInstPtr); // Clear the old status
+
+
+	XTmrCtr TimerInstancePtr;
+	XTmrCtr_Initialize(&TimerInstancePtr,XPAR_TMRCTR_0_DEVICE_ID);
+
+	XTmrCtr_SetOptions(&TimerInstancePtr, 0, XTC_ENABLE_ALL_OPTION|XTC_DOWN_COUNT_OPTION|XTC_AUTO_RELOAD_OPTION); //XTmrCtr_SetOptions(&TimerInstancePtr, 0, (XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION | XTC_DOWN_COUNT_OPTION));
+
+	u32 CounterControlReg = Xil_In32(TimerInstancePtr.BaseAddress + XTmrCtr_Offsets[0] + XTC_TCSR_OFFSET);
+	CounterControlReg = CounterControlReg | XTC_CSR_ENABLE_PWM_MASK | XTC_CSR_EXT_GENERATE_MASK;
+	Xil_Out32(TimerInstancePtr.BaseAddress + XTmrCtr_Offsets[0] + XTC_TCSR_OFFSET, CounterControlReg);
+
+	XTmrCtr_SetOptions(&TimerInstancePtr, 1, XTC_ENABLE_ALL_OPTION|XTC_DOWN_COUNT_OPTION|XTC_AUTO_RELOAD_OPTION); //XTmrCtr_SetOptions(&TimerInstancePtr, 1, (XTC_INT_MODE_OPTION | XTC_AUTO_RELOAD_OPTION | XTC_DOWN_COUNT_OPTION));
+
+	CounterControlReg = Xil_In32(TimerInstancePtr.BaseAddress + XTmrCtr_Offsets[1] + XTC_TCSR_OFFSET);
+	CounterControlReg = CounterControlReg | XTC_CSR_ENABLE_PWM_MASK | XTC_CSR_EXT_GENERATE_MASK;
+	Xil_Out32(TimerInstancePtr.BaseAddress + XTmrCtr_Offsets[1] + XTC_TCSR_OFFSET, CounterControlReg);
+
+	XTmrCtr_SetResetValue(&TimerInstancePtr, 0, 2000000); //XTmrCtr_SetResetValue(&TimerInstancePtr, 0, 0x5f5e100);
+	XTmrCtr_SetResetValue(&TimerInstancePtr, 1, 150000); //XTmrCtr_SetResetValue(&TimerInstancePtr,1, 0x1f78a40);
+
+	XTmrCtr_Start(&TimerInstancePtr,0);
+	XTmrCtr_Start(&TimerInstancePtr,1);
+
+	while (1)
+	{
+		btn = XGpio_DiscreteRead(&gpio, 1);
+		if (btn != 0) // turn all LEDs on when any button is pressed
+			led = 0xFFFFFFFF;
+		else
+			led = 0x00000000;
+		XGpio_DiscreteWrite(&gpio, 2, led);
+
+		//xil_printf("\rbutton state: %08x", btn);
+
+		//VccPdroRawData = XAdcPs_GetAdcData(XAdcInstPtr, XADCPS_SEQ_CH_AUX01);//XADCPS_CH_AUX_MIN+02
+		//VccPdroRawData = XAdcPs_GetAdcData(&XADC_Driver_Instance, XADCPS_CH_AUX_MIN+2U);//
+
+		//XGpio_DiscreteWrite(&gpio, 2, VccPdroRawData);
+
+		//while ((XSysMon_GetStatus(SysMonInstPtr) & XSM_SR_EOS_MASK) != XSM_SR_EOS_MASK);//wait until EOS activated
+
+		//ExtVolRawData = XSysMon_GetAdcData(SysMonInstPtr,XSM_CH_VPVN); //Read the external Vpn Data
+		//ExtVolData = XSysMon_RawToExtVoltage(ExtVolRawData);
+		//printf("VpVn: %0d.%03d V, ",(int)(ExtVolData), SysMonFractionToInt(ExtVolData));
+
+		VccPdroRawData = XSysMon_GetAdcData(SysMonInstPtr,XSM_CH_AUX_MIN+2);//Read the external Vaux2 Data
+
+		XTmrCtr_SetResetValue(&TimerInstancePtr, 1, 90000+VccPdroRawData*27);
+
+		//usleep(1000); //wait
+	}
+}

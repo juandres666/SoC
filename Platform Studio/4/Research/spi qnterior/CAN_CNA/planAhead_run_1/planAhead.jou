@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.1.1 (64-bit)
+# Build 179419 by xbuild on Thu Apr 26 11:43:29 MDT 2012
+# Start of session at: Tue Jul 08 14:43:24 2014
+# Process ID: 1820
+# Log file: D:/stage/test_ADC/planAhead_run_1/planAhead.log
+# Journal file: D:/stage/test_ADC/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/stage/test_ADC/pa.fromNetlist.tcl
+exit

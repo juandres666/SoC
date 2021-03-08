@@ -1,0 +1,9 @@
+10:12:43.079 INFO  - Processing command line option -hwspec F:\3\tp_SOC\SDK\SDK_Export\hw\system.xml. 
+08:16:53.866 INFO  - Processing command line option -hwspec F:\3\tp_SOC\SDK\SDK_Export\hw\system.xml. 
+08:33:11.592 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to Open JTAG Cable
+    Cable target is not connected to the host
+ 
+08:34:05.740 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

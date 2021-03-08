@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="can">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2014-7-23T8:37:55</timestamp>
+    <pin polarity="Input" x="0" y="-352" name="clk" />
+    <pin polarity="Input" x="0" y="-256" name="rst" />
+    <pin polarity="Input" x="0" y="-160" name="spi_miso" />
+    <pin polarity="Input" x="0" y="-64" name="en_can" />
+    <pin polarity="Output" x="384" y="-352" name="spi_miso_signal" />
+    <pin polarity="Output" x="384" y="-288" name="spi_sck" />
+    <pin polarity="Output" x="384" y="-224" name="ad_conv" />
+    <pin polarity="Output" x="384" y="-160" name="fin_can" />
+    <pin polarity="Output" x="384" y="-96" name="can0(13:0)" />
+    <pin polarity="Output" x="384" y="-32" name="can1(13:0)" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-392" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin clk" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-256" type="pin rst" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin spi_miso" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-64" type="pin en_can" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-352" type="pin spi_miso_signal" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-288" type="pin spi_sck" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-224" type="pin ad_conv" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-160" type="pin fin_can" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-96" type="pin can0(13:0)" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="312" y="-32" type="pin can1(13:0)" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <line x2="0" y1="-256" y2="-256" x1="64" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <line x2="0" y1="-64" y2="-64" x1="64" />
+        <line x2="384" y1="-352" y2="-352" x1="320" />
+        <line x2="384" y1="-288" y2="-288" x1="320" />
+        <line x2="384" y1="-224" y2="-224" x1="320" />
+        <line x2="384" y1="-160" y2="-160" x1="320" />
+        <rect width="64" x="320" y="-108" height="24" />
+        <line x2="384" y1="-96" y2="-96" x1="320" />
+        <rect width="64" x="320" y="-44" height="24" />
+        <line x2="384" y1="-32" y2="-32" x1="320" />
+        <rect width="256" x="64" y="-384" height="384" />
+    </graph>
+</symbol>

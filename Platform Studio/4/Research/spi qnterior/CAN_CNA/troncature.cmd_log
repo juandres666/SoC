@@ -1,0 +1,2 @@
+vhdtdtfi -lib work troncature.vhd -prj test_ADC -o troncature.spl -module troncature -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e troncature.spl D:/stage/test_ADC/troncature.sym 

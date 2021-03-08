@@ -1,0 +1,2 @@
+vhdtdtfi -lib work bascule.vhd -prj test_ADC -o bascule.spl -module bascule -template C:/Xilinx/14.1/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e bascule.spl D:/stage/test_ADC/bascule.sym 

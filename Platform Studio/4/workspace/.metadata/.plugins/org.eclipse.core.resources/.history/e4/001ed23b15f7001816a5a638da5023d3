@@ -1,0 +1,45 @@
+/*
+ * mtr_code.c
+ *
+ *  Created on: 3 déc. 2018
+ *      Author: jvalverd
+ */
+
+
+/*
+ * adc_scr.c
+ *
+ *  Created on: 13 nov. 2018
+ *      Author: jvalverd
+ */
+
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xspi.h"
+#include "xintc.h"
+//#include <stdio.h>
+//#include <stdlib.h>
+#include <string.h>
+
+
+int main()
+{
+	XSpi mySpi;
+
+	Xspi_mIntrGlobalDisable(&mySpi);
+
+	XSpi_Initialize(&mySpi, XPAR_XPS_SPI_0_DEVICE_ID); /* Initialize the SPI and clear	the SPI bus */
+	//clearSPI();
+
+	unsigned int adc[2] = {0x00, 0x00};
+	unsigned int gain_a, gain_b;
+
+	while(1)
+	{
+
+
+
+
+	}
+
+}

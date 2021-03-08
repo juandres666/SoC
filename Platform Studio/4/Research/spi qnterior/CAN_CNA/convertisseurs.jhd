@@ -1,0 +1,9 @@
+MODULE convertisseurs
+	SUBMODULE can_cna_commande
+		INSTANCE XLXI_1
+	SUBMODULE amplificateurs
+		INSTANCE XLXI_2
+	SUBMODULE can
+		INSTANCE XLXI_3
+	SUBMODULE cna
+		INSTANCE XLXI_4

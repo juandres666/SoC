@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="system_bd.bmm" key="tp_SOC_hw_platform-bmmFile"/>
+	<item value="F:\3\workspace\interr_in\Debug\interr_in.elf" key="tp_SOC_hw_platform-microblaze_0-initElf"/>
+	<item value="system.bit" key="tp_SOC_hw_platform-bitFile"/>
+</section>

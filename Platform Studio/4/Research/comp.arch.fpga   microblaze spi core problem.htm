@@ -1,0 +1,1080 @@
+<html class="fa-events-icons-ready"><head>
+    <link rel="shortcut icon" href="https://www.fpgarelated.com/new2/favicon.ico">
+    <link rel="canonical" href="https://www.fpgarelated.com/showthread/comp.arch.fpga/95604-1.php">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>comp.arch.fpga | microblaze spi core problem</title>
+    <meta name="description" content="Hello I'm using Xilinx EDK 11.5 with xps_spi core version 2.01b. Core is correctly integrated in my SDK, I can see the signals on my DSO....">
+
+    
+    <link href="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/css.css" rel="stylesheet" type="text/css">
+<link href="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/css_002.css" rel="stylesheet" type="text/css">
+<link href="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/css_004.css" rel="stylesheet" type="text/css">
+<link href="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/css_003.css" rel="stylesheet" type="text/css">
+<!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">-->
+<script async="" src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/analytics.js"></script><script type="text/javascript" async="" src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/recaptcha__fr.js"></script><script src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/ifvisible.js"></script>
+<script src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/timeme.js"></script>
+<script type="text/javascript">
+    TimeMe.setIdleDurationInSeconds(30);
+    TimeMe.setCurrentPageName("");
+    TimeMe.initialize();
+
+    window.onbeforeunload = function (event) {
+    xmlhttp=new XMLHttpRequest();
+    xmlhttp.open("POST","https://www.fpgarelated.com/new2/ajax_tracktime.php",false);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    var timeSpentOnPage = TimeMe.getTimeOnCurrentPageInSeconds();
+    xmlhttp.send("timespent="+timeSpentOnPage+"&threadid=95604"+"&group=comp.arch.fpga"+"&REMOTE_ADDR=147.127.150.232"+"&search_query="+"&HTTP_REFERER=https://www.google.com/");
+};
+</script>
+    <link rel="StyleSheet" type="text/css" href="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/style.css">
+
+    <script src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/jquery_004.js"></script>
+<script src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/jquery-migrate-1.js"></script>
+<script src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/jquery.js"></script>
+
+<script src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/b6039e963b.js"></script><link href="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/b6039e963b.css" media="all" rel="stylesheet">
+
+<!-- http://mycodde.blogspot.ca/2014/12/multiple-recaptcha-demo-same-page.html -->
+<script src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/api.js" async="" defer="defer"></script>
+    <script>
+      var recaptcha1;
+      var recaptcha2;
+    // do your stuff
+      var myCallBack = function() {
+        //Render the recaptcha1 on the element with ID "recaptcha1"
+        if ($('#recaptcha1').length) {
+        recaptcha1 = grecaptcha.render('recaptcha1', {
+          'sitekey' : '6LcoKR4TAAAAABOTOWiDACvcvs270jKtYqjcMcdr', //Replace this with your Site key
+          'theme' : 'light'
+        });
+        }
+        //Render the recaptcha2 on the element with ID "recaptcha2"
+        if ($('#recaptcha2').length) {
+        recaptcha2 = grecaptcha.render('recaptcha2', {
+          'sitekey' : '6LcoKR4TAAAAABOTOWiDACvcvs270jKtYqjcMcdr', //Replace this with your Site key
+          'theme' : 'light'
+        });
+        }
+      };
+    </script>
+    <script type="text/javascript" src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/autosize.js"></script>
+
+
+<script src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/jquery_002.js" type="text/javascript"></script>
+<script src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/jquery_003.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready( function() {
+      $('#tab-container').easytabs({animate: false});
+    });
+
+    function scrollBottom() {
+        var posts = document.getElementById("posts");
+        var blockquotes = posts.getElementsByTagName("blockquote");
+        for(var i=0; i<blockquotes.length; i++)
+        {
+            var thisblockquote = blockquotes[i];
+            thisblockquote.scrollTop = thisblockquote.scrollHeight;
+        }
+    }
+    window.onload = scrollBottom;
+  </script>
+
+    <link rel="StyleSheet" type="text/css" href="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/modal_login.css">
+            <script type="text/javascript" src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/jquery_005.js"></script>
+<script>
+    if (window.history.pushState) {
+window.history.replaceState({"threadid": 95604, "group": "comp.arch.fpga", "page": 1, "sort": "of"}, null, "/showthread/comp.arch.fpga/95604-1.php");
+                }
+
+    // Revert to a previously saved state when back button is pushed
+    window.addEventListener('popstate', function(event) {
+      console.log('popstate fired!');
+      console.log(event.state.page);
+      //var obj = event.state;
+      if (event.state)
+      {
+        var obj = event.state;
+        myCall(obj.threadid, obj.group, obj.page, obj.sort, '#tabs1-chronological', 'no');
+      }
+      //updateContent(event.state);
+    });
+
+    function myCall(threadid, group, page, sort, tabshash, pushstate) {
+
+        var tabshash2 = tabshash.substring(1, tabshash.length);     //remove # char because doesn't get passed properly to script
+
+        var request = $.ajax({
+            url: "/new2/showthread_ajax.php",
+            type: "GET",
+            data: "threadid=" + threadid + "&group=" + group + "&page=" + page + "&sort=" + sort + "&tabshash=" + tabshash2,
+            dataType: "html"
+        });
+
+        if (window.history.pushState && pushstate != 'no') {
+                        window.history.pushState({"threadid": threadid, "group": group, "page": page, "sort": sort, "tabshash": tabshash}, null, '/showthread/'+group+'/'+threadid+'-'+page+'.php'+tabshash);
+        }
+
+        request.done(function(msg) {
+            $(tabshash).fadeOut('slow', function() {
+            $(tabshash).html(msg);
+            $(tabshash).fadeIn('slow');
+});
+            $('html, body').animate({ scrollTop: 0 }, 'fast');
+            scrollBottom();
+        });
+
+        request.fail(function(jqXHR, textStatus) {
+            alert( "Request failed: " + textStatus );
+        });
+    }
+</script>
+
+<script>
+    function Reply(postid, group, elem) {
+
+        var request = $.ajax({
+            url: "/new2/ajax_reply.php",
+            type: "GET",
+            data: "postid=" + postid + "&group=" + group,
+            dataType: "html"
+        });
+
+        request.done(function(msg) {
+
+//            $(elem).parent().html(msg);
+            var parent = $(elem).parent();
+//            var textbox = $(parent).find("textarea");
+            height = $(parent).height();
+
+            $(parent).fadeOut('slow', function() {
+            $(parent).html(msg);
+            $(parent).find("textarea").height(height);
+            $(parent).fadeIn('slow', function() {
+//              $(parent).find("textarea").focus();
+              autosize($(parent).find("textarea"));
+              moveCursorToEnd($(parent).find("textarea"));
+              $(parent).find("textarea").scrollTop($(parent).find("textarea")[0].scrollHeight);
+/*              $(parent).find("textarea").animate({
+                scrollTop: $(parent).find("textarea")[0].scrollHeight
+              }, function(){
+              });*/
+//                $(parent).find("textarea").scrollTop($(parent).find("textarea")[0].scrollHeight, function() {alert('TEST');});
+//                moveCursorToEnd($(parent).find("textarea"));
+//                var data = $(parent).find("textarea").val();
+//                $(parent).find("textarea").focus().val('').val(data);
+//                autosize($(parent).find("textarea"));
+//                $(parent).find("textarea").scrollTop($(parent).find("textarea")[0].scrollHeight);
+            });
+});
+
+/*            height = $("#styled").height();
+            alert (height);*/
+
+
+/*            val = $('#styled').val();
+            alert (val);
+            $('#styled')
+                .focus()
+                .val("")
+                .val(val);*/
+
+        });
+
+        request.fail(function(jqXHR, textStatus) {
+            alert( "Request failed: " + textStatus );
+        });
+    }
+
+    function moveCursorToEnd(input) {
+    var originalValue = input.val();
+    input.val('');
+    input.blur().focus().val(originalValue);
+}
+</script>
+<script>
+$(function() {
+    var formMessages = $('.form-messages');
+
+        $(document).delegate('.replyform', 'submit', function(e) {
+        // Stop the browser from submitting the form.
+        e.preventDefault();
+//        alert('reply clicked');
+        var form = $(this);
+        // Serialize the form data.
+        var formData = $(form).serialize();
+        // Submit the form using AJAX.
+        //alert($('#subject').val());
+//        alert(formData);
+        $.ajax({
+            type: 'POST',
+            url: $(form).attr('action'),
+            data: formData
+        })
+
+        .done(function(response) {
+        var parent = $(form).parent();
+
+        $(parent).fadeOut('slow', function() {
+            $(parent).html(response);
+            $(parent).fadeIn('slow');
+            });
+
+
+//            alert(response);
+
+
+//            var postbox = document.getElementsByClassName("post");
+//            var spinner = new Spinner().spin(postbox);
+
+        })
+        .fail(function(data) {
+            // Make sure that the formMessages div has the 'error' class.
+            //$(formMessages).removeClass('success');
+            //$(formMessages).addClass('error');
+
+            // Set the message text.
+            if (data.responseText !== '') {
+//                $(formMessages).html(data.responseText);
+                $('#'+parent+' .form-messages').html(data.responseText);
+            } else {
+                $('#'+parent+' .form-messages').text('Oops! An error occured and your message could not be sent.');
+            }
+        });
+
+    });
+
+});
+</script>
+</head>
+
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1774944-6', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<div id="menutabs" class="container">
+
+        <a href="https://www.fpgarelated.com/"><img class="bigtab" src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/FPGARelated_bigtab.png" alt="" border="0"></a>
+        <a href="https://www.dsprelated.com/"><img class="smalltab" src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/DSPRelated_smalltab.png" alt="" border="0"></a>
+        <a href="https://www.electronics-related.com/"><img class="smalltab" src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/Electronics-Related_smalltab.png" alt="" border="0"></a>
+        <a href="https://www.embeddedrelated.com/"><img class="smalltab" src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/EmbeddedRelated_smalltab.png" alt="" border="0"></a>
+
+        <!--<img src="//www.embeddedrelated.com/new2/images/forengineers.png" alt="" style="margin-left: 40px;">-->
+</div>
+
+
+<div id="horizontalmenu2"><div class="container">
+<ul>
+<li><a href="https://www.fpgarelated.com/" title="FPGARelated.com | FPGA">Home</a></li><li><a href="https://www.fpgarelated.com/blogs.php" title="FPGA Blogs">Blogs</a><ul>
+      <li><a href="https://www.fpgarelated.com/blogs.php#tabs1-site">From the Editor</a></li>
+      <li><a href="https://www.fpgarelated.com/blogs.php">Recent Posts</a></li>
+      <li><a href="https://www.fpgarelated.com/blogs.php#tabs1-popular">Popular (this month)</a></li>
+      <li><a href="https://www.fpgarelated.com/blogs.php#tabs1-popularat">Popular (all time)</a></li>
+    </ul></li><li><a href="https://www.fpgarelated.com/tweets.php" title="FPGA Tweets"><i class="fa fa-twitter fa-lg"></i> Tweets</a><ul>
+      <li><a href="https://www.fpgarelated.com/tweets.php">All Popular Tweets</a></li>
+      <li><a href="https://www.fpgarelated.com/tweets.php#tabs1-vendors">Vendors Only</a></li>
+      <li><a href="https://www.fpgarelated.com/tweets.php#tabs1-iot">#IoT</a></li>
+    </ul></li><li class="active"><a href="https://www.fpgarelated.com/forums" title="FPGA Forums and Discussions" class="active">Forums</a></li><li><a href="https://www.fpgarelated.com/jobs" title="FPGA Jobs">Jobs</a></li><li><a href="https://www.fpgarelated.com/tutorials.php" title="FPGA Tutorials">Tutorials</a></li><li><a href="https://www.fpgarelated.com/books.php" title="FPGA Books">Books</a></li><li><a href="https://www.fpgarelated.com/documents.php" title="FPGA Free PDFs">Free PDFs</a></li><li><a href="https://www.fpgarelated.com/vendors" title="FPGA Vendors">Vendors</a></li></ul>
+
+    <div class="socialbox floatright"><a href="https://ca.linkedin.com/in/stephane-boucher-435294a"><i class="fa fa-linkedin fa-2x" style="line-height: 34px;"></i></a></div>
+    <div class="socialbox floatright"><a href="https://www.facebook.com/fpgarelated"><i class="fa fa-facebook fa-2x" style="line-height: 34px;"></i></a></div>
+    <div class="socialbox floatright"><a href="https://twitter.com/fpgarelated"><i class="fa fa-twitter fa-2x" style="line-height: 34px;"></i></a></div>
+    <div class="socialbox floatright"><a href="https://www.youtube.com/channel/UCeQLo2DnGk59lYps-8qzy2g"><i class="fa fa-youtube fa-2x" style="line-height: 34px;"></i></a></div>
+    <div class="socialbox floatright"><a href="https://www.fpgarelated.com/blogs_rss.php"><i class="fa fa-rss fa-2x" style="line-height: 34px;"></i></a></div>
+
+</div>
+</div>
+<div class="container">
+    <div id="mainleft">
+        <!--<img src="/new2/images/728x90.JPG" style="margin-bottom: 10px;">-->
+<div id="cookieconsent" style="position: relative; width: 680px; height: 160px; padding: 20px; border-style: solid; border-width: 1px;"><div id="hide" style="cursor: pointer; position:absolute; bottom: 0; right: 0; background-color: #cccccc; padding-left: 4px; padding-right: 4px; font-size: 0.8rem;">hide</div><h3 style="margin-top:0px; margin-bottom:0px;"><a href="" rel="nofollow" target="_blank">This website uses cookies</a></h3>
+        <p style="margin-top:5px; margin-bottom:5px;">This site uses 
+cookies to deliver our services and to show you relevant ads and job 
+listings. By using our site, you acknowledge that you have read and 
+understand our <a href="https://www.fpgarelated.com/cookies">Cookie Policy</a>, <a href="https://www.fpgarelated.com/privacy">Privacy Policy</a>, and our <a href="https://www.fpgarelated.com/terms">Terms of Service</a>.
+ Your use of the Related Sites, including DSPRelated.com, 
+FPGARelated.com, EmbeddedRelated.com and Electronics-Related.com, is 
+subject to these policies and terms.</p><button id="consentbutton" class="pure-button button-more-small" style="float: right; margin: 10px 20px 10px 0;">I Understand! </button></div><div style="clear:both;"></div><script>
+
+        function setCookie(name,value,days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+
+        $( document ).ready(function() {
+        $( "#cookieconsent" ).delay(500).slideDown( "slow", function() {
+            // Animation complete.
+            });
+        });
+        $("#hide").click(function(){
+                $( "#cookieconsent" ).slideUp( "slow", function() {
+                // Animation complete.
+            });
+        });
+        $("#consentbutton").unbind("click").click(function(){
+                setCookie("cookies_enabled", 1, 365);
+                $( "#cookieconsent" ).slideUp( "slow", function() {
+                    // Animation complete.
+                });
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "/new2/ajax_cookieconsent.php",
+                })
+                .done(function( msg ) {
+                    /*alert ( "Thank you for consenting to cookies!" );*/
+                });
+        });
+        </script>
+        <div class="breadcrumbs bigbold"><a href="https://www.fpgarelated.com/"><i class="fa fa-home"></i></a>&nbsp; <i class="fa fa-angle-right fa-lg"></i> &nbsp;<a href="https://www.fpgarelated.com/forums">Forums</a> &nbsp; <i class="fa fa-angle-right fa-lg"></i> &nbsp;<a href="https://www.fpgarelated.com/groups.php">More Forums</a> &nbsp;<i class="fa fa-angle-right fa-lg"></i>&nbsp; <a href="https://www.fpgarelated.com/groups/comp.arch.fpga/1.php">comp.arch.fpga</a> &nbsp;<i class="fa fa-angle-right fa-lg"></i></div>
+
+                <div id="posts">
+
+                    <h1 class="biggerfont">microblaze spi core problem</h1>
+                    <div class="threadinfo" style="float:left;">Started by <span class="author">Tobias Baumann</span> <span class="bullet">●</span>December 15, 2010</div>
+
+                <div id="tab-container" class="tab-container" data-easytabs="true">
+                   <ul class="etabs" style="text-align:right;">
+                     <li class="tab active"><a href="#tabs1-chronological" class="active">Chronological</a></li><li class="tab"><a href="https://www.fpgarelated.com/new2/showthread_ajax.php?threadid=95604&amp;group=comp.arch.fpga&amp;sort=nf&amp;page=1&amp;tabshash=tabs1-achronological" data-target="#tabs1-achronological" rel="nofollow">Newest First</a></li>
+                   </ul>
+
+                     <div class="panel-container-topborder">
+                        <div id="tabs1-chronological" style="display: block;" class="active"><div class="post"><span style="-ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;"><pre>Hello
+
+I'm using Xilinx EDK 11.5 with xps_spi core version 2.01b. Core is 
+correctly integrated in my SDK, I can see the signals on my DSO. 
+Everything seems to be allright. But I've got a little software problem.
+
+In SDK I transfer my data with the function "XSpi_Transfer(&amp;mySPI, 
+outBuffer, inBuffer, 2)" (see above). It works exactly one time and I 
+get XST_SCCUSS back. But if I call XSpi_Transfer again, I get 
+XST_DEVICE_BUSY back.
+
+My program do the following steps:
+
+1.) initalize SPI (function "XSpi_Initialize")
+2.) set options (function "XSpi_SetOptions")
+3.) select slave (function "XSpi_SetSlaveSelect")
+4.) start SPI (function "XSpi_Start")
+5.) transfer data (function "XSpi_Transfer")
+
+Every function return XST_SUCCESS, but not Xspi_transfer when I call it 
+the second time.
+
+So my question? Is there any bug in the core or have I forgot something? 
+I hope someone can help me. I tried to google, found a similar problem, 
+but no solution.
+
+Thanks a lot,
+
+Tobias
+
+C-Code:
+
+#include &lt;stdio.h&gt;
+#include "platform.h"
+#include "xbasic_types.h"
+#include "xstatus.h"
+#include "xparameters.h"
+#include "xspi.h"
+
+void SPIini(void);
+void pause(void);
+
+XSpi mySPI;
+
+int main()
+{
+     init_platform();
+	
+	print("SPI Test\n\r");
+	pause();
+	
+	Xuint8 inBuffer[4] = {0x00, 0x00, 0x00, 0x00};
+	Xuint8 outBuffer[4] = {0x00, 0xAA, 0xFF, 0xAA};
+	
+	XStatus status = XST_SUCCESS;
+	
+	SPIini();
+	
+	for(Xuint8 i=0; i&lt;100; i++) {
+		
+		/* initialization */
+		
+		status = XSpi_Transfer(&amp;mySPI, outBuffer, inBuffer, 2);
+			
+		switch(status)
+		{
+			case XST_SUCCESS: print("Status: Erfolgreich gesendet."); break;
+			case XST_DEVICE_IS_STOPPED: print("Status: Device stopped\n\r"); break;
+			case XST_DEVICE_BUSY: print("Status: Device busy\n\r"); break;
+			case XST_SPI_NO_SLAVE: print("Status: Device no slave\n\r"); break;
+		}
+				
+		pause();
+	}
+
+     cleanup_platform();
+
+     return 0;
+}
+
+void SPIini(void)
+{
+	XStatus status = XST_SUCCESS;
+	
+	status = XSpi_Initialize(&amp;mySPI, XPAR_TEST_SPI_DEVICE_ID);
+
+	switch(status)
+	{
+		case XST_SUCCESS: print("Status: Erfolgreich initialisiert\n\r"); break;
+		case XST_DEVICE_IS_STARTED: print("Status: Device is started\n\r"); break;
+		case XST_DEVICE_NOT_FOUND: print("Status: Device not found\n\r"); break;
+	}
+	
+	Xuint32 options = XSP_MASTER_OPTION;
+	status = XSpi_SetOptions(&amp;mySPI, options);
+
+	switch(status)
+	{
+		case XST_SUCCESS: print("Status: Erfolgreich option gesetzt\n\r"); break;
+		case XST_DEVICE_BUSY: print("Status: Device busy\n\r"); break;
+		case XST_SPI_SLAVE_ONLY: print("Status: Slave only\n\r"); break;
+	}
+	
+	XSpi_SetSlaveSelect(&amp;mySPI, 1);
+	XSpi_Start(&amp;mySPI);
+}
+
+void pause(void)
+{
+	for(int i=0; i&lt;CPU_FREQ; i++);
+}
+</pre></span><a class="modal_trigger" href="#modal"><button class="pure-button button-more-small" style="float: right; margin: 10px 40px 10px 0;">Reply <i class="fa fa-reply"></i></button></a><a href="https://www.fpgarelated.com/groups.php#tabs1-newthread"><button class="pure-button button-more-small" style="float: right; margin: 10px 10px 10px 0;"><i class="fa fa-pencil-square-o"></i> Start a New Thread</button></a><div style="clear:both;"></div></div><div style="clear: both;"></div><div class="postinfo">Posted by <span class="author">Martin Thompson</span> <span class="bullet">●</span>December 16, 2010</div><div class="post"><span style="-ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;"><pre>Tobias Baumann &lt;ttobsen@hotmail.com&gt; writes:
+
+<blockquote>&gt; Hello
+&gt;
+&gt; I'm using Xilinx EDK 11.5 with xps_spi core version 2.01b. Core is
+&gt; correctly integrated in my SDK, I can see the signals on my
+&gt; DSO. Everything seems to be allright. But I've got a little software
+&gt; problem.
+&gt;
+&gt; In SDK I transfer my data with the function "XSpi_Transfer(&amp;mySPI,
+&gt; outBuffer, inBuffer, 2)" (see above). It works exactly one time and I
+&gt; get XST_SCCUSS back. But if I call XSpi_Transfer again, I get
+&gt; XST_DEVICE_BUSY back.
+&gt;
+</blockquote>
+Maybe it is actually busy?  There's a FIFO in the SPI controller, so
+the XSpi_Transfer call can return before the hardware has finished
+sending.  Try checking the status flags before calling XSpi_Transfer
+again.
+
+If that's not the case, here's some other thoughts (without looking
+deeply into your code, sorry!):
+
+Have you provided your own XAssert handler function to report when
+assertions fail - the Xilinx drivers are liberally sprinkled with
+them, but the default action is just to hang.  If you look at the call
+stack in the debugger, you can see what's going on, but I prefer to
+have it pushed out over stdout as well...
+
+I have this in main():
+    XAssertSetCallback((XAssertCallback)myassert);
+
+and this function elsewhere.
+
+/* override the Xilinx xassert stub to report errors */
+void myassert(char * file, int line)
+{
+    xil_printf("XASSERT: %s: line %d\r\n", file, line);
+}
+
+This may give some clues.
+
+Also:
+
+Have you enabled interrupts?  If so, is the driver expecting
+interrupts?  As I recall, the 2.00.a driver didn't work in
+non-interrupt mode (it re-enabled the SPI interrupts at the end of a
+transmit, irrespective of the interrupt status on entry :) but I think
+that was fixed in 2.00.b
+
+Have you provided a StatusHandler function for the spi driver? I seem
+to recall doing this helped me debug a similar problem.
+
+On the up side - you at least have all the source to the driver, so
+you can single step everything through :)
+
+<blockquote>&gt; void pause(void)
+&gt; {
+&gt; 	for(int i=0; i&lt;CPU_FREQ; i++);
+&gt; }
+</blockquote>
+This is not the world's greatest pause function!  The compiler will
+just optimise the loop away (although probably not the function call
+itself).
+
+You need a timer in your system that you can watch to see elapsed
+time.
+
+Cheers,
+Martin
+
+-- 
+martin.j.thompson@trw.com 
+TRW Conekt - Consultancy in Engineering, Knowledge and Technology
+<a href="http://www.conekt.co.uk/capabilities/39-electronic-hardware" target="_blank" rel="nofollow">http://www.conekt.co.uk/capabilities/39-electronic-hardware</a>
+</pre></span><a class="modal_trigger" href="#modal"><button class="pure-button button-more-small" style="float: right; margin: 10px 40px 10px 0;">Reply <i class="fa fa-reply"></i></button></a><a href="https://www.fpgarelated.com/groups.php#tabs1-newthread"><button class="pure-button button-more-small" style="float: right; margin: 10px 10px 10px 0;"><i class="fa fa-pencil-square-o"></i> Start a New Thread</button></a><div style="clear:both;"></div></div><div style="clear: both;"></div><div class="postinfo">Posted by <span class="author">Bryan</span> <span class="bullet">●</span>December 20, 2010</div><div class="post"><span style="-ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;"><pre>I have successfully used the SPI peripheral with a SPI Flash.  The
+only difference that I can see is a call to disable the interrupts
+since I use the peripheral in polled mode:
+	XSpi_mIntrGlobalDisable(&amp;mySpi);
+
+Here's my instantiation from my MHS.  I turned on the FIFOs and have
+an SCK Ratio of 16 (this is from EDK 10):
+
+BEGIN xps_spi
+ PARAMETER INSTANCE =3D SPI_FLASH
+ PARAMETER C_FIFO_EXIST =3D 1
+ PARAMETER C_SCK_RATIO =3D 16
+ PARAMETER HW_VER =3D 2.01.b
+ PARAMETER C_BASEADDR =3D 0x83400000
+ PARAMETER C_HIGHADDR =3D 0x8340ffff
+ BUS_INTERFACE SPLB =3D mb_plb
+ PORT SPISEL =3D net_vcc
+ PORT SCK =3D fpga_0_SPI_FLASH_SCK_pin
+ PORT MISO =3D fpga_0_SPI_FLASH_MISO_pin
+ PORT MOSI =3D fpga_0_SPI_FLASH_MOSI_pin
+ PORT SS =3D fpga_0_SPI_FLASH_SS_pin
+END
+
+Here's the complete example if you are interested:
+   www.em.avnet.com/spartan3a-evl --&gt; &gt; MicroBlaze Serial Flash Test
+
+Bryan
+
+On Dec 15, 10:05=A0am, Tobias Baumann &lt;ttob...@hotmail.com&gt; wrote:
+<blockquote>&gt; Hello
+&gt;
+&gt; I'm using Xilinx EDK 11.5 with xps_spi core version 2.01b. Core is
+&gt; correctly integrated in my SDK, I can see the signals on my DSO.
+&gt; Everything seems to be allright. But I've got a little software problem.
+&gt;
+&gt; In SDK I transfer my data with the function "XSpi_Transfer(&amp;mySPI,
+&gt; outBuffer, inBuffer, 2)" (see above). It works exactly one time and I
+&gt; get XST_SCCUSS back. But if I call XSpi_Transfer again, I get
+&gt; XST_DEVICE_BUSY back.
+&gt;
+&gt; My program do the following steps:
+&gt;
+&gt; 1.) initalize SPI (function "XSpi_Initialize")
+&gt; 2.) set options (function "XSpi_SetOptions")
+&gt; 3.) select slave (function "XSpi_SetSlaveSelect")
+&gt; 4.) start SPI (function "XSpi_Start")
+&gt; 5.) transfer data (function "XSpi_Transfer")
+&gt;
+&gt; Every function return XST_SUCCESS, but not Xspi_transfer when I call it
+&gt; the second time.
+&gt;
+&gt; So my question? Is there any bug in the core or have I forgot something?
+&gt; I hope someone can help me. I tried to google, found a similar problem,
+&gt; but no solution.
+&gt;
+&gt; Thanks a lot,
+&gt;
+&gt; Tobias
+&gt;
+&gt; C-Code:
+&gt;
+&gt; #include &lt;stdio.h&gt;
+&gt; #include "platform.h"
+&gt; #include "xbasic_types.h"
+&gt; #include "xstatus.h"
+&gt; #include "xparameters.h"
+&gt; #include "xspi.h"
+&gt;
+&gt; void SPIini(void);
+&gt; void pause(void);
+&gt;
+&gt; XSpi mySPI;
+&gt;
+&gt; int main()
+&gt; {
+&gt; =A0 =A0 =A0init_platform();
+&gt;
+&gt; =A0 =A0 =A0 =A0 print("SPI Test\n\r");
+&gt; =A0 =A0 =A0 =A0 pause();
+&gt;
+&gt; =A0 =A0 =A0 =A0 Xuint8 inBuffer[4] =3D {0x00, 0x00, 0x00, 0x00};
+&gt; =A0 =A0 =A0 =A0 Xuint8 outBuffer[4] =3D {0x00, 0xAA, 0xFF, 0xAA};
+&gt;
+&gt; =A0 =A0 =A0 =A0 XStatus status =3D XST_SUCCESS;
+&gt;
+&gt; =A0 =A0 =A0 =A0 SPIini();
+&gt;
+&gt; =A0 =A0 =A0 =A0 for(Xuint8 i=3D0; i&lt;100; i++) {
+&gt;
+&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 /* initialization */
+&gt;
+&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 status =3D XSpi_Transfer(&amp;mySPI, outBuffe=
+</blockquote>r, inBuffer, 2);
+<blockquote>&gt;
+&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 switch(status)
+&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 {
+&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 case XST_SUCCESS: print("=
+</blockquote>Status: Erfolgreich gesendet."); break;
+<blockquote>&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 case XST_DEVICE_IS_STOPPE=
+</blockquote>D: print("Status: Device stopped\n\r"); break;
+<blockquote>&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 case XST_DEVICE_BUSY: pri=
+</blockquote>nt("Status: Device busy\n\r"); break;
+<blockquote>&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 case XST_SPI_NO_SLAVE: pr=
+</blockquote>int("Status: Device no slave\n\r"); break;
+<blockquote>&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 }
+&gt;
+&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 pause();
+&gt; =A0 =A0 =A0 =A0 }
+&gt;
+&gt; =A0 =A0 =A0cleanup_platform();
+&gt;
+&gt; =A0 =A0 =A0return 0;
+&gt;
+&gt; }
+&gt;
+&gt; void SPIini(void)
+&gt; {
+&gt; =A0 =A0 =A0 =A0 XStatus status =3D XST_SUCCESS;
+&gt;
+&gt; =A0 =A0 =A0 =A0 status =3D XSpi_Initialize(&amp;mySPI, XPAR_TEST_SPI_DEVICE_I=
+</blockquote>D);
+<blockquote>&gt;
+&gt; =A0 =A0 =A0 =A0 switch(status)
+&gt; =A0 =A0 =A0 =A0 {
+&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 case XST_SUCCESS: print("Status: Erfolgre=
+</blockquote>ich initialisiert\n\r"); break;
+<blockquote>&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 case XST_DEVICE_IS_STARTED: print("Status=
+</blockquote>: Device is started\n\r"); break;
+<blockquote>&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 case XST_DEVICE_NOT_FOUND: print("Status:=
+</blockquote> Device not found\n\r"); break;
+<blockquote>&gt; =A0 =A0 =A0 =A0 }
+&gt;
+&gt; =A0 =A0 =A0 =A0 Xuint32 options =3D XSP_MASTER_OPTION;
+&gt; =A0 =A0 =A0 =A0 status =3D XSpi_SetOptions(&amp;mySPI, options);
+&gt;
+&gt; =A0 =A0 =A0 =A0 switch(status)
+&gt; =A0 =A0 =A0 =A0 {
+&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 case XST_SUCCESS: print("Status: Erfolgre=
+</blockquote>ich option gesetzt\n\r"); break;
+<blockquote>&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 case XST_DEVICE_BUSY: print("Status: Devi=
+</blockquote>ce busy\n\r"); break;
+<blockquote>&gt; =A0 =A0 =A0 =A0 =A0 =A0 =A0 =A0 case XST_SPI_SLAVE_ONLY: print("Status: S=
+</blockquote>lave only\n\r"); break;
+<blockquote>&gt; =A0 =A0 =A0 =A0 }
+&gt;
+&gt; =A0 =A0 =A0 =A0 XSpi_SetSlaveSelect(&amp;mySPI, 1);
+&gt; =A0 =A0 =A0 =A0 XSpi_Start(&amp;mySPI);
+&gt;
+&gt; }
+&gt;
+&gt; void pause(void)
+&gt; {
+&gt; =A0 =A0 =A0 =A0 for(int i=3D0; i&lt;CPU_FREQ; i++);
+&gt;
+&gt; }
+</blockquote>
+</pre></span><a class="modal_trigger" href="#modal"><button class="pure-button button-more-small" style="float: right; margin: 10px 40px 10px 0;">Reply <i class="fa fa-reply"></i></button></a><a href="https://www.fpgarelated.com/groups.php#tabs1-newthread"><button class="pure-button button-more-small" style="float: right; margin: 10px 10px 10px 0;"><i class="fa fa-pencil-square-o"></i> Start a New Thread</button></a><div style="clear:both;"></div></div><div style="clear: both;"></div><div class="postinfo">Posted by <span class="author">Tobias Baumann</span> <span class="bullet">●</span>December 21, 2010</div><div class="post"><span style="-ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;"><pre>Hi Martin and Bryan
+
+You both were right. I had to disable the interrupts with 
+Xspi_mIntrGlobalDisable(&amp;mySpi) and now it works fine. Thanks a lot to you!
+
+But unfortunately I have a new problem. I want to stream data to a W-LAN 
+module, so I need a high throughput to max out my performance. The SPI 
+core is very slow, so I can't use the high performance of my W-LAN 
+module. (I get a throughput of 30kB/s, this is much to slow).
+
+Has someone an idea how to increase the throughput of my system? A fine 
+solution would be, sending data directly from rams and/or registers via 
+SPI to my module. Maybe DMA is the right keyword, but I'm not sure, 
+because I'm a total beginner of programming microblaze and IP cores.
+
+Maybe someone has a hint in which direction I have to search, for 
+finding a solution.
+
+Thanks a lot!
+
+Tobias
+</pre></span><a class="modal_trigger" href="#modal"><button class="pure-button button-more-small" style="float: right; margin: 10px 40px 10px 0;">Reply <i class="fa fa-reply"></i></button></a><a href="https://www.fpgarelated.com/groups.php#tabs1-newthread"><button class="pure-button button-more-small" style="float: right; margin: 10px 10px 10px 0;"><i class="fa fa-pencil-square-o"></i> Start a New Thread</button></a><div style="clear:both;"></div></div><div style="clear: both;"></div><div class="postinfo">Posted by <span class="author">Bryan</span> <span class="bullet">●</span>December 22, 2010</div><div class="post"><span style="-ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;"><pre>Some improvement can be made by decreasing the SCK Ratio, but you're
+still dealing with the PLB.  If this is Spartan-6 or Virtex-6, you
+could look at switching to AXI.  You could also look at a designing
+your own simple SPI peripheral and connect to MicroBlaze via FSL.
+
+Bryan
+
+On Dec 21, 10:02=A0am, Tobias Baumann &lt;ttob...@hotmail.com&gt; wrote:
+<blockquote>&gt; Hi Martin and Bryan
+&gt;
+&gt; You both were right. I had to disable the interrupts with
+&gt; Xspi_mIntrGlobalDisable(&amp;mySpi) and now it works fine. Thanks a lot to yo=
+</blockquote>u!
+<blockquote>&gt;
+&gt; But unfortunately I have a new problem. I want to stream data to a W-LAN
+&gt; module, so I need a high throughput to max out my performance. The SPI
+&gt; core is very slow, so I can't use the high performance of my W-LAN
+&gt; module. (I get a throughput of 30kB/s, this is much to slow).
+&gt;
+&gt; Has someone an idea how to increase the throughput of my system? A fine
+&gt; solution would be, sending data directly from rams and/or registers via
+&gt; SPI to my module. Maybe DMA is the right keyword, but I'm not sure,
+&gt; because I'm a total beginner of programming microblaze and IP cores.
+&gt;
+&gt; Maybe someone has a hint in which direction I have to search, for
+&gt; finding a solution.
+&gt;
+&gt; Thanks a lot!
+&gt;
+&gt; Tobias
+</blockquote>
+</pre></span><a class="modal_trigger" href="#modal"><button class="pure-button button-more-small" style="float: right; margin: 10px 40px 10px 0;">Reply <i class="fa fa-reply"></i></button></a><a href="https://www.fpgarelated.com/groups.php#tabs1-newthread"><button class="pure-button button-more-small" style="float: right; margin: 10px 10px 10px 0;"><i class="fa fa-pencil-square-o"></i> Start a New Thread</button></a><div style="clear:both;"></div></div><div style="clear: both;"></div><div class="postinfo">Posted by <span class="author">Tobias Baumann</span> <span class="bullet">●</span>December 23, 2010</div><div class="post"><span style="-ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -ms-hyphens: auto; hyphens: auto;"><pre>Am 22.12.2010 17:34, schrieb Bryan:
+<blockquote>&gt; Some improvement can be made by decreasing the SCK Ratio, but you're
+&gt; still dealing with the PLB.  If this is Spartan-6 or Virtex-6, you
+&gt; could look at switching to AXI.  You could also look at a designing
+&gt; your own simple SPI peripheral and connect to MicroBlaze via FSL.
+&gt;
+</blockquote>
+I'm working with a Spartan 3A-DSP.
+
+After optimizing the settings of the SPI-Core I get a much higher 
+throughput (maybe 500kB/s to 1MB/s, I still have to measure it).
+
+I thought that I have to make my own SPI peripheral to optimize my 
+problem, but I hoped that there is a finshed solution.
+
+Thanks a lot.
+
+Tobias
+</pre></span><a class="modal_trigger" href="#modal"><button class="pure-button button-more-small" style="float: right; margin: 10px 40px 10px 0;">Reply <i class="fa fa-reply"></i></button></a><a href="https://www.fpgarelated.com/groups.php#tabs1-newthread"><button class="pure-button button-more-small" style="float: right; margin: 10px 10px 10px 0;"><i class="fa fa-pencil-square-o"></i> Start a New Thread</button></a><div style="clear:both;"></div></div><div style="clear: both;"></div>
+                        </div>
+                        <div id="tabs1-achronological" style="display: none;">
+                        </div>
+
+                     </div>
+                  </div>
+              </div>        <!--<img src="/new2/images/728x90.JPG" style="margin-bottom: 10px;">-->
+<div id="cookieconsent" style="position: relative; display: none; width: 680px; height: 160px; padding: 20px; border-style: solid; border-width: 1px;"><div id="hide" style="cursor: pointer; position:absolute; bottom: 0; right: 0; background-color: #cccccc; padding-left: 4px; padding-right: 4px; font-size: 0.8rem;">hide</div><h3 style="margin-top:0px; margin-bottom:0px;"><a href="" rel="nofollow" target="_blank">This website uses cookies</a></h3>
+        <p style="margin-top:5px; margin-bottom:5px;">This site uses 
+cookies to deliver our services and to show you relevant ads and job 
+listings. By using our site, you acknowledge that you have read and 
+understand our <a href="https://www.fpgarelated.com/cookies">Cookie Policy</a>, <a href="https://www.fpgarelated.com/privacy">Privacy Policy</a>, and our <a href="https://www.fpgarelated.com/terms">Terms of Service</a>.
+ Your use of the Related Sites, including DSPRelated.com, 
+FPGARelated.com, EmbeddedRelated.com and Electronics-Related.com, is 
+subject to these policies and terms.</p><button id="consentbutton" class="pure-button button-more-small" style="float: right; margin: 10px 20px 10px 0;">I Understand! </button></div><div style="clear:both;"></div><script>
+
+        function setCookie(name,value,days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+
+        $( document ).ready(function() {
+        $( "#cookieconsent" ).delay(500).slideDown( "slow", function() {
+            // Animation complete.
+            });
+        });
+        $("#hide").click(function(){
+                $( "#cookieconsent" ).slideUp( "slow", function() {
+                // Animation complete.
+            });
+        });
+        $("#consentbutton").unbind("click").click(function(){
+                setCookie("cookies_enabled", 1, 365);
+                $( "#cookieconsent" ).slideUp( "slow", function() {
+                    // Animation complete.
+                });
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "/new2/ajax_cookieconsent.php",
+                })
+                .done(function( msg ) {
+                    /*alert ( "Thank you for consenting to cookies!" );*/
+                });
+        });
+        </script>    </div>
+    <div id="sidebar">
+        <div id="loginbox">
+<h2>Sign in</h2>
+        <div class="sidebar_box">
+            <form name="login" class="pure-form" action="/showthread/comp.arch.fpga/95604-1.php" method="post">
+            <fieldset>
+                <input name="usernameposted" class="pure-input-login" placeholder="Username" required="" type="text">
+                <input name="passwordposted" class="pure-input-login" placeholder="Password" required="" type="password">
+                <button type="submit" class="pure-button pure-button-green">Sign in</button>
+                <label for="remember" style="display: block;">
+                    <input id="remember" name="remember" value="checked" checked="checked" style="padding: 10px;" type="checkbox"> Remember me
+                </label>
+            </fieldset>
+
+            <span class="condensed"><a href="https://www.fpgarelated.com/forgot.php" class="green smallbold">Forgot username or password?</a> &nbsp;|&nbsp; <a href="https://www.fpgarelated.com/register.php" class="green smallbold">Create account</a></span>
+            </form>
+        </div></div>        <h2>Search forums</h2><div class="sidebar_box"><form name="searchform" class="pure-form" action="/forums" method="get">
+              <fieldset>
+                  <input name="searchfor" class="pure-input-subscribe" type="text">
+                  <button type="submit" class="pure-button pure-button-green">Search</button>
+              </fieldset>
+              </form></div>                                <h2>Free PDF Downloads</h2>
+    <div class="sidebar_box">
+<div class="imageleft" style="position: relative; width: 70px; float: left; margin: 0 10px 10px 0;">
+                <a href="https://www.fpgarelated.com/showabstract/21.php"><img src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/21.jpg" style="position: relative;" class="imageleft document" width="70" align="left"></a>
+             </div>
+            <span class="smallbold"><a href="https://www.fpgarelated.com/showabstract/21.php"><i class="fa fa-cloud-download"></i> Introducing the Spartan 3E FPGA and VHDL</a></span>
+            <div style="clear:both"></div><div class="imageleft" style="position: relative; width: 70px; float: left; margin: 0 10px 10px 0;">
+                <a href="https://www.fpgarelated.com/showabstract/17.php"><img src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/17.jpg" style="position: relative;" class="imageleft document" width="70" align="left"></a>
+             </div>
+            <span class="smallbold"><a href="https://www.fpgarelated.com/showabstract/17.php"><i class="fa fa-cloud-download"></i> Free Range VHDL</a></span>
+            <div style="clear:both"></div><div class="imageleft" style="position: relative; width: 70px; float: left; margin: 0 10px 10px 0;">
+                <a href="https://www.fpgarelated.com/showabstract/10.php"><img src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/10.jpg" style="position: relative;" class="imageleft document" width="70" align="left"></a>
+             </div>
+            <span class="smallbold"><a href="https://www.fpgarelated.com/showabstract/10.php"><i class="fa fa-cloud-download"></i> FPGAs!? Now What?</a></span>
+            <div style="clear:both"></div><a href="https://www.fpgarelated.com/documents.php"><button class="pure-button button-more-small" style="float: right; margin: 10px 0px 10px 0;">All FREE PDF Downloads <i class="fa fa-arrow-circle-o-down fa-lg"></i> </button></a>    <div style="clear:both"></div>
+    </div>
+
+        <h2>Blogs - Hall of Fame</h2>
+<div class="sidebar_box">
+<div class="halloffame">
+<a href="https://www.fpgarelated.com/showarticle/208/vhdl-tutorial-a-practical-example-part-3-vhdl-testbench.php"><img src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/208.jpg" class="imageleft document" width="100" height="64" align="left">
+        </a><p><a href="https://www.fpgarelated.com/showarticle/208/vhdl-tutorial-a-practical-example-part-3-vhdl-testbench.php"><span class="highlight">VHDL Tutorial</span> Series</a><br><span class="author">Gene Breniman</span></p>
+<div style="clear:both;"></div>
+</div>
+<div class="halloffame">
+<a href="https://www.fpgarelated.com/showarticle/357/how-fpgas-work-and-why-you-ll-buy-one"><img src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/357.png" class="imageleft document" width="100" height="88" align="left">
+        </a><p><a href="https://www.fpgarelated.com/showarticle/357/how-fpgas-work-and-why-you-ll-buy-one">How <span class="highlight">FPGAs</span> Work and Why You'll Buy One</a><br><span class="author">Yossi Krenin</span></p>
+<div style="clear:both;"></div>
+</div>
+<div class="halloffame">
+<a href="https://www.fpgarelated.com/showarticle/25.php"><img src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/25.png" class="imageleft document" width="100" height="80" align="left">
+        </a><p><a href="https://www.fpgarelated.com/showarticle/25.php"><span class="highlight">MyHDL</span> FPGA Tutorial (LED Strobe)</a><br><span class="author">Christopher Felton</span></p>
+<div style="clear:both;"></div>
+</div>
+<div class="halloffame">
+<a href="https://www.embeddedrelated.com/showarticle/453.php"><img src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/453.png" class="imageleft document" width="100" height="92" align="left">
+        </a><p><a href="https://www.embeddedrelated.com/showarticle/453.php">Introduction to <span class="highlight">Microcontrollers</span></a><br><span class="author">Mike Silva</span></p>
+<div style="clear:both;"></div>
+</div>
+
+</div>            </div>
+</div>
+<div style="clear: both;"></div>
+
+<div id="footer">
+    <div class="container">
+        <div class="footerbox">
+            <h2 class="smallfont">Quick Links</h2>
+            <ul>
+<li><a href="https://www.fpgarelated.com/">Home</a></li><li><a href="https://www.fpgarelated.com/blogs.php">Blogs</a></li><li><a href="https://www.fpgarelated.com/tweets.php"><i class="fa fa-twitter fa-lg"></i> Tweets</a></li><li><a href="https://www.fpgarelated.com/forums">Forums</a></li><li><a href="https://www.fpgarelated.com/jobs">Jobs</a></li><li><a href="https://www.fpgarelated.com/tutorials.php">Tutorials</a></li><li><a href="https://www.fpgarelated.com/books.php">Books</a></li><li><a href="https://www.fpgarelated.com/documents.php">Free PDFs</a></li><li><a href="https://www.fpgarelated.com/vendors">Vendors</a></li><li><a href="https://www.fpgarelated.com/groups/comp.arch.fpga/1.php">comp.arch.fpga</a></li>            </ul>
+
+        </div>
+        <div class="footerbox">
+            <h2>About FPGARelated.com</h2>
+                <ul><li><a href="https://www.fpgarelated.com/showarticle/770/advertising-on-the-related-sites">Advertise</a></li><li><a href="https://www.fpgarelated.com/contact.php">Contact</a></li><li><a href="https://www.fpgarelated.com/privacy">Privacy Policy</a></li><li><a href="https://www.fpgarelated.com/terms">Terms of Service</a></li><li><a href="https://www.fpgarelated.com/cookies">Cookies Policy</a></li></ul>
+            </div>
+        <div class="footerbox">
+        <h2>Social Networks</h2>
+        <div class="socialbox  floatleft"><a href="https://www.facebook.com/fpgarelated"><i class="fa fa-facebook fa-2x darkblue" style="line-height: 30px;"></i></a></div>
+        <div class="socialbox  floatleft"><a href="https://twitter.com/fpgarelated"><i class="fa fa-twitter fa-2x darkblue" style="line-height: 30px;"></i></a></div>
+        <div class="socialbox  floatleft"><a href="https://plus.google.com/+FPGARelated/posts"><i class="fa fa-google-plus fa-2x darkblue" style="line-height: 30px;"></i></a></div>
+        </div>
+        <div class="footerbox">
+        <a href="https://www.embeddedrelated.com/"><img src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/EmbeddedRelated_logo.svg" style="margin: 0; padding: 0; vertical-align: top;" width="260px"></a>
+        <a href="https://www.dsprelated.com/"><img src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/DSPRelated_logo.svg" style="margin: 0; padding: 0;  vertical-align: top;" width="260px"></a>
+        <a href="https://www.electronics-related.com/"><img src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/Electronics-Related_logo.svg" style="margin: 0; padding: 0; vertical-align: top;" width="260px"></a>
+        <a href="https://www.fpgarelated.com/"><img src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/FPGARelated_logo.svg" style="margin: 0; padding: 0; vertical-align: top;" width="260px"></a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  $(".modal_trigger").leanModal({top : 50, overlay : 0.6, closeButton: ".modal_close" });
+  $(function () {
+      // Calling Login Form
+      $("#login_form").click(function () {
+          $(".social_login").hide();
+          $(".user_login").show();
+          return false;
+      });
+
+      // Calling Register Form
+      $(".register_form").click(function () {
+          $(".user_login").hide();
+          $(".social_login").hide();
+          $(".user_register").show();
+          $(".header_title").text('Register');
+          return false;
+      });
+
+      // Going back to Social Forms
+      $(".back_btn").click(function () {
+          $(".user_login").show();
+          $(".user_register").hide();
+          $(".header_title").text('Login');
+          return false;
+      });
+
+  })
+</script><div id="lean_overlay"></div>
+
+<script type="text/javascript">
+$(function() {
+
+	// Get the form.
+//	var form = $('#registerform');
+//	var form = $('.ajaxform2');
+
+	// Get the messages div.
+	var formMessages = $('.form-messages');
+
+
+	// Set up an event listener for the form.
+//	$(form).submit(function(e) {
+        $(document).delegate('#registerform', 'submit', function(e) {
+		// Stop the browser from submitting the form.
+		e.preventDefault();
+
+       //alert($(this).parent().attr('id'));
+        var parent = $(this).parent().attr('id');
+//        alert (parent);
+
+        var form = $(this);
+
+		// Serialize the form data.
+		var formData = $(form).serialize();
+
+		// Submit the form using AJAX.
+		$.ajax({
+			type: 'POST',
+			url: $(form).attr('action'),
+			data: formData
+		})
+
+		.done(function(response) {
+			// Make sure that the formMessages div has the 'success' class.
+			//$(formMessages).removeClass('error');
+			//$(formMessages).addClass('success');
+
+			// Set the message text.
+			//$(formMessages).text(response);
+            //$('#'+parent+' .form-messages').html(response);
+
+            //$(registerform).html(response);
+            //$('#'+parent).html(response);
+            $('.user_register').hide();
+            $('.user_register').html(response);
+
+            $('#loginbox').load("/new2/ajax_updateloginbox.php");
+
+            $('.user_register').append('<input type="button" value="Close" class="btn btn_green" onClick="window.location.reload()">');
+            $('.modal_close').hide();
+//            location.reload();
+//            alert('test');
+            $('.user_register').fadeIn(1600);
+
+		})
+		.fail(function(data) {
+			// Make sure that the formMessages div has the 'error' class.
+			//$(formMessages).removeClass('success');
+			//$(formMessages).addClass('error');
+
+			// Set the message text.
+			if (data.responseText !== '') {
+//				$(formMessages).html(data.responseText);
+                $('.form-messages').html(data.responseText);
+			} else {
+				$('.form-messages').text('Oops! An error occured and your message could not be sent.');
+			}
+		});
+
+	});
+
+});
+</script>
+
+
+
+<div id="modal" class="popupContainer" style="display:none;">
+	<header class="popupHeader">
+		<span class="header_title">Login</span>
+		<span class="modal_close"><i class="fa fa-times"></i></span>
+	</header>
+
+    <section class="popupBody">
+    <!-- -- Here Goes all the Login and signup Forms ---->
+      <div class="user_login">
+      <p style="margin-top: 0px; padding-top: 0px;">Before you can participate to the *related sites forums, you need to login or <a href="#" class="register_form" name="register_form">create an account</a>.</p>
+      <form name="login" action="/showthread/comp.arch.fpga/95604-1.php#tabs1-chronological" method="post">
+          <label>Email / Username</label> <input name="usernameposted" type="text"><br>
+          <label>Password</label> <input name="passwordposted" type="password"><br>
+
+          <div class="action_btns">
+              <div class="one_half first">
+                    <button type="submit" class="btn btn_green">Login</button>
+
+              </div>
+          </div>
+      </form>
+        <div class="forgot_password">
+       <a href="#" class="register_form" name="register_form">Create free account</a> | <a href="https://www.fpgarelated.com/new2/forgot.php">Forgot password?</a>
+        </div>
+      </div>
+
+      <div class="user_register">
+          <div class="form-messages" style="display: inline-block; vertical-align: top; margin-bottom: 10px; color: red;">                        <!--<p><i>Please note that there is currently an issue with <b>hotmail/outlook/msn</b> email adresses.  If you enter an email address from one of these providers, you won't be able to confirm your email address and use the features of this website.</i></p>-->                                </div>
+          <form id="registerform" action="/new2/ajax_process_registration.php" method="post">
+              <label>Email Address</label> <input name="email" type="email"><br>
+              <label>Username</label> <input name="username" maxlength="16" type="text"><br>
+              <label>Password</label> <input name="passwd" type="password"><br>
+              <label>Confirm Password</label> <input name="passwd2" type="password"><br>
+              <input name="terms" type="checkbox"> I agree with the <a href="https://www.fpgarelated.com/terms" target="_blank">terms of use</a> and <a href="https://www.fpgarelated.com/privacy" target="_blank">privacy policy</a>.<br><br>
+              <input name="newsletter" type="checkbox"> Yes, I want to 
+subscribe to your world famous newsletter and see for myself how great 
+it is.  I also understand that I can unsubscribe VERY easily!<br>
+              <div id="recaptcha1" style="margin-top: 10px; margin-bottom: 10px; transform:scale(0.88);-webkit-transform:scale(0.88);transform-origin:0 0;-webkit-transform-origin:0 0;"><div style="width: 304px; height: 78px;"><div><iframe src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/anchor.htm" role="presentation" name="a-lftbenaggq9y" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" width="304" height="78" frameborder="0"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+<!--              <div class="checkbox">
+                  <input id="send_updates" type="checkbox" name="newsletter" checked> <label for=
+                  "send_updates">Send me occasional email updates</label>
+              </div>-->
+
+              <div class="action_btns">
+                  <div class="one_half">
+                      <a class="btn back_btn" href="#">Back</a>
+                  </div>
+
+                  <div class="one_half last">
+                      <button type="submit" class="btn btn_green">Register</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+
+    </section>
+</div>
+
+        
+
+
+
+
+<div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;" class="g-recaptcha-bubble-arrow"></div><div style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;" class="g-recaptcha-bubble-arrow"></div><div style="z-index: 2000000000; position: relative;"><iframe title="Test recaptcha" src="comp.arch.fpga%20%20%20microblaze%20spi%20core%20problem_fichiers/bframe.htm" style="width: 100%; height: 100%;" name="c-lftbenaggq9y" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" frameborder="0"></iframe></div></div></body></html>

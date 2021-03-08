@@ -1,0 +1,778 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Reading design: Test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Test.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Test"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : Test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : NO
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/stage/test_ADC/can_cna_commande.vhd" in Library work.
+Architecture behavioral of Entity can_cna_commande is up to date.
+Compiling vhdl file "D:/stage/test_ADC/amplificateurs.vhd" in Library work.
+Architecture behavioral of Entity amplificateurs is up to date.
+Compiling vhdl file "D:/stage/test_ADC/can.vhd" in Library work.
+Entity <can> compiled.
+Entity <can> (Architecture <behavioral>) compiled.
+Compiling vhdl file "D:/stage/test_ADC/cna.vhd" in Library work.
+Entity <cna> compiled.
+Entity <cna> (Architecture <behavioral>) compiled.
+Compiling vhdl file "D:/stage/test_ADC/clk_management.vhd" in Library work.
+Architecture behavioral of Entity clk_management is up to date.
+Compiling vhdl file "D:/stage/test_ADC/bascule.vhd" in Library work.
+Architecture behavioral of Entity bascule is up to date.
+Compiling vhdl file "D:/stage/test_ADC/signed_unsigned_converter.vhd" in Library work.
+Architecture behavioral of Entity signed_unsigned_converter is up to date.
+Compiling vhdl file "D:/stage/test_ADC/Test.vhf" in Library work.
+Entity <convertisseurs_muser_test> compiled.
+Entity <convertisseurs_muser_test> (Architecture <behavioral>) compiled.
+Entity <test> compiled.
+Entity <test> (Architecture <behavioral>) compiled.
+Compiling vhdl file "D:/stage/test_ADC/convertisseurs.vhf" in Library work.
+Entity <convertisseurs> compiled.
+Entity <convertisseurs> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Test> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <convertisseurs_MUSER_Test> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clk_management> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <bascule> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <signed_unsigned_converter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <can_cna_commande> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <amplificateurs> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <can> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <cna> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Test> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "D:/stage/test_ADC/Test.vhf" line 331: Unconnected output port 'CLKFX_OUT' of component 'clk_management'.
+WARNING:Xst:753 - "D:/stage/test_ADC/Test.vhf" line 331: Unconnected output port 'CLK2X180_OUT' of component 'clk_management'.
+WARNING:Xst:753 - "D:/stage/test_ADC/Test.vhf" line 331: Unconnected output port 'CLKIN_IBUFG_OUT' of component 'clk_management'.
+WARNING:Xst:753 - "D:/stage/test_ADC/Test.vhf" line 331: Unconnected output port 'CLK0_OUT' of component 'clk_management'.
+Entity <Test> analyzed. Unit <Test> generated.
+
+Analyzing Entity <convertisseurs_MUSER_Test> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "D:/stage/test_ADC/Test.vhf" line 176: Unconnected output port 'can1' of component 'can'.
+Entity <convertisseurs_MUSER_Test> analyzed. Unit <convertisseurs_MUSER_Test> generated.
+
+Analyzing Entity <can_cna_commande> in library <work> (Architecture <behavioral>).
+Entity <can_cna_commande> analyzed. Unit <can_cna_commande> generated.
+
+Analyzing Entity <amplificateurs> in library <work> (Architecture <behavioral>).
+Entity <amplificateurs> analyzed. Unit <amplificateurs> generated.
+
+Analyzing Entity <can> in library <work> (Architecture <behavioral>).
+Entity <can> analyzed. Unit <can> generated.
+
+Analyzing Entity <cna> in library <work> (Architecture <behavioral>).
+Entity <cna> analyzed. Unit <cna> generated.
+
+Analyzing Entity <clk_management> in library <work> (Architecture <behavioral>).
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <clk_management>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <clk_management>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <clk_management>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <clk_management>.
+    Set user-defined property "CLKDV_DIVIDE =  2.0000000000000000" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "CLKFX_DIVIDE =  25" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "CLKFX_MULTIPLY =  28" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "CLKIN_PERIOD =  20.0000000000000000" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  FIXED" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "PHASE_SHIFT =  20" for instance <DCM_SP_INST> in unit <clk_management>.
+    Set user-defined property "STARTUP_WAIT =  TRUE" for instance <DCM_SP_INST> in unit <clk_management>.
+Entity <clk_management> analyzed. Unit <clk_management> generated.
+
+Analyzing Entity <bascule> in library <work> (Architecture <behavioral>).
+Entity <bascule> analyzed. Unit <bascule> generated.
+
+Analyzing Entity <signed_unsigned_converter> in library <work> (Architecture <behavioral>).
+Entity <signed_unsigned_converter> analyzed. Unit <signed_unsigned_converter> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <bascule>.
+    Related source file is "D:/stage/test_ADC/bascule.vhd".
+    Found 14-bit register for signal <sortie>.
+    Summary:
+	inferred  14 D-type flip-flop(s).
+Unit <bascule> synthesized.
+
+
+Synthesizing Unit <signed_unsigned_converter>.
+    Related source file is "D:/stage/test_ADC/signed_unsigned_converter.vhd".
+Unit <signed_unsigned_converter> synthesized.
+
+
+Synthesizing Unit <can_cna_commande>.
+    Related source file is "D:/stage/test_ADC/can_cna_commande.vhd".
+    Found finite state machine <FSM_0> for signal <ypresent>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <en_can>.
+    Found 1-bit register for signal <en_amp>.
+    Found 1-bit register for signal <en_cna>.
+    Found 1-bit register for signal <spi_ss_b>.
+    Found 1-bit register for signal <fpga_init_b>.
+    Found 1-bit register for signal <spi_sck>.
+    Found 1-bit register for signal <spi_mosi>.
+    Found 1-bit register for signal <sf_ce0>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   8 D-type flip-flop(s).
+Unit <can_cna_commande> synthesized.
+
+
+Synthesizing Unit <amplificateurs>.
+    Related source file is "D:/stage/test_ADC/amplificateurs.vhd".
+    Found finite state machine <FSM_1> for signal <ypresent>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8x1-bit ROM for signal <$mux0000> created at line 123.
+    Found 1-bit register for signal <fin_amp>.
+    Found 1-bit register for signal <amp_cs>.
+    Found 1-bit register for signal <spi_sck>.
+    Found 1-bit register for signal <spi_mosi>.
+    Found 4-bit register for signal <cpt>.
+    Found 4-bit adder for signal <cpt$addsub0000> created at line 85.
+    Found 3-bit register for signal <i>.
+    Found 3-bit subtractor for signal <i$addsub0000> created at line 98.
+    Found 3-bit comparator greater for signal <ypresent$cmp_gt0000> created at line 59.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 ROM(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <amplificateurs> synthesized.
+
+
+Synthesizing Unit <can>.
+    Related source file is "D:/stage/test_ADC/can.vhd".
+    Found finite state machine <FSM_2> for signal <ypresent>.
+    -----------------------------------------------------------------------
+    | States             | 20                                             |
+    | Transitions        | 23                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 11                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <ad_conv>.
+    Found 1-bit register for signal <fin_can>.
+    Found 5-bit register for signal <i>.
+    Found 5-bit subtractor for signal <i$addsub0000> created at line 98.
+    Found 14-bit register for signal <rcan0>.
+    Found 14-bit register for signal <rcan1>.
+    Found 1-bit register for signal <s_spi_miso>.
+    Found 14-bit register for signal <scan0>.
+    Found 14-bit register for signal <scan1>.
+    Found 1-bit register for signal <sspi_sck>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  60 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <can> synthesized.
+
+
+Synthesizing Unit <cna>.
+    Related source file is "D:/stage/test_ADC/cna.vhd".
+WARNING:Xst:1780 - Signal <cpt> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_3> for signal <ypresent>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <dac_clr>.
+    Found 1-bit register for signal <fin_cna>.
+    Found 1-bit register for signal <dac_cs>.
+    Found 1-bit 24-to-1 multiplexer for signal <$varindex0000> created at line 139.
+    Found 24-bit register for signal <donnee>.
+    Found 5-bit register for signal <i>.
+    Found 5-bit subtractor for signal <i$addsub0000> created at line 90.
+    Found 1-bit register for signal <sspi_mosi>.
+    Found 1-bit register for signal <sspi_sck>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <cna> synthesized.
+
+
+Synthesizing Unit <convertisseurs_MUSER_Test>.
+    Related source file is "D:/stage/test_ADC/Test.vhf".
+Unit <convertisseurs_MUSER_Test> synthesized.
+
+
+Synthesizing Unit <clk_management>.
+    Related source file is "D:/stage/test_ADC/clk_management.vhd".
+Unit <clk_management> synthesized.
+
+
+Synthesizing Unit <Test>.
+    Related source file is "D:/stage/test_ADC/Test.vhf".
+Unit <Test> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 8x1-bit ROM                                           : 1
+# Adders/Subtractors                                   : 4
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 1
+ 5-bit subtractor                                      : 2
+# Registers                                            : 45
+ 1-bit register                                        : 35
+ 14-bit register                                       : 5
+ 24-bit register                                       : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 1
+ 5-bit register                                        : 2
+# Comparators                                          : 1
+ 3-bit comparator greater                              : 1
+# Multiplexers                                         : 1
+ 1-bit 24-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <XLXI_1/XLXI_4/ypresent/FSM> on signal <ypresent[1:7]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ init  | 0000001
+ start | 0000010
+ e0    | 0000100
+ e1    | 0001000
+ e2    | 0100000
+ e3    | 0010000
+ e4    | 1000000
+-------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <XLXI_1/XLXI_3/ypresent/FSM> on signal <ypresent[1:20]> with one-hot encoding.
+-------------------------------
+ State | Encoding
+-------------------------------
+ init  | 00000000000000000001
+ start | 00000000000000000010
+ e00   | 00000000000000000100
+ e0    | 00000000000000001000
+ e1    | 00000000000000010000
+ e2    | 00000000000000100000
+ e3    | 00000000000001000000
+ e4    | 00000000000010000000
+ e5    | 00000000000100000000
+ e6    | 00000000100000000000
+ e7    | 00000000001000000000
+ e8    | 00000000010000000000
+ e9    | 00000001000000000000
+ e10   | 00000010000000000000
+ e11   | 00000100000000000000
+ e12   | 00001000000000000000
+ e13   | 00100000000000000000
+ e14   | 00010000000000000000
+ e15   | 01000000000000000000
+ e16   | 10000000000000000000
+-------------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <XLXI_1/XLXI_2/ypresent/FSM> on signal <ypresent[1:9]> with one-hot encoding.
+-----------------------
+ State    | Encoding
+-----------------------
+ init     | 000000001
+ attendre | 000000010
+ e0       | 000000100
+ e1       | 000001000
+ e2       | 000010000
+ e3       | 000100000
+ e4       | 001000000
+ e5       | 010000000
+ e6       | 100000000
+-----------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <XLXI_1/XLXI_1/ypresent/FSM> on signal <ypresent[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ init  | 00
+ amp   | 01
+ can   | 10
+ cna   | 11
+-------------------
+WARNING:Xst:1293 - FF/Latch <2> has a constant value of 0 in block <donnee>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <donnee>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <1> has a constant value of 0 in block <donnee>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <3> has a constant value of 0 in block <donnee>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <17> has a constant value of 1 in block <donnee>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <16> has a constant value of 1 in block <donnee>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <20> has a constant value of 1 in block <donnee>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <18> has a constant value of 1 in block <donnee>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <19> has a constant value of 1 in block <donnee>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <23> has a constant value of 0 in block <donnee>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <21> has a constant value of 1 in block <donnee>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <22> has a constant value of 0 in block <donnee>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 4
+# ROMs                                                 : 1
+ 8x1-bit ROM                                           : 1
+# Adders/Subtractors                                   : 4
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 1
+ 5-bit subtractor                                      : 2
+# Registers                                            : 146
+ Flip-Flops                                            : 146
+# Comparators                                          : 1
+ 3-bit comparator greater                              : 1
+# Multiplexers                                         : 1
+ 1-bit 24-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <2> in Unit <LPM_DFF_30> is equivalent to the following 5 FFs/Latches, which will be removed : <0> <1> <3> <23> <22> 
+INFO:Xst:2261 - The FF/Latch <17> in Unit <LPM_DFF_30> is equivalent to the following 5 FFs/Latches, which will be removed : <16> <20> <18> <19> <21> 
+INFO:Xst:2261 - The FF/Latch <sf_ce0> in Unit <can_cna_commande> is equivalent to the following FF/Latch, which will be removed : <spi_ss_b> 
+WARNING:Xst:1293 - FF/Latch <2> has a constant value of 0 in block <LPM_DFF_30>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <17> has a constant value of 1 in block <LPM_DFF_30>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ypresent_FSM_FFd2> in Unit <amplificateurs> is equivalent to the following FF/Latch, which will be removed : <fin_amp> 
+INFO:Xst:2261 - The FF/Latch <ypresent_FSM_FFd2> in Unit <can> is equivalent to the following FF/Latch, which will be removed : <fin_can> 
+INFO:Xst:2261 - The FF/Latch <ypresent_FSM_FFd18> in Unit <can> is equivalent to the following FF/Latch, which will be removed : <ad_conv> 
+
+Optimizing unit <Test> ...
+
+Optimizing unit <bascule> ...
+
+Optimizing unit <can_cna_commande> ...
+
+Optimizing unit <amplificateurs> ...
+
+Optimizing unit <can> ...
+
+Optimizing unit <cna> ...
+WARNING:Xst:1710 - FF/Latch <XLXI_1/XLXI_1/fpga_init_b> (without init value) has a constant value of 0 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XLXI_1/XLXI_1/sf_ce0> (without init value) has a constant value of 1 in block <Test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_13> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_12> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_11> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_10> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_9> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_8> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_7> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_6> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_5> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_4> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_3> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_2> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_1> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/scan1_0> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_13> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_11> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_10> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_12> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_9> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_7> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_6> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_8> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_4> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_3> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_5> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_2> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_0> of sequential type is unconnected in block <Test>.
+WARNING:Xst:2677 - Node <XLXI_1/XLXI_3/rcan1_1> of sequential type is unconnected in block <Test>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <XLXI_1/XLXI_2/ypresent_FSM_FFd9> in Unit <Test> is equivalent to the following FF/Latch, which will be removed : <XLXI_1/XLXI_4/ypresent_FSM_FFd7> 
+Found area constraint ratio of 100 (+ 5) on block Test, actual ratio is 2.
+FlipFlop XLXI_1/XLXI_3/s_spi_miso has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+Processing Unit <Test> :
+	Found 4-bit shift register for signal <XLXI_1/XLXI_3/ypresent_FSM_FFd12>.
+Unit <Test> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 134
+ Flip-Flops                                            : 134
+# Shift Registers                                      : 1
+ 4-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Test.ngr
+Top Level Output File Name         : Test
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 31
+
+Cell Usage :
+# BELS                             : 117
+#      BUF                         : 1
+#      GND                         : 1
+#      INV                         : 15
+#      LUT2                        : 14
+#      LUT2_D                      : 2
+#      LUT2_L                      : 1
+#      LUT3                        : 24
+#      LUT3_D                      : 1
+#      LUT3_L                      : 2
+#      LUT4                        : 32
+#      LUT4_D                      : 3
+#      LUT4_L                      : 3
+#      MUXF5                       : 13
+#      MUXF6                       : 3
+#      MUXF7                       : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 139
+#      FD                          : 1
+#      FDC                         : 83
+#      FDC_1                       : 1
+#      FDCE                        : 27
+#      FDCE_1                      : 14
+#      FDP                         : 9
+#      FDPE                        : 4
+# Shift Registers                  : 1
+#      SRL16                       : 1
+# Clock Buffers                    : 4
+#      BUFG                        : 4
+# IO Buffers                       : 31
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      OBUF                        : 28
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       95  out of   4656     2%  
+ Number of Slice Flip Flops:            138  out of   9312     1%  
+ Number of 4 input LUTs:                 98  out of   9312     1%  
+    Number used as logic:                97
+    Number used as Shift registers:       1
+ Number of IOs:                          31
+ Number of bonded IOBs:                  31  out of    232    13%  
+    IOB Flip Flops:                       1
+ Number of GCLKs:                         4  out of     24    16%  
+ Number of DCMs:                          1  out of      4    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)    | Load  |
+-----------------------------------+--------------------------+-------+
+clk                                | XLXI_56/DCM_SP_INST:CLK2X| 140   |
+-----------------------------------+--------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 138   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 10.158ns (Maximum Frequency: 98.447MHz)
+   Minimum input arrival time before clock: 1.754ns
+   Maximum output required time after clock: 5.103ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 10.158ns (frequency: 98.447MHz)
+  Total number of paths / destination ports: 478 / 181
+-------------------------------------------------------------------------
+Delay:               5.079ns (Levels of Logic = 5)
+  Source:            XLXI_1/XLXI_3/ypresent_FSM_FFd9 (FF)
+  Destination:       XLXI_1/XLXI_3/i_4 (FF)
+  Source Clock:      clk rising 2.0X +20
+  Destination Clock: clk rising 2.0X +20
+
+  Data Path: XLXI_1/XLXI_3/ypresent_FSM_FFd9 to XLXI_1/XLXI_3/i_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             18   0.514   0.911  XLXI_1/XLXI_3/ypresent_FSM_FFd9 (XLXI_1/XLXI_3/ypresent_FSM_FFd9)
+     LUT4:I3->O            1   0.612   0.426  XLXI_1/XLXI_3/ypresent_cmp_eq0000_SW2_F (N37)
+     LUT4:I1->O            1   0.612   0.000  XLXI_1/XLXI_3/i_mux0000<1>11_F (N41)
+     MUXF5:I0->O           5   0.278   0.568  XLXI_1/XLXI_3/i_mux0000<1>11 (XLXI_1/XLXI_3/N11)
+     LUT3:I2->O            1   0.612   0.000  XLXI_1/XLXI_3/i_mux0000<0>42_F (N31)
+     MUXF5:I0->O           1   0.278   0.000  XLXI_1/XLXI_3/i_mux0000<0>42 (XLXI_1/XLXI_3/i_mux0000<0>)
+     FDP:D                     0.268          XLXI_1/XLXI_3/i_4
+    ----------------------------------------
+    Total                      5.079ns (3.174ns logic, 1.905ns route)
+                                       (62.5% logic, 37.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.754ns (Levels of Logic = 1)
+  Source:            spi_miso (PAD)
+  Destination:       XLXI_1/XLXI_3/s_spi_miso (FF)
+  Destination Clock: clk rising 2.0X +20
+
+  Data Path: spi_miso to XLXI_1/XLXI_3/s_spi_miso
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.380  spi_miso_IBUF (spi_miso_IBUF)
+     FDC:D                     0.268          XLXI_1/XLXI_3/s_spi_miso
+    ----------------------------------------
+    Total                      1.754ns (1.374ns logic, 0.380ns route)
+                                       (78.3% logic, 21.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 24 / 24
+-------------------------------------------------------------------------
+Offset:              5.103ns (Levels of Logic = 2)
+  Source:            XLXI_1/XLXI_3/ypresent_FSM_FFd18 (FF)
+  Destination:       sig_ad_conv (PAD)
+  Source Clock:      clk rising 2.0X +20
+
+  Data Path: XLXI_1/XLXI_3/ypresent_FSM_FFd18 to sig_ad_conv
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.514   0.451  XLXI_1/XLXI_3/ypresent_FSM_FFd18 (XLXI_1/XLXI_3/ypresent_FSM_FFd18)
+     BUF:I->O              1   0.612   0.357  XLXI_10 (sig_ad_conv_OBUF)
+     OBUF:I->O                 3.169          sig_ad_conv_OBUF (sig_ad_conv)
+    ----------------------------------------
+    Total                      5.103ns (4.295ns logic, 0.808ns route)
+                                       (84.2% logic, 15.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.93 secs
+ 
+--> 
+
+Total memory usage is 290640 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   50 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

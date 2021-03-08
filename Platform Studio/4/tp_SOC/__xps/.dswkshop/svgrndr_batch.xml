@@ -1,0 +1,32 @@
+
+<RENDERBATCH>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\microblaze_0.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\microblaze_0.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\microblaze_0.svg"/>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\data_lmb.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\data_lmb.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\data_lmb.svg"/>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\inst_lmb.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\inst_lmb.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\inst_lmb.svg"/>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\plb_v46_0.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\plb_v46_0.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\plb_v46_0.svg"/>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\bram_block_0.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\bram_block_0.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\bram_block_0.svg"/>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\data_ctrl.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\data_ctrl.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\data_ctrl.svg"/>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\inst_ctrl.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\inst_ctrl.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\inst_ctrl.svg"/>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\clock_generator_0.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\clock_generator_0.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\clock_generator_0.svg"/>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\reset_0.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\reset_0.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\reset_0.svg"/>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\xps_gpio_0.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\xps_gpio_0.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\xps_gpio_0.svg"/>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\xps_gpio_1.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\xps_gpio_1.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\xps_gpio_1.svg"/>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\xps_spi_0.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\xps_spi_0.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\xps_spi_0.svg"/>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\xps_timer_0.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\xps_timer_0.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\xps_timer_0.svg"/>
+
+  <RENDERIMG RASNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\system_blkd.jpg" SVGNAME="F:\4\tp_SOC\SDK\SDK_Export\hw\imgs\system_blkd.svg" TMPSVGFN="F:\4\tp_SOC\__xps\.dswkshop\system_blkd.svg"/>
+
+</RENDERBATCH>

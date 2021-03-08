@@ -1,0 +1,75 @@
+/*
+ * mtr_code.c
+ *
+ *  Created on: 3 déc. 2018
+ *      Author: jvalverd
+ */
+
+
+/*
+ * adc_scr.c
+ *
+ *  Created on: 13 nov. 2018
+ *      Author: jvalverd
+ */
+
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xspi.h"
+
+//#include <xtmrctr.h>
+
+#include "xtmrctr_l.h"
+#include "xtmrctr.h"
+
+//#include "xintc.h"
+//#include <stdio.h>
+//#include <stdlib.h>
+#include <string.h>
+
+
+int main()
+{
+	XSpi mySPI;
+	//Xspi_mIntrGlobalDisable(&mySPI);
+	XSpi_Initialize(&mySPI, XPAR_XPS_SPI_0_DEVICE_ID); /* Initialize the SPI and clear	the SPI bus */
+	XSpi_SetOptions(&mySPI, XSP_MASTER_OPTION);
+	XSpi_SetSlaveSelect(&mySPI, 1);
+	XSpi_Start(&mySPI);
+
+
+	/*Timer*/	/*Timer 0 -pwm-*/
+	XTmrCtr TimerCounter;
+	//XTmrCtr *InstanciaTimer=&TimerCounter;
+
+	/* #define XPAR_XPS_TIMER_0_DEVICE_ID 0
+	#define XPAR_XPS_TIMER_0_BASEADDR 0x83C00000
+	#define XPAR_XPS_TIMER_0_HIGHADDR 0x83C0FFFF*/
+	void configurar_pwm(void);
+	void valorpwm(int);
+
+	XTmrCtr_Initialize(&TimerCounter,XPAR_XPS_TIMER_0 _DEVICE_ID);//Inicializa el timer en modo pwm
+
+	//XTmrCtr_mSetLoadReg(InstanciaTimer->BaseAddress, 0,50000); //para 1khz
+	XTmrCtr_mSetLoadReg(0x83C00000,0,50000); //para 1khz
+	//XTmrCtr_mSetLoadReg(InstanciaTimer->BaseAddress, 1,25000);
+	XTmrCtr_mSetLoadReg(0x83C00000,1,25000);
+	//XTmrCtr_mWriteReg(InstanciaTimer->BaseAddress,0, XTC_TCSR_OFFSET,0x00000204);
+	XTmrCtr_mWriteReg(0x83C00000,0,XTC_TCSR_OFFSET,0x00000204);
+	//XTmrCtr_mWriteReg(InstanciaTimer->BaseAddress,1, XTC_TCSR_OFFSET,0x00000604);
+	XTmrCtr_mWriteReg(0x83C00000,1,XTC_TCSR_OFFSET,0x00000604);
+
+
+	unsigned int adc[2] = {0x00, 0x00};
+	unsigned int gain_a, gain_b;
+
+	while(1)
+	{
+
+
+//		PWM_PERIOD = (TLR0 + 2) x PLB_CLOCK_PERIOD
+//		PWM_HIGH_TIME = (TLR1 + 2) x PLB_CLOCK_PERIOD
+
+	}
+
+}

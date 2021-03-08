@@ -1,0 +1,721 @@
+19:22:26 **** Build of project project_3_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_7/src"
+make -C microblaze_0/libsrc/cpu_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_7/src"
+make -C microblaze_0/libsrc/intc_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_7/src"
+make -C microblaze_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/sysmon_v7_4/src"
+make -C microblaze_0/libsrc/sysmon_v7_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_4/src"
+make -C microblaze_0/libsrc/tmrctr_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_7/src"
+make -C microblaze_0/libsrc/cpu_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_7/src"
+make -C microblaze_0/libsrc/intc_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_7/src"
+make -C microblaze_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+inbyte.c: In function 'inbyte':
+inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+microblaze_sleep.c:74:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+outbyte.c: In function 'outbyte':
+outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
+ void outbyte(char c) {
+                   ^
+"Running Make libs in microblaze_0/libsrc/sysmon_v7_4/src"
+make -C microblaze_0/libsrc/sysmon_v7_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling sysmon"
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_4/src"
+make -C microblaze_0/libsrc/tmrctr_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+'Finished building libraries'
+
+**** Build of configuration Debug for project project_3 ****
+
+Nothing to build for project project_3
+19:30:04 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [project_3.elf] Error 1
+19:31:00 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [project_3.elf] Error 1
+19:31:03 **** Incremental Build of configuration Debug for project project_3 ****
+make all 
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [project_3.elf] Error 1
+19:31:16 **** Incremental Build of configuration Debug for project project_3 ****
+make all 
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [project_3.elf] Error 1
+19:31:42 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:26:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'u32'
+  u32 btn, led;
+  ^~~
+../main.c:29:20: error: 'gpio' undeclared (first use in this function); did you mean 'XGpio'?
+  XGpio_Initialize(&gpio, XPAR_GPIO_0_DEVICE_ID);
+                    ^~~~
+                    XGpio
+../main.c:29:20: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [main.o] Error 1
+19:31:48 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: project_3.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size project_3.elf  |tee "project_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7048	    376	   3136	  10560	   2940	project_3.elf
+'Finished building: project_3.elf.size'
+' '
+19:31:50 **** Incremental Build of configuration Debug for project project_3 ****
+make all 
+make: Nothing to be done for `all'.
+19:34:37 **** Incremental Build of configuration Debug for project project_3 ****
+make all 
+make: Nothing to be done for `all'.
+19:34:49 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:86:29: error: 'gpio' undeclared (first use in this function); did you mean 'gpio1'?
+   btn = XGpio_DiscreteRead(&gpio, 1);
+                             ^~~~
+                             gpio1
+../main.c:86:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [main.o] Error 1
+19:35:24 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: project_3.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size project_3.elf  |tee "project_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7128	    376	   3136	  10640	   2990	project_3.elf
+'Finished building: project_3.elf.size'
+' '
+19:35:26 **** Incremental Build of configuration Debug for project project_3 ****
+make all 
+make: Nothing to be done for `all'.
+19:36:21 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: project_3.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size project_3.elf  |tee "project_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7128	    376	   3136	  10640	   2990	project_3.elf
+'Finished building: project_3.elf.size'
+' '
+19:36:26 **** Incremental Build of configuration Debug for project project_3 ****
+make all 
+make: Nothing to be done for `all'.
+19:37:32 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: project_3.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size project_3.elf  |tee "project_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7128	    376	   3136	  10640	   2990	project_3.elf
+'Finished building: project_3.elf.size'
+' '
+19:41:35 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'myISR':
+../main.c:25:6: error: 'XPAR_XPS_INTC_0_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_INTC_0_BASEADDR'?
+  if( XPAR_XPS_INTC_0_BASEADDR & XPAR_XPS_GPIO_1_IP2INTC_IRPT_MASK ) // Button interrupt is pending
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+      XPAR_AXI_INTC_0_BASEADDR
+../main.c:25:6: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:25:33: error: 'XPAR_XPS_GPIO_1_IP2INTC_IRPT_MASK' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK'?
+  if( XPAR_XPS_INTC_0_BASEADDR & XPAR_XPS_GPIO_1_IP2INTC_IRPT_MASK ) // Button interrupt is pending
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                 XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK
+../main.c:26:3: warning: implicit declaration of function 'button_ISR' [-Wimplicit-function-declaration]
+   button_ISR();
+   ^~~~~~~~~~
+../main.c: In function 'main':
+../main.c:93:31: error: 'XInterruptHqndler' undeclared (first use in this function); did you mean 'XInterruptHandler'?
+  microblaze_register_handler((XInterruptHqndler)myIntHandler,(void *)0);
+                               ^~~~~~~~~~~~~~~~~
+                               XInterruptHandler
+../main.c:93:49: error: expected ')' before 'myIntHandler'
+  microblaze_register_handler((XInterruptHqndler)myIntHandler,(void *)0);
+                                                 ^~~~~~~~~~~~
+../main.c:93:2: error: too few arguments to function 'microblaze_register_handler'
+  microblaze_register_handler((XInterruptHqndler)myIntHandler,(void *)0);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../project_3_bsp/microblaze_0/include/xil_io.h:68:0,
+                 from ../../project_3_bsp/microblaze_0/include/xgpio_l.h:87,
+                 from ../../project_3_bsp/microblaze_0/include/xgpio.h:136,
+                 from ../main.c:9:
+../../project_3_bsp/microblaze_0/include/mb_interface.h:67:13: note: declared here
+ extern void microblaze_register_handler(XInterruptHandler Handler, void *DataPtr); /* Register top level interrupt handler */
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../main.c:95:3: error: 'ier' undeclared (first use in this function)
+  *ier = ierEnqble; //Enable interrupts on PIC
+   ^~~
+../main.c:95:9: error: 'ierEnqble' undeclared (first use in this function)
+  *ier = ierEnqble; //Enable interrupts on PIC
+         ^~~~~~~~~
+../main.c:96:3: error: 'mer' undeclared (first use in this function); did you mean 'ier'?
+  *mer = merInitMask;
+   ^~~
+   ier
+../main.c:96:9: error: 'merInitMask' undeclared (first use in this function)
+  *mer = merInitMask;
+         ^~~~~~~~~~~
+../main.c:97:2: warning: implicit declaration of function 'microblaze_enable_interrups'; did you mean 'microblaze_enable_interrupts'? [-Wimplicit-function-declaration]
+  microblaze_enable_interrups();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  microblaze_enable_interrupts
+make: *** [main.o] Error 1
+19:42:42 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'myISR':
+../main.c:25:6: error: 'XPAR_XPS_INTC_0_BASEADDR' undeclared (first use in this function); did you mean 'XPAR_AXI_INTC_0_BASEADDR'?
+  if( XPAR_XPS_INTC_0_BASEADDR & XPAR_XPS_GPIO_1_IP2INTC_IRPT_MASK ) // Button interrupt is pending
+      ^~~~~~~~~~~~~~~~~~~~~~~~
+      XPAR_AXI_INTC_0_BASEADDR
+../main.c:25:6: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:25:33: error: 'XPAR_XPS_GPIO_1_IP2INTC_IRPT_MASK' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK'?
+  if( XPAR_XPS_INTC_0_BASEADDR & XPAR_XPS_GPIO_1_IP2INTC_IRPT_MASK ) // Button interrupt is pending
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                 XPAR_AXI_GPIO_1_IP2INTC_IRPT_MASK
+../main.c:26:3: warning: implicit declaration of function 'button_ISR' [-Wimplicit-function-declaration]
+   button_ISR();
+   ^~~~~~~~~~
+../main.c: In function 'main':
+../main.c:34:31: error: 'XInterruptHqndler' undeclared (first use in this function); did you mean 'XInterruptHandler'?
+  microblaze_register_handler((XInterruptHqndler)myIntHandler,(void *)0);
+                               ^~~~~~~~~~~~~~~~~
+                               XInterruptHandler
+../main.c:34:49: error: expected ')' before 'myIntHandler'
+  microblaze_register_handler((XInterruptHqndler)myIntHandler,(void *)0);
+                                                 ^~~~~~~~~~~~
+../main.c:34:2: error: too few arguments to function 'microblaze_register_handler'
+  microblaze_register_handler((XInterruptHqndler)myIntHandler,(void *)0);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../../project_3_bsp/microblaze_0/include/xil_io.h:68:0,
+                 from ../../project_3_bsp/microblaze_0/include/xgpio_l.h:87,
+                 from ../../project_3_bsp/microblaze_0/include/xgpio.h:136,
+                 from ../main.c:9:
+../../project_3_bsp/microblaze_0/include/mb_interface.h:67:13: note: declared here
+ extern void microblaze_register_handler(XInterruptHandler Handler, void *DataPtr); /* Register top level interrupt handler */
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../main.c:36:3: error: 'ier' undeclared (first use in this function)
+  *ier = ierEnqble; //Enable interrupts on PIC
+   ^~~
+../main.c:36:9: error: 'ierEnqble' undeclared (first use in this function)
+  *ier = ierEnqble; //Enable interrupts on PIC
+         ^~~~~~~~~
+../main.c:37:3: error: 'mer' undeclared (first use in this function); did you mean 'ier'?
+  *mer = merInitMask;
+   ^~~
+   ier
+../main.c:37:9: error: 'merInitMask' undeclared (first use in this function)
+  *mer = merInitMask;
+         ^~~~~~~~~~~
+../main.c:38:2: warning: implicit declaration of function 'microblaze_enable_interrups'; did you mean 'microblaze_enable_interrupts'? [-Wimplicit-function-declaration]
+  microblaze_enable_interrups();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+  microblaze_enable_interrupts
+make: *** [main.o] Error 1
+19:44:40 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'SwitchInterruptHandler':
+../main.c:28:3: error: 'inputs' undeclared (first use in this function); did you mean 'inbyte'?
+   inputs = XGpio_DiscreteRead(&Switches, switchs_ch);
+   ^~~~~~
+   inbyte
+../main.c:28:3: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:28:32: error: 'Switches' undeclared (first use in this function)
+   inputs = XGpio_DiscreteRead(&Switches, switchs_ch);
+                                ^~~~~~~~
+../main.c:28:42: error: 'switchs_ch' undeclared (first use in this function); did you mean 'Switches'?
+   inputs = XGpio_DiscreteRead(&Switches, switchs_ch);
+                                          ^~~~~~~~~~
+                                          Switches
+../main.c:29:24: error: 'Leds' undeclared (first use in this function)
+   XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                        ^~~~
+../main.c:29:30: error: 'leds_ch' undeclared (first use in this function)
+   XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                              ^~~~~~~
+../main.c: In function 'main':
+../main.c:94:27: error: 'Switches' undeclared (first use in this function)
+    XGpio_InterruptEnable(&Switches, XGPIO_IR_CH1_MASK);
+                           ^~~~~~~~
+make: *** [main.o] Error 1
+19:50:19 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'SwitchInterruptHandler':
+../main.c:31:3: error: 'inputs' undeclared (first use in this function); did you mean 'inbyte'?
+   inputs = XGpio_DiscreteRead(&Switches, switchs_ch);
+   ^~~~~~
+   inbyte
+../main.c:31:3: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:31:32: error: 'Switches' undeclared (first use in this function)
+   inputs = XGpio_DiscreteRead(&Switches, switchs_ch);
+                                ^~~~~~~~
+../main.c:31:42: error: 'switchs_ch' undeclared (first use in this function); did you mean 'Switches'?
+   inputs = XGpio_DiscreteRead(&Switches, switchs_ch);
+                                          ^~~~~~~~~~
+                                          Switches
+../main.c:32:24: error: 'Leds' undeclared (first use in this function); did you mean 'led1'?
+   XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                        ^~~~
+                        led1
+../main.c:32:30: error: 'leds_ch' undeclared (first use in this function)
+   XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                              ^~~~~~~
+../main.c: In function 'main':
+../main.c:83:31: error: 'Switches' undeclared (first use in this function)
+  XGpio_InterruptGlobalEnable(&Switches);
+                               ^~~~~~~~
+make: *** [main.o] Error 1
+19:50:31 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'SwitchInterruptHandler':
+../main.c:31:3: error: 'inputs' undeclared (first use in this function); did you mean 'inbyte'?
+   inputs = XGpio_DiscreteRead(&Switches, switchs_ch);
+   ^~~~~~
+   inbyte
+../main.c:31:3: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:31:32: error: 'Switches' undeclared (first use in this function)
+   inputs = XGpio_DiscreteRead(&Switches, switchs_ch);
+                                ^~~~~~~~
+../main.c:31:42: error: 'switchs_ch' undeclared (first use in this function); did you mean 'Switches'?
+   inputs = XGpio_DiscreteRead(&Switches, switchs_ch);
+                                          ^~~~~~~~~~
+                                          Switches
+../main.c:32:24: error: 'Leds' undeclared (first use in this function); did you mean 'led1'?
+   XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                        ^~~~
+                        led1
+../main.c:32:30: error: 'leds_ch' undeclared (first use in this function)
+   XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                              ^~~~~~~
+make: *** [main.o] Error 1
+19:53:17 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'SwitchInterruptHandler':
+../main.c:32:6: error: 'btn' undeclared (first use in this function); did you mean 'btn1'?
+  if (btn != 0) // turn all LEDs on when any button is pressed
+      ^~~
+      btn1
+../main.c:32:6: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:33:3: error: 'led' undeclared (first use in this function); did you mean 'led1'?
+   led = 0xFFFFFFFF;
+   ^~~
+   led1
+../main.c:39:23: error: 'Leds' undeclared (first use in this function); did you mean 'led'?
+  XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                       ^~~~
+                       led
+../main.c:39:29: error: 'leds_ch' undeclared (first use in this function)
+  XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                             ^~~~~~~
+../main.c:39:38: error: 'inputs' undeclared (first use in this function); did you mean 'inbyte'?
+  XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                                      ^~~~~~
+                                      inbyte
+../main.c:40:24: error: 'Switches' undeclared (first use in this function)
+  XGpio_InterruptClear(&Switches, XGPIO_IR_CH1_MASK);
+                        ^~~~~~~~
+make: *** [main.o] Error 1
+19:55:58 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'SwitchInterruptHandler':
+../main.c:32:6: error: 'led' undeclared (first use in this function); did you mean 'led1'?
+  if (led != 0x00000000) // turn all LEDs on when any button is pressed
+      ^~~
+      led1
+../main.c:32:6: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:39:23: error: 'Leds' undeclared (first use in this function); did you mean 'led'?
+  XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                       ^~~~
+                       led
+../main.c:39:29: error: 'leds_ch' undeclared (first use in this function)
+  XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                             ^~~~~~~
+../main.c:39:38: error: 'inputs' undeclared (first use in this function); did you mean 'inbyte'?
+  XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                                      ^~~~~~
+                                      inbyte
+../main.c:40:24: error: 'Switches' undeclared (first use in this function)
+  XGpio_InterruptClear(&Switches, XGPIO_IR_CH1_MASK);
+                        ^~~~~~~~
+make: *** [main.o] Error 1
+19:56:04 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'SwitchInterruptHandler':
+../main.c:39:23: error: 'Leds' undeclared (first use in this function); did you mean 'led1'?
+  XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                       ^~~~
+                       led1
+../main.c:39:23: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:39:29: error: 'leds_ch' undeclared (first use in this function)
+  XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                             ^~~~~~~
+../main.c:39:38: error: 'inputs' undeclared (first use in this function); did you mean 'inbyte'?
+  XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                                      ^~~~~~
+                                      inbyte
+../main.c:40:24: error: 'Switches' undeclared (first use in this function)
+  XGpio_InterruptClear(&Switches, XGPIO_IR_CH1_MASK);
+                        ^~~~~~~~
+make: *** [main.o] Error 1
+19:58:16 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'SwitchInterruptHandler':
+../main.c:39:23: error: 'Leds' undeclared (first use in this function); did you mean 'led1'?
+  XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                       ^~~~
+                       led1
+../main.c:39:23: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:39:29: error: 'leds_ch' undeclared (first use in this function)
+  XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                             ^~~~~~~
+../main.c:39:38: error: 'inputs' undeclared (first use in this function); did you mean 'inbyte'?
+  XGpio_DiscreteWrite(&Leds, leds_ch, inputs);
+                                      ^~~~~~
+                                      inbyte
+../main.c:40:24: error: 'Switches' undeclared (first use in this function)
+  XGpio_InterruptClear(&Switches, XGPIO_IR_CH1_MASK);
+                        ^~~~~~~~
+make: *** [main.o] Error 1
+19:58:38 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: project_3.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size project_3.elf  |tee "project_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7604	    376	   3156	  11136	   2b80	project_3.elf
+'Finished building: project_3.elf.size'
+' '
+20:00:32 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: project_3.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size project_3.elf  |tee "project_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7604	    376	   3156	  11136	   2b80	project_3.elf
+'Finished building: project_3.elf.size'
+' '
+20:00:37 **** Incremental Build of configuration Debug for project project_3 ****
+make all 
+make: Nothing to be done for `all'.
+20:03:43 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:95:20: error: 'Interrupt' undeclared (first use in this function)
+  XIntc_Initialize(&Interrupt, XPAR_XPS_INTC_0_DEVICE_ID);//XPAR_INTC_CONTROLLER_DEVICE_ID
+                    ^~~~~~~~~
+../main.c:95:20: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:95:31: error: 'XPAR_XPS_INTC_0_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_INTC_0_DEVICE_ID'?
+  XIntc_Initialize(&Interrupt, XPAR_XPS_INTC_0_DEVICE_ID);//XPAR_INTC_CONTROLLER_DEVICE_ID
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~
+                               XPAR_AXI_INTC_0_DEVICE_ID
+../main.c:98:28: error: 'XPAR_XPS_INTC_0_XPS_GPIO_1_IP2INTC_IRPT_INTR' undeclared (first use in this function); did you mean 'XPAR_AXI_INTC_0_AXI_GPIO_1_IP2INTC_IRPT_INTR'?
+  XIntc_Connect(&Interrupt, XPAR_XPS_INTC_0_XPS_GPIO_1_IP2INTC_IRPT_INTR, (XInterruptHandler)SwitchInterruptHandler, (void *)0);//XPAR_INTC_CONTROLLER_GPIO_SWITCHES_IP2INTC_IRPT_INTR
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            XPAR_AXI_INTC_0_AXI_GPIO_1_IP2INTC_IRPT_INTR
+make: *** [main.o] Error 1
+20:04:05 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:96:31: error: 'XPAR_XPS_INTC_0_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_INTC_0_DEVICE_ID'?
+  XIntc_Initialize(&Interrupt, XPAR_XPS_INTC_0_DEVICE_ID);//XPAR_INTC_CONTROLLER_DEVICE_ID
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~
+                               XPAR_AXI_INTC_0_DEVICE_ID
+../main.c:96:31: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:99:28: error: 'XPAR_XPS_INTC_0_XPS_GPIO_1_IP2INTC_IRPT_INTR' undeclared (first use in this function); did you mean 'XPAR_AXI_INTC_0_AXI_GPIO_1_IP2INTC_IRPT_INTR'?
+  XIntc_Connect(&Interrupt, XPAR_XPS_INTC_0_XPS_GPIO_1_IP2INTC_IRPT_INTR, (XInterruptHandler)SwitchInterruptHandler, (void *)0);//XPAR_INTC_CONTROLLER_GPIO_SWITCHES_IP2INTC_IRPT_INTR
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            XPAR_AXI_INTC_0_AXI_GPIO_1_IP2INTC_IRPT_INTR
+make: *** [main.o] Error 1
+20:04:11 **** Incremental Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:96:31: error: 'XPAR_XPS_INTC_0_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_INTC_0_DEVICE_ID'?
+  XIntc_Initialize(&Interrupt, XPAR_XPS_INTC_0_DEVICE_ID);//XPAR_INTC_CONTROLLER_DEVICE_ID
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~
+                               XPAR_AXI_INTC_0_DEVICE_ID
+../main.c:96:31: note: each undeclared identifier is reported only once for each function it appears in
+../main.c:99:28: error: 'XPAR_XPS_INTC_0_XPS_GPIO_1_IP2INTC_IRPT_INTR' undeclared (first use in this function); did you mean 'XPAR_AXI_INTC_0_AXI_GPIO_1_IP2INTC_IRPT_INTR'?
+  XIntc_Connect(&Interrupt, XPAR_XPS_INTC_0_XPS_GPIO_1_IP2INTC_IRPT_INTR, (XInterruptHandler)SwitchInterruptHandler, (void *)0);//XPAR_INTC_CONTROLLER_GPIO_SWITCHES_IP2INTC_IRPT_INTR
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            XPAR_AXI_INTC_0_AXI_GPIO_1_IP2INTC_IRPT_INTR
+make: *** [main.o] Error 1
+20:06:55 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:99:28: error: 'XPAR_XPS_INTC_0_XPS_GPIO_1_IP2INTC_IRPT_INTR' undeclared (first use in this function); did you mean 'XPAR_AXI_INTC_0_AXI_GPIO_1_IP2INTC_IRPT_INTR'?
+  XIntc_Connect(&Interrupt, XPAR_XPS_INTC_0_XPS_GPIO_1_IP2INTC_IRPT_INTR, (XInterruptHandler)SwitchInterruptHandler, (void *)0);//XPAR_INTC_CONTROLLER_GPIO_SWITCHES_IP2INTC_IRPT_INTR
+                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                            XPAR_AXI_INTC_0_AXI_GPIO_1_IP2INTC_IRPT_INTR
+../main.c:99:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [main.o] Error 1
+20:12:07 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: project_3.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size project_3.elf  |tee "project_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9800	    376	   3304	  13480	   34a8	project_3.elf
+'Finished building: project_3.elf.size'
+' '
+20:12:13 **** Incremental Build of configuration Debug for project project_3 ****
+make all 
+make: Nothing to be done for `all'.
+20:14:33 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: project_3.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size project_3.elf  |tee "project_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9800	    376	   3304	  13480	   34a8	project_3.elf
+'Finished building: project_3.elf.size'
+' '
+20:27:23 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: project_3.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size project_3.elf  |tee "project_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9800	    376	   3304	  13480	   34a8	project_3.elf
+'Finished building: project_3.elf.size'
+' '
+20:27:43 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: project_3.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size project_3.elf  |tee "project_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9744	    376	   3304	  13424	   3470	project_3.elf
+'Finished building: project_3.elf.size'
+' '
+20:28:07 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: project_3.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size project_3.elf  |tee "project_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9816	    376	   3304	  13496	   34b8	project_3.elf
+'Finished building: project_3.elf.size'
+' '
+20:28:09 **** Incremental Build of configuration Debug for project project_3 ****
+make all 
+make: Nothing to be done for `all'.
+20:31:34 **** Incremental Build of configuration Debug for project project_3 ****
+make all 
+make: Nothing to be done for `all'.
+20:32:46 **** Incremental Build of configuration Debug for project project_3 ****
+make all 
+make: Nothing to be done for `all'.
+20:39:35 **** Auto Build of configuration Debug for project project_3 ****
+make all 
+'Building file: ../main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -I../../project_3_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: project_3.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../project_3_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "project_3.elf"  ./main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: project_3.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size project_3.elf  |tee "project_3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9744	    376	   3304	  13424	   3470	project_3.elf
+'Finished building: project_3.elf.size'
+' '

@@ -1,0 +1,430 @@
+15:07:13 **** Build of project led_bliking_bsp ****
+make -k all 
+libgen -hw ../tp_SOC_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../tp_SOC_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-pattern-compare -mcpu=v8.50.c  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+
+Running libs - 'make -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-pattern-compare -mcpu=v8.50.c  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"'.
+"Compiling common"
+"Compiling standalone";
+"Compiling bram"
+"Compiling gpio"
+"Compiling cpu"
+Running execs_generate.
+'Finished building libraries'
+
+**** Build of configuration Debug for project led_bliking ****
+
+Nothing to build for project led_bliking
+15:07:35 **** Auto Build of configuration Debug for project led_bliking ****
+make all 
+'Building file: ../led_bliking.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../led_bliking_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_bliking.d" -MT"led_bliking.d" -o "led_bliking.o" "../led_bliking.c"
+'Finished building: ../led_bliking.c'
+' '
+'Building target: led_bliking.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_bliking_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_bliking.elf"  ./led_bliking.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/14.7/ise_ds/edk/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/m/crtinit.o: In function `_crtinit':
+/wrk/ptx/users/nagaraju/GCC_2013_03/newlib/libgloss/microblaze/crtinit.S:69: undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [led_bliking.elf] Erreur 1
+15:07:55 **** Auto Build of configuration Debug for project led_bliking ****
+make all 
+'Building file: ../led_bliking.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../led_bliking_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_bliking.d" -MT"led_bliking.d" -o "led_bliking.o" "../led_bliking.c"
+../led_bliking.c:8:25: warning: extra tokens at end of #include directive [enabled by default]
+../led_bliking.c:9:19: warning: extra tokens at end of #include directive [enabled by default]
+'Finished building: ../led_bliking.c'
+' '
+'Building target: led_bliking.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_bliking_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_bliking.elf"  ./led_bliking.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_bliking.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_bliking.elf  |tee "led_bliking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1826	    268	   2090	   4184	   1058	led_bliking.elf
+'Finished building: led_bliking.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck led_bliking.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "led_bliking.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+led_bliking.elf 
+
+ELF file	: led_bliking.elf
+elfcheck passed.
+'Finished building: led_bliking.elf.elfcheck'
+' '
+15:08:18 **** Auto Build of project led_bliking_bsp ****
+make -k all 
+'Finished building libraries'
+15:11:16 **** Auto Build of configuration Debug for project led_bliking ****
+make all 
+'Building file: ../led_bliking.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../led_bliking_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_bliking.d" -MT"led_bliking.d" -o "led_bliking.o" "../led_bliking.c"
+'Finished building: ../led_bliking.c'
+' '
+'Building target: led_bliking.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_bliking_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_bliking.elf"  ./led_bliking.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_bliking.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_bliking.elf  |tee "led_bliking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1826	    268	   2090	   4184	   1058	led_bliking.elf
+'Finished building: led_bliking.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck led_bliking.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "led_bliking.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+led_bliking.elf 
+
+ELF file	: led_bliking.elf
+elfcheck passed.
+'Finished building: led_bliking.elf.elfcheck'
+' '
+15:11:21 **** Auto Build of configuration Debug for project led_bliking ****
+make all 
+'Building file: ../led_bliking.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../led_bliking_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_bliking.d" -MT"led_bliking.d" -o "led_bliking.o" "../led_bliking.c"
+'Finished building: ../led_bliking.c'
+' '
+'Building target: led_bliking.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_bliking_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_bliking.elf"  ./led_bliking.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_bliking.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_bliking.elf  |tee "led_bliking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1826	    268	   2090	   4184	   1058	led_bliking.elf
+'Finished building: led_bliking.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck led_bliking.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "led_bliking.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+led_bliking.elf 
+
+ELF file	: led_bliking.elf
+elfcheck passed.
+'Finished building: led_bliking.elf.elfcheck'
+' '
+15:11:34 **** Incremental Build of configuration Debug for project led_bliking ****
+make all 
+make: Rien à faire pour « all ».
+15:11:43 **** Incremental Build of configuration Debug for project led_bliking ****
+make all 
+make: Rien à faire pour « all ».
+15:11:58 **** Auto Build of project led_bliking_bsp ****
+make -k all 
+'Finished building libraries'
+15:12:33 **** Auto Build of configuration Debug for project led_bliking ****
+make all 
+'Building file: ../led_bliking.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../led_bliking_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_bliking.d" -MT"led_bliking.d" -o "led_bliking.o" "../led_bliking.c"
+'Finished building: ../led_bliking.c'
+' '
+'Building target: led_bliking.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_bliking_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_bliking.elf"  ./led_bliking.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_bliking.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_bliking.elf  |tee "led_bliking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1826	    268	   2090	   4184	   1058	led_bliking.elf
+'Finished building: led_bliking.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck led_bliking.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "led_bliking.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+led_bliking.elf 
+
+ELF file	: led_bliking.elf
+elfcheck passed.
+'Finished building: led_bliking.elf.elfcheck'
+' '
+15:12:43 **** Auto Build of project led_bliking_bsp ****
+make -k all 
+'Finished building libraries'
+15:14:19 **** Auto Build of configuration Debug for project led_bliking ****
+make all 
+'Building file: ../led_bliking.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../led_bliking_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_bliking.d" -MT"led_bliking.d" -o "led_bliking.o" "../led_bliking.c"
+'Finished building: ../led_bliking.c'
+' '
+'Building target: led_bliking.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_bliking_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_bliking.elf"  ./led_bliking.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_bliking.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_bliking.elf  |tee "led_bliking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1826	    268	   2090	   4184	   1058	led_bliking.elf
+'Finished building: led_bliking.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck led_bliking.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "led_bliking.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+led_bliking.elf 
+
+ELF file	: led_bliking.elf
+elfcheck passed.
+'Finished building: led_bliking.elf.elfcheck'
+' '
+15:14:26 **** Incremental Build of configuration Debug for project led_bliking ****
+make all 
+make: Rien à faire pour « all ».
+15:14:54 **** Auto Build of configuration Debug for project led_bliking ****
+make all 
+'Building file: ../led_bliking.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../led_bliking_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_bliking.d" -MT"led_bliking.d" -o "led_bliking.o" "../led_bliking.c"
+'Finished building: ../led_bliking.c'
+' '
+'Building target: led_bliking.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_bliking_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_bliking.elf"  ./led_bliking.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_bliking.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_bliking.elf  |tee "led_bliking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1826	    268	   2090	   4184	   1058	led_bliking.elf
+'Finished building: led_bliking.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck led_bliking.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "led_bliking.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+led_bliking.elf 
+
+ELF file	: led_bliking.elf
+elfcheck passed.
+'Finished building: led_bliking.elf.elfcheck'
+' '
+15:15:39 **** Auto Build of project led_bliking_bsp ****
+make -k all 
+'Finished building libraries'
+15:21:17 **** Auto Build of configuration Debug for project led_bliking ****
+make all 
+'Building file: ../led_bliking.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../led_bliking_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_bliking.d" -MT"led_bliking.d" -o "led_bliking.o" "../led_bliking.c"
+'Finished building: ../led_bliking.c'
+' '
+'Building target: led_bliking.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_bliking_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_bliking.elf"  ./led_bliking.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_bliking.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_bliking.elf  |tee "led_bliking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1902	    268	   2084	   4254	   109e	led_bliking.elf
+'Finished building: led_bliking.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck led_bliking.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "led_bliking.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+led_bliking.elf 
+
+ELF file	: led_bliking.elf
+elfcheck passed.
+'Finished building: led_bliking.elf.elfcheck'
+' '
+15:23:19 **** Auto Build of project led_bliking_bsp ****
+make -k all 
+'Finished building libraries'
+15:23:55 **** Auto Build of configuration Debug for project led_bliking ****
+make all 
+'Building file: ../led_bliking.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../led_bliking_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_bliking.d" -MT"led_bliking.d" -o "led_bliking.o" "../led_bliking.c"
+'Finished building: ../led_bliking.c'
+' '
+'Building target: led_bliking.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_bliking_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_bliking.elf"  ./led_bliking.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_bliking.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_bliking.elf  |tee "led_bliking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1902	    268	   2084	   4254	   109e	led_bliking.elf
+'Finished building: led_bliking.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck led_bliking.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "led_bliking.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+led_bliking.elf 
+
+ELF file	: led_bliking.elf
+elfcheck passed.
+'Finished building: led_bliking.elf.elfcheck'
+' '
+15:24:05 **** Auto Build of project led_bliking_bsp ****
+make -k all 
+'Finished building libraries'
+15:30:29 **** Auto Build of configuration Debug for project led_bliking ****
+make all 
+'Building file: ../led_bliking.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../led_bliking_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_bliking.d" -MT"led_bliking.d" -o "led_bliking.o" "../led_bliking.c"
+'Finished building: ../led_bliking.c'
+' '
+'Building target: led_bliking.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_bliking_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_bliking.elf"  ./led_bliking.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_bliking.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_bliking.elf  |tee "led_bliking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1902	    268	   2084	   4254	   109e	led_bliking.elf
+'Finished building: led_bliking.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck led_bliking.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "led_bliking.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+led_bliking.elf 
+
+ELF file	: led_bliking.elf
+elfcheck passed.
+'Finished building: led_bliking.elf.elfcheck'
+' '
+15:30:40 **** Auto Build of project led_bliking_bsp ****
+make -k all 
+'Finished building libraries'
+15:31:01 **** Incremental Build of configuration Debug for project led_bliking ****
+make all 
+make: Rien à faire pour « all ».
+15:31:10 **** Auto Build of configuration Debug for project led_bliking ****
+make all 
+'Building file: ../led_bliking.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../led_bliking_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_bliking.d" -MT"led_bliking.d" -o "led_bliking.o" "../led_bliking.c"
+'Finished building: ../led_bliking.c'
+' '
+'Building target: led_bliking.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_bliking_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_bliking.elf"  ./led_bliking.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_bliking.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_bliking.elf  |tee "led_bliking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1902	    268	   2084	   4254	   109e	led_bliking.elf
+'Finished building: led_bliking.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck led_bliking.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "led_bliking.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+led_bliking.elf 
+
+ELF file	: led_bliking.elf
+elfcheck passed.
+'Finished building: led_bliking.elf.elfcheck'
+' '
+15:31:40 **** Auto Build of configuration Debug for project led_bliking ****
+make all 
+'Building file: ../led_bliking.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../led_bliking_bsp/microblaze_0/include -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"led_bliking.d" -MT"led_bliking.d" -o "led_bliking.o" "../led_bliking.c"
+'Finished building: ../led_bliking.c'
+' '
+'Building target: led_bliking.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../led_bliking_bsp/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "led_bliking.elf"  ./led_bliking.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: led_bliking.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size led_bliking.elf  |tee "led_bliking.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1902	    268	   2084	   4254	   109e	led_bliking.elf
+'Finished building: led_bliking.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck led_bliking.elf -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0  |tee "led_bliking.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../tp_SOC_hw_platform/system.xml -pe microblaze_0
+led_bliking.elf 
+
+ELF file	: led_bliking.elf
+elfcheck passed.
+'Finished building: led_bliking.elf.elfcheck'
+' '
+15:32:06 **** Auto Build of project led_bliking_bsp ****
+make -k all 
+'Finished building libraries'
